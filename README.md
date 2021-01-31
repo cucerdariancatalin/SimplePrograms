@@ -12,20 +12,20 @@ For quick access to the discription of the program and its implementation you ca
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
 
-## <center> AmountOfSalaries </center> ##
+## AmountOfSalaries ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
 
-## <center> ArrayInitialization </center> ##
+## ArrayInitialization ##
 [Here](ArrayInitialization.java) you can see how array initialization is implemented in the class constructor in Java.
 
-## <center> CaesarCipher </center> ##
+## CaesarCipher ##
 [Here](CaesarCipher.java) is the implementation of Caesar Cipher in Java.
 
-## <center> ChangingArrayType </center> ##
+## ChangingArrayType ##
 [Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with String values) is implemented in Java. The second array takes all the values of the first array, converts them to String type and stores them in reverse order.
 
-## <center> Factorial </center> ##
+## Factorial ##
 [Here](Factorial.java) is the implementation of Factorial in Java and [Here](factorial.py) in Python.
 
-## <center> FibonacciNumbers </center> ##
+## FibonacciNumbers ##
 [Here](FibonacciNumbers.java) is the implementation of Fibonacci numbers in Java and [here](FibonacciNumbers.py) in Python.
