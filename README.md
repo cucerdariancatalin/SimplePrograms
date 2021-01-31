@@ -1,5 +1,4 @@
 # Repository guide #
-====
 
 ## List of all programs ##
 
