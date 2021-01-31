@@ -8,3 +8,21 @@
 - ChangingArrayType
 - Factorial
 - FibonacciNumbers
+
+## AmountOfSalaries ##
+
+
+## ArrayInitialization ##
+
+
+## CaesarCipher ##
+
+
+## ChangingArrayType ##
+
+
+## Factorial ##
+
+
+## FibonacciNumbers ##
+
