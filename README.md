@@ -10,7 +10,7 @@ For quick access to the discription of the program and its implementation you ca
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
 - [Factorial](#Factorial)
-- [FibonacciNumbers](#fibonaccinumbers)
+- [FibonacciNumbers](#FibonacciNumbers)
 
 ## <center> AmountOfSalaries </center> ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
