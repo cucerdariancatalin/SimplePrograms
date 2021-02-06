@@ -34,7 +34,7 @@ public class Factorial {
 
         System.out.println("- Number?");
         number = sc.nextInt();
-        System.out.print("- " + number + "\n" + number + "! = ");
+        System.out.print(number + "! = ");
 
         while (number > 0) {
             result *= number;
