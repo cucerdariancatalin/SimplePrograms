@@ -8,11 +8,11 @@ private String outputMessage = "";
 private Scanner sc = new Scanner(System.in);
 private ArrayList <Character> deutschAlphabet = new ArrayList<Character>();
 private char [] chars;
-private int numberX = 1;        // TODO create input
+private int key;
     public static void main(String[] args) {
         CaesarCipher cc = new CaesarCipher();
 
-        System.out.println(cc.encryption(cc.getChars(), cc.createDeutschAlphabet()));
+        System.out.println(cc.encryption(cc.getChars(), cc.createDeutschAlphabet(), cc.getKey()));
     }
 
     private ArrayList <Character> createDeutschAlphabet() {
@@ -29,22 +29,33 @@ private int numberX = 1;        // TODO create input
     }
 
     private char [] getChars() {
+        System.out.println("Your message:");
         inputMessage = sc.nextLine().toLowerCase();
-        chars = new char [inputMessage.length()];
-
-        for (int i = 0; i < inputMessage.length(); i++) {
-            chars[i] = inputMessage.charAt(i);
-        }
+        chars = inputMessage.toCharArray();
         return chars;
     }
 
-    private String encryption(char [] chars, ArrayList <Character> deutschAlphabet) {
+    private int getKey() {
+        System.out.println("Your key:");
+        key = sc.nextInt();
+
+        key %= 30;
+
+        return key;
+    }
+
+    private String encryption(char [] chars, ArrayList <Character> deutschAlphabet, int key) {
         chars = this.chars;
         deutschAlphabet = this.deutschAlphabet;
+        key = this.key;
 
         for (char c : chars) {
             if (deutschAlphabet.contains(c) == true) {
-                outputMessage += deutschAlphabet.get(deutschAlphabet.indexOf(c) + numberX); //TODO if ... + numberX > length
+                if ((deutschAlphabet.indexOf(c) + key) > 30) {
+                    outputMessage += deutschAlphabet.get(30 % (deutschAlphabet.indexOf(c) + key));
+                    continue;
+                }
+                outputMessage += deutschAlphabet.get(deutschAlphabet.indexOf(c) + key);
 
             } else {
                 outputMessage += c;
