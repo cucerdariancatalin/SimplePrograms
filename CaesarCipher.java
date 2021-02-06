@@ -9,6 +9,7 @@ private Scanner sc = new Scanner(System.in);
 private ArrayList <Character> deutschAlphabet = new ArrayList<Character>();
 private char [] chars;
 private int key;
+
     public static void main(String[] args) {
         CaesarCipher cc = new CaesarCipher();
 
