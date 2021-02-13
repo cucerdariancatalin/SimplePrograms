@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  * Class-example of factorial implementation
+ * 
  * @author VitasSalvantes
  * @version 1.0
  */
@@ -23,7 +24,10 @@ public class Factorial {
         System.out.println(f.go(f.getResult(), f.getNumber()));
     }
 
-    /** Method calculates factorial and prints the result {@link Factorial#result} to the console
+    /**
+     * Method calculates factorial and prints the result {@link Factorial#result} to
+     * the console
+     * 
      * @param result {@link Factorial#result}
      * @param number {@link Factorial#number}
      */
