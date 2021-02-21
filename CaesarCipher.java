@@ -78,7 +78,7 @@ public class CaesarCipher {
     /** Setter for key {@link CaesarCipher#key} */
     public void setKey() {
         System.out.println("Your key:");
-        key = sc.nextInt();
+        key = Math.abs(sc.nextInt());
     }
 
     /**
