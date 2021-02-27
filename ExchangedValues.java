@@ -1,5 +1,6 @@
 /**
- * A simple class with a method to exchange values between two variables without using a third
+ * A simple class with a method to exchange values between two variables without
+ * using a third
  * 
  * @author VitasSalvantes
  * @version 1.0
@@ -18,7 +19,10 @@ public class ExchangedValues {
         en.exchanger();
     }
 
-    /** Method that changes the values of the first {@link ExchangedValues#a} and second {@link ExchangedValues#b} variables */
+    /**
+     * Method that changes the values of the first {@link ExchangedValues#a} and
+     * second {@link ExchangedValues#b} variables
+     */
     private void exchanger() {
         System.out.println(a + " and " + b);
         a += b;
