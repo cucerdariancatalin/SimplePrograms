@@ -11,6 +11,7 @@ For quick access to the discription of the program and its implementation you ca
 - [ChangingArrayType](#ChangingArrayType)
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
+- [FizzBuzz](FizzBuzz.java)
 
 ## AmountOfSalaries ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
@@ -29,3 +30,6 @@ For quick access to the discription of the program and its implementation you ca
 
 ## FibonacciNumbers ##
 [Here](FibonacciNumbers.java) is the implementation of Fibonacci numbers in Java and [here](FibonacciNumbers.py) in Python.
+
+## FizzBuzz ##
+[Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java. The program should print numbers from 1 to 100. But instead of multiples of three, it prints "Fizz", and instead of numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same time, it prints "FizzBuzz".
