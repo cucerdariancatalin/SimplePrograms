@@ -11,7 +11,7 @@ For quick access to the discription of the program and its implementation you ca
 - [ChangingArrayType](#ChangingArrayType)
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
-- [FizzBuzz](FizzBuzz.java)
+- [FizzBuzz](#FizzBuzz)
 
 ## AmountOfSalaries ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
