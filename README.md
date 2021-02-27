@@ -9,6 +9,7 @@ For quick access to the discription of the program and its implementation you ca
 - [ArrayInitialization](#ArrayInitialization)
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
+- [ExchangedNumbers](#ExchangedNumbers)
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
 - [FizzBuzz](#FizzBuzz)
@@ -24,6 +25,9 @@ For quick access to the discription of the program and its implementation you ca
 
 ## ChangingArrayType ##
 [Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with String values) is implemented in Java. The second array takes all the values of the first array, converts them to String type and stores them in reverse order.
+
+## ExchangedNumbers ##
+[Here](ExchangedNumbers.java) you can see how to exchange values between two variables without using a third in Java.
 
 ## Factorial ##
 [Here](Factorial.java) is the implementation of Factorial in Java and [Here](factorial.py) in Python.

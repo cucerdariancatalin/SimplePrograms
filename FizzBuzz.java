@@ -22,6 +22,7 @@ public class FizzBuzz {
     /** Array with numbers from 0 to 100 */
     private int[] numbers;
 
+    /** Method that launches the program */
     public static void main(String[] args) {
         FizzBuzz fb = new FizzBuzz();
         fb.printer(fb.fizzBuzzer());
