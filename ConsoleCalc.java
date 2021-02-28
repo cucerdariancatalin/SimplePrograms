@@ -91,6 +91,7 @@ public class ConsoleCalc {
      */
     public void setOperation() {
         System.out.println("- Your operation:");
+        // TODO add formatter
         try {
             operation = sc.next();
         } catch (Exception incorrectInput) {
