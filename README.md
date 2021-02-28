@@ -9,6 +9,7 @@ For quick access to the discription of the program and its implementation you ca
 - [ArrayInitialization](#ArrayInitialization)
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
+- [ConsoleCalc](#ConsoleCalc)
 - [ExchangedValues](#ExchangedValues)
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
@@ -26,6 +27,9 @@ For quick access to the discription of the program and its implementation you ca
 
 ## ChangingArrayType ##
 [Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with String values) is implemented in Java. The second array takes all the values of the first array, converts them to String type and stores them in reverse order.
+
+## ConsoleCalc ##
+[Here](ConsoleCalc.java) you can see the implementation of a simple calculator in Java. You can enter an unlimited number of numbers and perform various mathemathical operations with them.
 
 ## ExchangedValues ##
 [Here](ExchangedValues.java) you can see how to exchange values between two variables without using a third in Java.
