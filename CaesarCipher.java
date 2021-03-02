@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Class for encrypting messages with Caesar cipher
  * 
  * @author VitasSalvantes
- * @version 3.0
+ * @version 4.0
  */
 
 public class CaesarCipher {
@@ -17,9 +17,9 @@ public class CaesarCipher {
     private String outputMessage = "";
 
     /** A Scanner class object that accepts user input */
-    private Scanner sc = new Scanner(System.in);
+    final private Scanner sc = new Scanner(System.in);
 
-    /** List of letters of the German alphabet */
+    /** List of letters of the English alphabet */
     private ArrayList<Character> englishAlphabet = new ArrayList<Character>();
 
     /** A character array containing the processed custom message */
@@ -37,11 +37,7 @@ public class CaesarCipher {
         System.out.println(cc.encryption(cc.getInputMessage(), cc.getKey()));
     }
 
-    /**
-     * Method for creating letters of the German alphabet
-     * 
-     * @return deutschAlphabet {@link CaesarCipher#englishAlphabet}
-     */
+    /** Method for creating letters of the English alphabet */
     private void createEnglishAlphabet() {
         for (char letter = 'a'; letter <= 'z'; letter++) {
             englishAlphabet.add(letter);
@@ -70,23 +66,19 @@ public class CaesarCipher {
     }
 
     /** Setter for inputMessage {@link CaesarCipher#inputMessage} */
-    public void setInputMessage() {
+    private void setInputMessage() {
         System.out.println("Your message:");
         inputMessage = sc.nextLine().toLowerCase();
     }
 
     /** Setter for key {@link CaesarCipher#key} */
-    public void setKey() {
+    private void setKey() {
         System.out.println("Your key:");
         key = Math.abs(sc.nextInt());
     }
 
     /**
      * A method for encrypting a user message with Caesar cipher
-     * 
-     * @param chars           {@link CaesarCipher#chars}
-     * @param deutschAlphabet {@link CaesarCipher#englishAlphabet}
-     * @param key             {@link CaesarCipher#key}
      * 
      * @return outputMessage {@link CaesarCipher#outputMessage}
      */
@@ -107,6 +99,8 @@ public class CaesarCipher {
                 outputMessage += c;
             }
         }
+
+        sc.close();
         return outputMessage;
     }
 }

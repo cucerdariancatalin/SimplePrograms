@@ -6,6 +6,7 @@ For quick access to the discription of the program and its implementation you ca
 ## List of all programs ##
 
 - [AmountOfSalaries](#AmountOfSalaries)
+- [AtbashCipher](#AtbashCipher)
 - [ArrayInitialization](#ArrayInitialization)
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
@@ -18,6 +19,9 @@ For quick access to the discription of the program and its implementation you ca
 
 ## AmountOfSalaries ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
+
+## AtbashCipher ##
+[Here](AtbashCipher.java) you can see the implementation of Atbash Cipher in Java.
 
 ## ArrayInitialization ##
 [Here](ArrayInitialization.java) you can see how array initialization is implemented in the class constructor in Java.
