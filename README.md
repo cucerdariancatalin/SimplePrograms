@@ -16,6 +16,7 @@ For quick access to the discription of the program and its implementation you ca
 - [FibonacciNumbers](#FibonacciNumbers)
 - [FizzBuzz](#FizzBuzz)
 - [PrimeNumbers](#PrimeNumbers)
+- [RecamanSequence](#RecamanSequence)
 
 ## AmountOfSalaries ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
@@ -49,3 +50,6 @@ For quick access to the discription of the program and its implementation you ca
 
 ## PrimeNumbers ##
 [Here](PrimeNumbers.java) you can see the implementation of prime numbers in Java.
+
+## RecamanSequence ##
+[Here](RecamanSequence.java) you can see the implementation of the Recaman sequence.
