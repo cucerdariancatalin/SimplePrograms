@@ -18,6 +18,7 @@ If you want to contribute to the development of the project, please visit the [w
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
 - [FizzBuzz](#FizzBuzz)
+- [PerfectNumbers](#PerfectNumbers)
 - [PrimeNumbers](#PrimeNumbers)
 - [RecamanSequence](#RecamanSequence)
 
@@ -244,6 +245,41 @@ The beginning of the sequence is thus:
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java.
 
 The program should print numbers from 1 to 100. But instead of multiples of three, it prints "Fizz", and instead of numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same time, it prints "FizzBuzz".
+
+## PerfectNumbers ##
+In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
+
+<table style="text-align:center;">
+<tbody>
+<tr>
+<th>Rank</th>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+
+<tr>
+<th>Perfect number</th>
+<td>6</td>
+<td>28</td>
+<td>496</td>
+<td>8128</td>
+<td>33550336</td>
+<td>8589869056</td>
+<td>137438691328</td>
+</tr>
+</tbody>
+</table>
+
+(See more in [Wikipedia](https://en.wikipedia.org/wiki/Perfect_number))
+
+[Here](PerfectNumbers.java) you can see the implementation of a sequence of perfect numbers in Java.
+
+**Attention! To display more than four numbers, you will have to wait!** :)
 
 ## PrimeNumbers ##
 A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers. A natural number greater than 1 that is not prime is called a composite number. For example, 5 is prime because the only ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 is composite because it is a product (2 × 2) in which both numbers are smaller than 4. Primes are central in number theory because of the fundamental theorem of arithmetic: every natural number greater than 1 is either a prime itself or can be factorized as a product of primes that is unique up to their order.
