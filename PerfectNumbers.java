@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class PerfectNumbers {
 
     /** A Scanner class object that accepts user input */
-    private Scanner sc = new Scanner(System.in);
+    final private Scanner sc = new Scanner(System.in);
 
     /**
      * Sequence length. Attention! To display more than four numbers, you will have
