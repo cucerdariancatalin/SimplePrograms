@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Class for encrypting messages with Caesar cipher
+ * Class with methods for encrypting messages with Caesar cipher
  * 
  * @author VitasSalvantes
- * @version 4.0
+ * @version 4.5
  */
 
 public class CaesarCipher {
@@ -20,7 +20,7 @@ public class CaesarCipher {
     final private Scanner sc = new Scanner(System.in);
 
     /** List of letters of the English alphabet */
-    private ArrayList<Character> englishAlphabet = new ArrayList<Character>();
+    final private ArrayList<Character> englishAlphabet = new ArrayList<Character>();
 
     /** A character array containing the processed custom message */
     private char[] chars;

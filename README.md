@@ -13,6 +13,7 @@ If you want to contribute to the development of the project, please visit the [w
 - [ArrayInitialization](#ArrayInitialization)
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
+- [CodeWordCipher](#CodeWordCipher)
 - [ConsoleCalc](#ConsoleCalc)
 - [ExchangedValues](#ExchangedValues)
 - [Factorial](#Factorial)
@@ -174,6 +175,79 @@ The transformation can be represented by aligning two alphabets; the cipher alph
 
 ## ChangingArrayType ##
 [Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with String values) is implemented in Java. The second array takes all the values of the first array, converts them to String type and stores them in reverse order.
+
+## CodeWordCipher ##
+Substitution of single letters separately — simple substitution — can be demonstrated by writing out the alphabet in some order to represent the substitution. This is termed a substitution alphabet. The cipher alphabet may be shifted or reversed (creating the Caesar and Atbash ciphers, respectively) or scrambled in a more complex fashion, in which case it is called a mixed alphabet or deranged alphabet. Traditionally, mixed alphabets may be created by first writing out a keyword, removing repeated letters in it, then writing all the remaining letters in the alphabet in the usual order.
+
+Using this system, the keyword "zebras" gives us the following alphabets:
+
+<table>
+<tbody>
+<tr>
+<th>Plain</th>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+</tr>
+
+<tr>
+<th>Cipher</th>
+<td>Z</td>
+<td>E</td>
+<td>B</td>
+<td>R</td>
+<td>A</td>
+<td>S</td>
+<td>C</td>
+<td>D</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+
+(See more in [Wikipedia](https://en.m.wikipedia.org/wiki/Substitution_cipher))
+
+[Here](CodeWordCipher.java) you can see the implementation of code word cipher in Java.
 
 ## ConsoleCalc ##
 [Here](ConsoleCalc.java) you can see the implementation of a simple calculator in Java. You can enter an unlimited number of numbers and perform various mathemathical operations with them.

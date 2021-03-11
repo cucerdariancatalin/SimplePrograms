@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Class with methods that implement the Recaman sequence
  * 
  * @author VitasSalvantes
- * @version 1.0
+ * @version 1.5
  */
 
 public class RecamanSequence {
@@ -14,13 +14,13 @@ public class RecamanSequence {
     private int number = 0;
 
     /** Numbers included in the sequence */
-    private LinkedList<Integer> sequence = new LinkedList<Integer>();
+    final private LinkedList<Integer> sequence = new LinkedList<Integer>();
 
     /** Sequence length */
     private int length;
 
     /** A Scanner class object that accepts user input */
-    private Scanner sc = new Scanner(System.in);
+    final private Scanner sc = new Scanner(System.in);
 
     /** Method that launches the program */
     public static void main(String[] args) {
