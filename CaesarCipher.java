@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Class with methods for encrypting messages with Caesar cipher
  * 
  * @author VitasSalvantes
- * @version 4.5
+ * @version 5.0
  */
 
 public class CaesarCipher {
@@ -13,7 +13,7 @@ public class CaesarCipher {
     /** Message from user */
     private String inputMessage;
 
-    /** Encrypted message */
+    /** En- or decrypted message */
     private String outputMessage = "";
 
     /** A Scanner class object that accepts user input */
@@ -34,6 +34,7 @@ public class CaesarCipher {
 
         cc.setInputMessage();
         cc.setKey();
+        System.out.println(cc.decryption(cc.getInputMessage(), cc.getKey()));
         System.out.println(cc.encryption(cc.getInputMessage(), cc.getKey()));
     }
 
@@ -78,7 +79,7 @@ public class CaesarCipher {
     }
 
     /**
-     * A method for encrypting a user message with Caesar cipher
+     * Method for encrypting a user message with Caesar cipher
      * 
      * @return outputMessage {@link CaesarCipher#outputMessage}
      */
@@ -94,6 +95,33 @@ public class CaesarCipher {
                     continue;
                 }
                 outputMessage += englishAlphabet.get(englishAlphabet.indexOf(c) + key);
+
+            } else {
+                outputMessage += c;
+            }
+        }
+
+        sc.close();
+        return outputMessage;
+    }
+
+    /**
+     * Method for decrypting a user message with Caesar cipher
+     * 
+     * @return outputMessage {@link CaesarCipher#outputMessage}
+     */
+    private String decryption(char[] chars, int key) {
+        chars = this.chars;
+        createEnglishAlphabet();
+        key = this.key;
+
+        for (char c : chars) {
+            if (englishAlphabet.contains(c) == true) {
+                if ((englishAlphabet.indexOf(c) - key) < 0) {
+                    outputMessage += englishAlphabet.get(Math.abs(26 - (key - englishAlphabet.indexOf(c))));
+                    continue;
+                }
+                outputMessage += englishAlphabet.get(englishAlphabet.indexOf(c) - key);
 
             } else {
                 outputMessage += c;

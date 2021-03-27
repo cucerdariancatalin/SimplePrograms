@@ -21,16 +21,16 @@ public class CodeWordCipher {
     /** Message from user */
     private String inputMessage = "";
 
-    /** Encrypted message */
+    /** En- or decrypted message */
     private String outputMessage = "";
 
     /** Code word with which encryption will be carried out */
     private String codeWord = "";
 
-     /** A character array containing the processed custom message */
+    /** A character array containing the processed custom message */
     private char[] messageToChars;
 
-     /** A character array containing the processed code word */
+    /** A character array containing the processed code word */
     private char[] codeWordToChars;
 
     /** Method that launches the program */
@@ -40,6 +40,7 @@ public class CodeWordCipher {
         cwp.setInputMessage();
         cwp.setCodeWord();
 
+        System.out.println(cwp.decryption());
         System.out.println(cwp.encryption());
     }
 
@@ -80,7 +81,7 @@ public class CodeWordCipher {
     }
 
     /**
-     * A method for encrypting a user message with code word cipher
+     * Method for encrypting a user message with code word cipher
      * 
      * @return outputMessage {@link CodeWordCipher#outputMessage}
      */
@@ -91,6 +92,27 @@ public class CodeWordCipher {
         for (char c : messageToChars) {
             if (englishAlphabet.contains(c)) {
                 outputMessage += newAlphabet.get(englishAlphabet.indexOf(c));
+            } else {
+                outputMessage += c;
+            }
+        }
+
+        sc.close();
+        return outputMessage;
+    }
+
+    /**
+     * Method for decrypting a user message with code word cipher
+     * 
+     * @return outputMessage {@link CodeWordCipher#outputMessage}
+     */
+    private String decryption() {
+        createEnglishAlphabet();
+        createNewAlphabet();
+
+        for (char c : messageToChars) {
+            if (newAlphabet.contains(c)) {
+                outputMessage += englishAlphabet.get(newAlphabet.indexOf(c));
             } else {
                 outputMessage += c;
             }

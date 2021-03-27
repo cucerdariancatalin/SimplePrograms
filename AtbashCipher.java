@@ -16,7 +16,7 @@ public class AtbashCipher {
     /** Message from user */
     private String inputMessage;
 
-    /** Encrypted message */
+    /** En- or decrypted message */
     private String outputMessage = "";
 
     /** A character array containing the processed custom message */
@@ -51,7 +51,7 @@ public class AtbashCipher {
         sc.close();
     }
 
-    /** A method for encrypting a user message with Atbash cipher */
+    /** Method for encrypting a user message with Atbash cipher */
     private String encryption() {
         createEnglishAlphabet();
 
@@ -67,5 +67,4 @@ public class AtbashCipher {
 
         return outputMessage;
     }
-
 }
