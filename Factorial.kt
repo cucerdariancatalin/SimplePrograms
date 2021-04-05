@@ -1,10 +1,10 @@
 package com.vitassalvantes.hellokotlin
 
 /**
+ * Example of factorial implementation
+ *
  * @author VitasSalvantes
  * @version 1.0
- *
- * Method that launches the program
  */
 fun main() {
     var result: Int = 1
