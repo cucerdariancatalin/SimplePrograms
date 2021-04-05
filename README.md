@@ -294,7 +294,7 @@ The value of 0! is 1, according to the convention for an empty product.
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Factorial))
 
-[Here](Factorial.java) you can see the implementation of Factorial in Java and [here](factorial.py) in Python.
+[Here](Factorial.java) you can see the implementation of Factorial in Java, [here](Factorial.kt) in Kotlin and [here](Factorial.py) in Python.
 
 ## FibonacciNumbers ##
 In mathematics, the Fibonacci numbers, commonly denoted Fn, form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
