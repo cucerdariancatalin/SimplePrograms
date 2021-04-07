@@ -253,7 +253,7 @@ Using this system, the keyword "zebras" gives us the following alphabets:
 [Here](ConsoleCalc.java) you can see the implementation of a simple calculator in Java. You can enter an unlimited number of numbers and perform various mathemathical operations with them.
 
 ## ExchangedValues ##
-[Here](ExchangedValues.java) you can see how to exchange values between two variables without using a third in Java.
+[Here](ExchangedValues.java) you can see how to exchange values between two variables without using a third in Java and [here](ExchangedValues.kt) in Kotlin.
 
 ## Factorial ##
 In mathematics, the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n:
