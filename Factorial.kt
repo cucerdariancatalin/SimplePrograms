@@ -1,5 +1,3 @@
-package com.vitassalvantes.hellokotlin
-
 /**
  * Example of factorial implementation
  *
