@@ -357,7 +357,7 @@ The beginning of the sequence is thus:
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
 
-[Here](FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in Java and [here](FibonacciNumbers.py) in Python.
+[Here](FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in Java, [here](FibonacciNumbers.kt) in Kotlin and [here](FibonacciNumbers.py) in Python.
 
 ## FizzBuzz ##
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java.
