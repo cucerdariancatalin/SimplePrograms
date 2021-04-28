@@ -360,9 +360,9 @@ The beginning of the sequence is thus:
 [Here](FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in Java, [here](FibonacciNumbers.kt) in Kotlin and [here](FibonacciNumbers.py) in Python.
 
 ## FizzBuzz ##
-[Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java.
-
 The program should print numbers from 1 to 100. But instead of multiples of three, it prints "Fizz", and instead of numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same time, it prints "FizzBuzz".
+
+[Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](FizzBuzz.kt) in Kotlin.
 
 ## PerfectNumbers ##
 In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
