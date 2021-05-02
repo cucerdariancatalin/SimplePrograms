@@ -20,6 +20,7 @@ If you want to contribute to the development of the project, please visit the [w
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
 - [FizzBuzz](#FizzBuzz)
+- [IsSquare](#IsSquare)
 - [PerfectNumbers](#PerfectNumbers)
 - [PrimeNumbers](#PrimeNumbers)
 - [RecamanSequence](#RecamanSequence)
@@ -363,6 +364,13 @@ The beginning of the sequence is thus:
 The program should print numbers from 1 to 100. But instead of multiples of three, it prints "Fizz", and instead of numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same time, it prints "FizzBuzz".
 
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](FizzBuzz.kt) in Kotlin.
+
+## IsSquare ##
+In mathematics, a square is the result of multiplying a number by itself.
+
+(See more in [Wikipedia](https://en.wikipedia.org/wiki/Square_(algebra)))
+
+[Here](IsSquare.java) you can see an example of defining a square in Java.
 
 ## PerfectNumbers ##
 In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
