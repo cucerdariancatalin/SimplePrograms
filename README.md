@@ -24,6 +24,7 @@ If you want to contribute to the development of the project, please visit the [w
 - [PerfectNumbers](#PerfectNumbers)
 - [PrimeNumbers](#PrimeNumbers)
 - [RecamanSequence](#RecamanSequence)
+- [SquareEveryDigit](#SquareEveryDigit)
 
 ## AmountOfSalaries ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
@@ -436,3 +437,11 @@ I like the drawing better:
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
 [Here](RecamanSequence.java) you can see the implementation of the Recaman sequence.
+
+## SquareEveryDigit ##
+
+It's necessary to display the squares of all digits included in the number entered by the user.
+
+For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
+
+[Here](SquareEveryDigit.java) you can see the implementation of this algorithm.
