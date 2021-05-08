@@ -9,6 +9,7 @@ If you want to contribute to the development of the project, please visit the [w
 ## List of all programs ##
 
 - [AmountOfSalaries](#AmountOfSalaries)
+- [AnagramDetection](#AnagramDetection)
 - [AtbashCipher](#AtbashCipher)
 - [ArrayInitialization](#ArrayInitialization)
 - [BubbleSort](#BubbleSort)
@@ -28,6 +29,16 @@ If you want to contribute to the development of the project, please visit the [w
 
 ## AmountOfSalaries ##
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the same class) is implemented in Java.
+
+## AnagramDetection ##
+
+An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once. For example, the word *anagram* itself can be rearranged into *nag a ram*, also the word binary into brainy and the word *adobe* into *abode*.
+
+The original word or phrase is known as the subject of the anagram. Any word or phrase that exactly reproduces the letters in another order is an anagram. Someone who creates anagrams may be called an "anagrammatist", and the goal of a serious or skilled anagrammatist is to produce anagrams that reflect or comment on their subject.
+
+(See more in [Wikipedia](https://en.wikipedia.org/wiki/Anagram))
+
+[Here](AnagramDetection.java) you can see the implementation of the anagram detection in Java.
 
 ## AtbashCipher ##
 The Atbash cipher is a particular type of monoalphabetic cipher formed by taking the alphabet (or abjad, syllabary, etc.) and mapping it to its reverse, so that the first letter becomes the last letter, the second letter becomes the second to last letter, and so on. For example, the Latin alphabet would work like this:
