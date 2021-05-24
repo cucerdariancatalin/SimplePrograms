@@ -5,13 +5,13 @@ import java.util.Scanner;
  * Class for encrypting messages with Atbash cipher
  * 
  * @author VitasSalvantes
- * @version 1.0
+ * @version 1.5
  */
 
 public class AtbashCipher {
 
     /** List of letters of the English alphabet */
-    private ArrayList<Character> englishAlphabet = new ArrayList<Character>();
+    private final ArrayList<Character> englishAlphabet = new ArrayList<Character>();
 
     /** Message from user */
     private String inputMessage;
@@ -22,15 +22,10 @@ public class AtbashCipher {
     /** A character array containing the processed custom message */
     private char[] chars;
 
-    /** A Scanner class object that accepts user input */
-    private Scanner sc = new Scanner(System.in);
-
     /** Method that launches the program */
     public static void main(String[] args) {
         AtbashCipher ac = new AtbashCipher();
-
         ac.setInputMessage();
-
         System.out.println(ac.encryption());
     }
 
@@ -46,9 +41,8 @@ public class AtbashCipher {
      */
     private void setInputMessage() {
         System.out.println("Your message:");
-        inputMessage = sc.nextLine().toLowerCase();
+        inputMessage = new Scanner(System.in).nextLine().toLowerCase();
         chars = inputMessage.toCharArray();
-        sc.close();
     }
 
     /** Method for encrypting a user message with Atbash cipher */
@@ -56,10 +50,8 @@ public class AtbashCipher {
         createEnglishAlphabet();
 
         for (char c : chars) {
-            if (englishAlphabet.contains(c) == true) {
-
+            if (englishAlphabet.contains(c)) {
                 outputMessage += englishAlphabet.get(25 - englishAlphabet.indexOf(c));
-
             } else {
                 outputMessage += c;
             }
