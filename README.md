@@ -20,6 +20,7 @@ If you want to contribute to the development of the project, please visit the [w
 - [ExchangedValues](#ExchangedValues)
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
+- [FirstUniqueCharacterInString](#FirstUniqueCharacterInString) 
 - [FizzBuzz](#FizzBuzz)
 - [IsSquare](#IsSquare)
 - [PerfectNumbers](#PerfectNumbers)
@@ -371,6 +372,17 @@ The beginning of the sequence is thus:
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
 
 [Here](FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in Java, [here](FibonacciNumbers.kt) in Kotlin and [here](FibonacciNumbers.py) in Python.
+
+## FirstUniqueCharacterInString ##
+You need to find the first non-repeating character in the string that the user enters.
+
+Example:
+
+Given the string: "Hello World! Hello!".
+
+First  unique character: "W".
+
+[Here](FirstUniqueCharacterInString.java) you can see the solution to this task in Java.
 
 ## FizzBuzz ##
 The program should print numbers from 1 to 100. But instead of multiples of three, it prints "Fizz", and instead of numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same time, it prints "FizzBuzz".
