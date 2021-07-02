@@ -1,60 +1,63 @@
 import java.util.LinkedList;
-import java.util.Scanner;
 
 /**
  * Class with methods for encrypting messages with code word cipher
- * 
+ *
  * @author VitasSalvantes
  * @version 1.5
  */
 public class CodeWordCipher {
 
-    /** New alphabet with code word */
+    /**
+     * New alphabet with code word
+     */
     private LinkedList<Character> newAlphabet;
 
-    /** List of letters of the English alphabet */
+    /**
+     * List of letters of the English alphabet
+     */
     final private LinkedList<Character> englishAlphabet = new LinkedList<Character>();
 
-    /** A Scanner class object that accepts user input */
-    final private Scanner sc = new Scanner(System.in);
-
-    /** Message from user */
-    private String inputMessage = "";
-
-    /** En- or decrypted message */
+    /**
+     * En- or decrypted message
+     */
     private String outputMessage = "";
 
-    /** Code word with which encryption will be carried out */
-    private String codeWord = "";
+    /**
+     * Message from user
+     */
+    private char[] inputMessage;
 
-    /** A character array containing the processed custom message */
-    private char[] messageToChars;
+    /**
+     * Code word with which encryption will be carried out
+     */
+    private char[] codeWord;
 
-    /** A character array containing the processed code word */
-    private char[] codeWordToChars;
-
-    /** Method that launches the program */
+    /**
+     * Method that launches the program
+     */
     public static void main(String[] args) {
-        CodeWordCipher cwp = new CodeWordCipher();
-
-        cwp.setInputMessage();
-        cwp.setCodeWord();
-
-        System.out.println(cwp.decryption());
-        System.out.println(cwp.encryption());
+        CodeWordCipher cwc = new CodeWordCipher();
+        cwc.setInputMessage("Hello world!");
+        cwc.setCodeWord("Abrakadabra");
+        System.out.println(cwc.encryption());
     }
 
-    /** Method for creating {@link CodeWordCipher#englishAlphabet} */
+    /**
+     * Method for creating {@link CodeWordCipher#englishAlphabet}
+     */
     private void createEnglishAlphabet() {
         for (char letter = 'a'; letter <= 'z'; letter++) {
             englishAlphabet.add(letter);
         }
     }
 
-    /** Method that creates a new alphabet with a {@link CodeWordCipher#codeWord} */
+    /**
+     * Method that creates a new alphabet with a {@link CodeWordCipher#codeWord}
+     */
     private void createNewAlphabet() {
         newAlphabet = new LinkedList<Character>(englishAlphabet);
-        for (char c : codeWordToChars) {
+        for (char c : codeWord) {
             if (newAlphabet.contains(c)) {
                 newAlphabet.remove(newAlphabet.indexOf(c));
                 newAlphabet.addFirst(c);
@@ -62,34 +65,30 @@ public class CodeWordCipher {
         }
     }
 
-    /** Setter for {@link CodeWordCipher#inputMessage} */
-    private void setInputMessage() {
-        System.out.println("- Your message:");
-        inputMessage = sc.nextLine().toLowerCase();
-        messageToChars = inputMessage.toCharArray();
+    /**
+     * Setter for {@link CodeWordCipher#inputMessage}
+     */
+    public void setInputMessage(String inputMessage) {
+        this.inputMessage = inputMessage.toLowerCase().toCharArray();
     }
 
-    /** Setter for {@link CodeWordCipher#codeWord} */
-    private void setCodeWord() {
-        System.out.println("- Your code word:");
-        codeWord = sc.nextLine().toLowerCase();
-
-        codeWordToChars = new char[codeWord.length()];
-        for (int i = codeWord.length() - 1; i >= 0; i--) {
-            codeWordToChars[i] = codeWord.charAt(i);
-        }
+    /**
+     * Setter for {@link CodeWordCipher#codeWord}
+     */
+    public void setCodeWord(String codeWord) {
+        this.codeWord = codeWord.toLowerCase().toCharArray();
     }
 
     /**
      * Method for encrypting a user message with code word cipher
-     * 
+     *
      * @return outputMessage {@link CodeWordCipher#outputMessage}
      */
-    private String encryption() {
+    public String encryption() {
         createEnglishAlphabet();
         createNewAlphabet();
 
-        for (char c : messageToChars) {
+        for (char c : inputMessage) {
             if (englishAlphabet.contains(c)) {
                 outputMessage += newAlphabet.get(englishAlphabet.indexOf(c));
             } else {
@@ -97,20 +96,19 @@ public class CodeWordCipher {
             }
         }
 
-        sc.close();
         return outputMessage;
     }
 
     /**
      * Method for decrypting a user message with code word cipher
-     * 
+     *
      * @return outputMessage {@link CodeWordCipher#outputMessage}
      */
-    private String decryption() {
+    public String decryption() {
         createEnglishAlphabet();
         createNewAlphabet();
 
-        for (char c : messageToChars) {
+        for (char c : inputMessage) {
             if (newAlphabet.contains(c)) {
                 outputMessage += englishAlphabet.get(newAlphabet.indexOf(c));
             } else {
@@ -118,7 +116,6 @@ public class CodeWordCipher {
             }
         }
 
-        sc.close();
         return outputMessage;
     }
 }
