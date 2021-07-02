@@ -4,7 +4,7 @@ import java.util.LinkedList;
  * Class with methods for encrypting messages with code word cipher
  *
  * @author VitasSalvantes
- * @version 1.5
+ * @version 3.0
  */
 public class CodeWordCipher {
 
