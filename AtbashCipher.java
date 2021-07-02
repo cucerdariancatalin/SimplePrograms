@@ -1,35 +1,41 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * Class for encrypting messages with Atbash cipher
- * 
+ *
  * @author VitasSalvantes
- * @version 1.5
+ * @version 3.0
  */
 
 public class AtbashCipher {
 
-    /** List of letters of the English alphabet */
+    /**
+     * List of letters of the English alphabet
+     */
     private final ArrayList<Character> englishAlphabet = new ArrayList<Character>();
 
-    /** Message from user */
-    private String inputMessage;
-
-    /** En- or decrypted message */
+    /**
+     * En- or decrypted message
+     */
     private String outputMessage = "";
 
-    /** A character array containing the processed custom message */
-    private char[] chars;
+    /**
+     * Message from user
+     */
+    private char[] inputMessage;
 
-    /** Method that launches the program */
+    /**
+     * Method that launches the program
+     */
     public static void main(String[] args) {
         AtbashCipher ac = new AtbashCipher();
-        ac.setInputMessage();
+        ac.setInputMessage("Hello world!");
         System.out.println(ac.encryption());
     }
 
-    /** Method for creating letters of the English alphabet */
+    /**
+     * Method for creating letters of the English alphabet
+     */
     private void createEnglishAlphabet() {
         for (char letter = 'a'; letter <= 'z'; letter++) {
             englishAlphabet.add(letter);
@@ -37,19 +43,19 @@ public class AtbashCipher {
     }
 
     /**
-     * Setter for {@link AtbashCipher#inputMessage} and {@link AtbashCipher#chars}
+     * Setter for {@link AtbashCipher#inputMessage}
      */
-    private void setInputMessage() {
-        System.out.println("Your message:");
-        inputMessage = new Scanner(System.in).nextLine().toLowerCase();
-        chars = inputMessage.toCharArray();
+    public void setInputMessage(String inputMessage) {
+        this.inputMessage = inputMessage.toLowerCase().toCharArray();
     }
 
-    /** Method for encrypting a user message with Atbash cipher */
-    private String encryption() {
+    /**
+     * Method for encrypting a user message with Atbash cipher
+     */
+    public String encryption() {
         createEnglishAlphabet();
 
-        for (char c : chars) {
+        for (char c : inputMessage) {
             if (englishAlphabet.contains(c)) {
                 outputMessage += englishAlphabet.get(25 - englishAlphabet.indexOf(c));
             } else {
