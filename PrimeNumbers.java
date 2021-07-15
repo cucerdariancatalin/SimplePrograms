@@ -2,33 +2,41 @@ import java.util.Scanner;
 
 /**
  * Class with methods for printing prime numbers
- * 
+ *
  * @author VitasSalvantes
- * @version 1.0
+ * @version 1.5
  */
 
 public class PrimeNumbers {
 
-    /** A Scanner class object that accepts user input */
-    private Scanner sc;
+    /**
+     * A Scanner class object that accepts user input
+     */
+    private Scanner scanner;
 
-    /** The number of prime numbers displayed */
-    private int quantity;
+    /**
+     * The number of prime numbers displayed
+     */
+    private int numberOfPrimes;
 
-    /** Method that launches the program */
+    /**
+     * Method that launches the program
+     */
     public static void main(String[] args) {
         PrimeNumbers pn = new PrimeNumbers();
 
         pn.setQuantity();
-        System.out.println(pn.creatPrimeNumbers());
+        System.out.println(pn.createPrimeNumbers());
     }
 
-    /** Method for creating strings containing prime numbers */
-    private String creatPrimeNumbers() {
-        String s = "";
+    /**
+     * Method for creating strings containing prime numbers
+     */
+    public String createPrimeNumbers() {
+        StringBuilder primesOutput = new StringBuilder();
         int number = 2;
 
-        while (quantity > 0) {
+        while (numberOfPrimes > 0) {
 
             for (int i = 2; i <= number; i++) {
 
@@ -37,22 +45,24 @@ public class PrimeNumbers {
                 }
 
                 if (number == i) {
-                    s += number + " ";
-                    quantity--;
+                    primesOutput.append(number).append(" ");
+                    numberOfPrimes--;
                 }
             }
 
             number++;
         }
-        return s;
+        return primesOutput.toString();
     }
 
-    /** Setter for {@link PrimeNumbers#quantity} */
+    /**
+     * Setter for {@link PrimeNumbers#numberOfPrimes}
+     */
     public void setQuantity() {
-        sc = new Scanner(System.in);
+        scanner = new Scanner(System.in);
 
         System.out.println("- Quantity?");
-        quantity = sc.nextInt();
-        sc.close();
+        numberOfPrimes = scanner.nextInt();
+        scanner.close();
     }
 }
