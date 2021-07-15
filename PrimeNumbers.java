@@ -6,7 +6,6 @@ import java.util.Scanner;
  * @author VitasSalvantes
  * @version 1.5
  */
-
 public class PrimeNumbers {
 
     /**
