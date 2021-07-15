@@ -1,8 +1,10 @@
 public class CommonDenominators {
     public static void main(String[] args) {
-        long[][] listOfFractions = {{1, 2}, {2, 3}, {3, 4}, {1, 6}};
-
         CommonDenominators cd = new CommonDenominators();
+        long[][] listOfFractions = {{10, 20}, {200, 300}, {3, 4}, {1, 6}};
+
+        listOfFractions = cd.reduceFractions(listOfFractions);
+
         long leastCommonMultiple = cd.findLeastCommonMultipleForDenominators(listOfFractions);
         System.out.println("Least common multiple for the denominators of fractions: " + leastCommonMultiple);
 
@@ -10,17 +12,22 @@ public class CommonDenominators {
         System.out.println("Fractions with a common denominator: " + output);
     }
 
-    public long[][] reduceFractions(long[][] listOfFracts) { //TODO
+    public long[][] reduceFractions(long[][] listOfFractions) {
+        for (long[] fraction : listOfFractions) {
+            while (fraction[0] % 10 == 0 && fraction[1] % 10 == 0) {
+                fraction[0] /= 10;
+                fraction[1] /= 10;
+            }
+        }
 
-
-        return listOfFracts;
+        return listOfFractions;
     }
 
     public long findLeastCommonMultipleForDenominators(long[][] listOfFractions) {
         long oldLeastCommonMultiple = 1L, newLeastCommonMultiple = 1L, counter = 2L;
 
-        for (long[] array : listOfFractions) {
-            while (newLeastCommonMultiple % array[1] != 0) {
+        for (long[] fraction : listOfFractions) {
+            while (newLeastCommonMultiple % fraction[1] != 0) {
                 newLeastCommonMultiple = oldLeastCommonMultiple;
                 newLeastCommonMultiple *= counter;
                 counter++;
@@ -36,8 +43,8 @@ public class CommonDenominators {
                                         long[][] listOfFractions) {
         String formattedOutput = "";
 
-        for (long[] array : listOfFractions) {
-            long numerator = array[0] * leastCommonMultipleForDenominators / array[1];
+        for (long[] fraction : listOfFractions) {
+            long numerator = fraction[0] * leastCommonMultipleForDenominators / fraction[1];
             long denominator = leastCommonMultipleForDenominators;
             formattedOutput += "(" + numerator + "," + denominator + ")";
         }
