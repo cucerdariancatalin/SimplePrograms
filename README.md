@@ -32,6 +32,7 @@ the [wiki](https://github.com/VitasSalvantes/Simple-Examples/wiki).
 - [PrimeNumbers](#PrimeNumbers)
 - [RecamanSequence](#RecamanSequence)
 - [SquareEveryDigit](#SquareEveryDigit)
+- [TortoiseRacing](#TortoiseRacing)
 
 ## AmountOfSalaries ##
 
@@ -357,8 +358,8 @@ The algorithm of work is quite simple:
 3. We bring all fractions to a common denominator (it is equal to the least common multiple)
 4. We get the answer as a string like "(numerator_1,denominator_1)(numerator_2,denominator_2)...(numerator_n,
    denominator_n)"
-   
-This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d95)
+
+This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d95).
 
 [Here](CommonDenominators.java) you can see the implementation of this program in Java.
 
@@ -377,11 +378,11 @@ and [here](ExchangedValues.kt) in Kotlin.
 In mathematics, the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than
 or equal to n:
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4f850a56fb2d948805be9a7eb87b7b0bbeacb1c5">
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4f850a56fb2d948805be9a7eb87b7b0bbeacb1c5" alt="factorial-formula">
 
 For example,
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ef2aaeff6a5a3fe133932ab28153a750783a9ab">
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ef2aaeff6a5a3fe133932ab28153a750783a9ab" alt="factorial-example">
 
 The value of 0! is 1, according to the convention for an empty product.
 
@@ -421,17 +422,17 @@ and [here](Factorial.py) in Python.
 In mathematics, the Fibonacci numbers, commonly denoted Fn, form a sequence, called the Fibonacci sequence, such that
 each number is the sum of the two preceding ones, starting from 0 and 1. That is,
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c667d91153450b3a161371582ee8227af85951f">
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c667d91153450b3a161371582ee8227af85951f" alt="fibonacci-formula">
 
 and
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4fa6d281e7a54e08aeffeef7458ddc0884333686">
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4fa6d281e7a54e08aeffeef7458ddc0884333686" alt="fibonacci-formula">
 
 for n > 1.
 
 The beginning of the sequence is thus:
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d9941f4184ea7677a056402b98d8b741af937f80">
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d9941f4184ea7677a056402b98d8b741af937f80" alt="fibonacci-example">
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
 
@@ -514,7 +515,7 @@ ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 
    arithmetic: every natural number greater than 1 is either a prime itself or can be factorized as a product of primes
    that is unique up to their order.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Primes-vs-composites.svg/800px-Primes-vs-composites.svg.png" width="220" heigth="309">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Primes-vs-composites.svg/800px-Primes-vs-composites.svg.png" width="220" height="309" alt="primes-image">
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Prime_number))
 
@@ -529,10 +530,10 @@ often defined using recursion.
 It takes its name after its inventor Bernardo Recamán Santos (Bogotá, August 5, 1954), a Colombian mathematician.
 
 The Recamán's
-sequence <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda"> is
+sequence <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda" alt="recaman-sequence-formula"> is
 defined as:
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89ab504e66d289aeb91cdd3c9b3d88212a13f506">
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89ab504e66d289aeb91cdd3c9b3d88212a13f506" alt="recaman-sequence-formula">
 
 The first terms of the sequence are:
 
@@ -542,7 +543,7 @@ The first terms of the sequence are:
 
 I like the drawing better:
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Reacam%C3%A1nSequenceDrawing.png/375px-Reacam%C3%A1nSequenceDrawing.png">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Reacam%C3%A1nSequenceDrawing.png/375px-Reacam%C3%A1nSequenceDrawing.png"  alt="recaman-sequence-image">
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
@@ -555,3 +556,17 @@ It's necessary to display the squares of all digits included in the number enter
 For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
 
 [Here](SquareEveryDigit.java) you can see the implementation of this algorithm.
+
+## TortoiseRacing ##
+
+Two tortoises started a race. The first tortoise starts right away, and the second gives is a head start. If the
+distance between the tortoises is known, how long will it take for the second to catch up with the first?
+
+We will assume that the speed of the second is always greater than the speed of the first and that all numbers are
+non-negative integers.
+
+The answer should be displayed as [hours, minutes, seconds].
+
+This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006c/java).
+
+[Here](TortoiseRacing.java) you can see the implementation of this program.
