@@ -1,27 +1,40 @@
 import java.util.Arrays;
 
-public class TortoiseRacing { // TODO: Add description
+/**
+ * A program for finding the time to cover the distance
+ *
+ * @author VitasSalvantes
+ * @version 1.0
+ */
+public class TortoiseRacing {
 
+    /**
+     * Method that launches the program
+     */
     public static void main(String[] args) {
-        int speedOfTheFirstTortoise = 10;
-        int speedOfTheSecondTortoise = 20;
-        int distanceBetweenTortoises = 7;
+        int speedOfTheFirstTortoise = 15, speedOfTheSecondTortoise = 300, distanceBetweenTortoises = 1000;
 
-        TortoiseRacing tr = new TortoiseRacing();
-        int timeBeforeMeeting = tr.calculateTimeBeforeMeeting(speedOfTheFirstTortoise, speedOfTheSecondTortoise, distanceBetweenTortoises);
-
-        System.out.println(Arrays.toString(tr.convertTimeBeforeMeeting(timeBeforeMeeting)));
-
+        System.out.println(Arrays.toString(new TortoiseRacing().calculateTimeBeforeMeeting(speedOfTheFirstTortoise, speedOfTheSecondTortoise, distanceBetweenTortoises)));
     }
 
-    public int calculateTimeBeforeMeeting(int speedOfFirstTortoise,
-                                          int speedOfSecondTortoise,
-                                          int distanceBetweenTortoises) {
+    /**
+     * Method for calculating the time before the meeting.
+     * First the time is found in seconds, then it is converted by the
+     * {@link TortoiseRacing#convertTimeBeforeMeeting(int timeBeforeMeetingInSeconds)} to an array
+     */
+    public int[] calculateTimeBeforeMeeting(int speedOfFirstTortoise,
+                                            int speedOfSecondTortoise,
+                                            int distanceBetweenTortoises) {
 
-        return (3600 * distanceBetweenTortoises) / (speedOfSecondTortoise - speedOfFirstTortoise);
+        int timeBeforeMeetingInSeconds = (3600 * distanceBetweenTortoises) / (speedOfSecondTortoise - speedOfFirstTortoise);
+
+        return convertTimeBeforeMeeting(timeBeforeMeetingInSeconds);
     }
 
-    public int[] convertTimeBeforeMeeting(int timeBeforeMeetingInSeconds) {
+    /**
+     * Method for converting to an array of the form [hours, minutes, seconds]
+     */
+    private int[] convertTimeBeforeMeeting(int timeBeforeMeetingInSeconds) {
         int[] convertedTime = new int[3];
         convertedTime[0] = timeBeforeMeetingInSeconds / 3600;
         convertedTime[1] = (timeBeforeMeetingInSeconds % 3600) / 60;
