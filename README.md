@@ -547,7 +547,7 @@ I like the drawing better:
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
-[Here](RecamanSequence.java) you can see the implementation of the Recaman sequence.
+[Here](RecamanSequence.java) you can see the implementation of the Recaman sequence in Java.
 
 ## SquareEveryDigit ##
 
@@ -555,7 +555,7 @@ It's necessary to display the squares of all digits included in the number enter
 
 For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
 
-[Here](SquareEveryDigit.java) you can see the implementation of this algorithm.
+[Here](SquareEveryDigit.java) you can see the implementation of this algorithm in Java.
 
 ## TortoiseRacing ##
 
@@ -569,4 +569,4 @@ The answer should be displayed as [hours, minutes, seconds].
 
 This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006c/java).
 
-[Here](TortoiseRacing.java) you can see the implementation of this program.
+[Here](TortoiseRacing.java) you can see the implementation of this program in Java.
