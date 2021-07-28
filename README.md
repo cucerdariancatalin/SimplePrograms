@@ -1,14 +1,23 @@
-# Repository guide #
+# Simple programs #
 
 This repository presents implementations of various algorithms in various programming languages (
 the [author](https://github.com/VitasSalvantes) mainly uses Java). You can suggest your own options for implementing
 existing examples (naming them in accordance with the samples) or new options in any programming language.
 
-For quick access to the discription of the program and its implementation you can use
-the [list of all programs](#List-of-all-programs).
+## Content ##
 
-If you want to contribute to the development of the project, please visit
-the [wiki](https://github.com/VitasSalvantes/Simple-Examples/wiki).
+- [How does it work](#How-does-it-work)
+- [List of all programs](#List-of-all-programs)
+- [Technologies](#Technologies)
+- [Development progress](#Development-progress)
+- [Project statistics](#Project-statistics)
+- [How to install](#How-to-install)
+- [How to contribute](#How-to-contribute)
+
+## How does it work ##
+
+For quick access to the description of the program and its implementation you can use
+the [list of all programs](#List-of-all-programs).
 
 ## List of all programs ##
 
@@ -34,12 +43,12 @@ the [wiki](https://github.com/VitasSalvantes/Simple-Examples/wiki).
 - [SquareEveryDigit](#SquareEveryDigit)
 - [TortoiseRacing](#TortoiseRacing)
 
-## AmountOfSalaries ##
+### AmountOfSalaries ###
 
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the
 same class) is implemented in Java.
 
-## AnagramDetection ##
+### AnagramDetection ###
 
 An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the
 original letters exactly once. For example, the word *anagram* itself can be rearranged into *nag a ram*, also the word
@@ -53,7 +62,7 @@ serious or skilled anagrammatist is to produce anagrams that reflect or comment 
 
 [Here](AnagramDetection.java) you can see the implementation of the anagram detection in Java.
 
-## AtbashCipher ##
+### AtbashCipher ###
 
 The Atbash cipher is a particular type of monoalphabetic cipher formed by taking the alphabet (or abjad, syllabary,
 etc.) and mapping it to its reverse, so that the first letter becomes the last letter, the second letter becomes the
@@ -127,11 +136,11 @@ second to last letter, and so on. For example, the Latin alphabet would work lik
 
 [Here](AtbashCipher.java) you can see the implementation of Atbash Cipher in Java.
 
-## ArrayInitialization ##
+### ArrayInitialization ###
 
 [Here](ArrayInitialization.java) you can see how array initialization is implemented in the class constructor in Java.
 
-## BubbleSort ##
+### BubbleSort ###
 
 Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the
 list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated
@@ -182,7 +191,7 @@ in [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort#:~:text=Bubble%20sort%2
 
 [Here](BubbleSort.kt) you can see example of bubble sort implementation in Kotlin.
 
-## CaesarCipher ##
+### CaesarCipher ###
 
 In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one
 of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in
@@ -262,13 +271,13 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 
 [Here](CaesarCipher.java) you can see the implementation of Caesar Cipher (i used offset to the right) in Java.
 
-## ChangingArrayType ##
+### ChangingArrayType ###
 
 [Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with
 String values) is implemented in Java. The second array takes all the values of the first array, converts them to String
 type and stores them in reverse order.
 
-## CodeWordCipher ##
+### CodeWordCipher ###
 
 Substitution of single letters separately — simple substitution — can be demonstrated by writing out the alphabet in
 some order to represent the substitution. This is termed a substitution alphabet. The cipher alphabet may be shifted or
@@ -346,7 +355,7 @@ Using this system, the keyword "zebras" gives us the following alphabets:
 
 [Here](CodeWordCipher.java) you can see the implementation of code word cipher in Java.
 
-## CommonDenominators ##
+### CommonDenominators ###
 
 This simple program converts any number of fractions to a common denominator.
 
@@ -363,17 +372,17 @@ This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d9
 
 [Here](CommonDenominators.java) you can see the implementation of this program in Java.
 
-## ConsoleCalc ##
+### ConsoleCalc ###
 
 [Here](ConsoleCalc.java) you can see the implementation of a simple calculator in Java. You can enter an unlimited
 number of numbers and perform various mathematical operations with them.
 
-## ExchangedValues ##
+### ExchangedValues ###
 
 [Here](ExchangedValues.java) you can see how to exchange values between two variables without using a third in Java
 and [here](ExchangedValues.kt) in Kotlin.
 
-## Factorial ##
+### Factorial ###
 
 In mathematics, the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than
 or equal to n:
@@ -417,7 +426,7 @@ The value of 0! is 1, according to the convention for an empty product.
 [Here](Factorial.java) you can see the implementation of Factorial in Java, [here](Factorial.kt) in Kotlin
 and [here](Factorial.py) in Python.
 
-## FibonacciNumbers ##
+### FibonacciNumbers ###
 
 In mathematics, the Fibonacci numbers, commonly denoted Fn, form a sequence, called the Fibonacci sequence, such that
 each number is the sum of the two preceding ones, starting from 0 and 1. That is,
@@ -439,7 +448,7 @@ The beginning of the sequence is thus:
 [Here](FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in Java, [here](FibonacciNumbers.kt)
 in Kotlin and [here](FibonacciNumbers.py) in Python.
 
-## FirstUniqueCharacterInString ##
+### FirstUniqueCharacterInString ###
 
 You need to find the first non-repeating character in the string that the user enters.
 
@@ -451,7 +460,7 @@ First unique character: "W".
 
 [Here](FirstUniqueCharacterInString.java) you can see the solution to this task in Java.
 
-## FizzBuzz ##
+### FizzBuzz ###
 
 The program should print numbers from 1 to 100. But instead of multiples of three, it prints "Fizz", and instead of
 numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same
@@ -459,7 +468,7 @@ time, it prints "FizzBuzz".
 
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](FizzBuzz.kt) in Kotlin.
 
-## IsSquare ##
+### IsSquare ###
 
 In mathematics, a square is the result of multiplying a number by itself.
 
@@ -467,7 +476,7 @@ In mathematics, a square is the result of multiplying a number by itself.
 
 [Here](IsSquare.java) you can see an example of defining a square in Java.
 
-## PerfectNumbers ##
+### PerfectNumbers ###
 
 In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding
 the number itself. For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect
@@ -505,7 +514,7 @@ number.
 
 **Attention! To display more than four numbers, you will have to wait!** :)
 
-## PrimeNumbers ##
+### PrimeNumbers ###
 
 A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers. A
 natural number greater than 1 that is not prime is called a composite number. For example, 5 is prime because the only
@@ -521,7 +530,7 @@ ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 
 
 [Here](PrimeNumbers.java) you can see the implementation of prime numbers in Java.
 
-## RecamanSequence ##
+### RecamanSequence ###
 
 In mathematics and computer science, the Recamán's sequence (or Recaman's sequence) is a well known sequence defined by
 a recurrence relation, because its elements are related to the previous elements in a straightforward way, they are
@@ -530,8 +539,8 @@ often defined using recursion.
 It takes its name after its inventor Bernardo Recamán Santos (Bogotá, August 5, 1954), a Colombian mathematician.
 
 The Recamán's
-sequence <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda" alt="recaman-sequence-formula"> is
-defined as:
+sequence <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda" alt="recaman-sequence-formula">
+is defined as:
 
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89ab504e66d289aeb91cdd3c9b3d88212a13f506" alt="recaman-sequence-formula">
 
@@ -549,7 +558,7 @@ I like the drawing better:
 
 [Here](RecamanSequence.java) you can see the implementation of the Recaman sequence in Java.
 
-## SquareEveryDigit ##
+### SquareEveryDigit ###
 
 It's necessary to display the squares of all digits included in the number entered by the user.
 
@@ -557,7 +566,7 @@ For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
 
 [Here](SquareEveryDigit.java) you can see the implementation of this algorithm in Java.
 
-## TortoiseRacing ##
+### TortoiseRacing ###
 
 Two tortoises started a race. The first tortoise starts right away, and the second gives is a head start. If the
 distance between the tortoises is known, how long will it take for the second to catch up with the first?
@@ -570,3 +579,41 @@ The answer should be displayed as [hours, minutes, seconds].
 This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006c/java).
 
 [Here](TortoiseRacing.java) you can see the implementation of this program in Java.
+
+## Technologies ##
+
+- [Java](https://www.oracle.com/java/) ([AdoptOpenJDK version 11.0.10](https://adoptopenjdk.net/)),
+  [Kotlin](https://kotlinlang.org/) ([AdoptOpenJDK version 11.0.10](https://adoptopenjdk.net/))
+  and [Python](https://www.python.org/) programming languages were chosen for development.
+
+- Development was carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Ultimate Edition (license for
+  students).
+
+- [WakaTime](https://wakatime.com/) was used to track activity.
+
+- [Microsoft To Do](https://todo.microsoft.com/tasks/) was used to schedule tasks.
+
+## Development progress ##
+
+Development is in an active state.
+
+As there is no clear plan, any interesting programs are welcome.
+
+**Freedom to be creative!**
+
+## Project statistics ##
+
+[![wakatime](https://wakatime.com/badge/github/VitasSalvantes/SimplePrograms.svg)](https://wakatime.com/badge/github/VitasSalvantes/SimplePrograms)
+
+See more on [WakaTime](https://wakatime.com/@VitasSalvantes/projects/qomqnujpcs)
+
+*Activity tracking started on **July 1, 2021**.*
+
+## How to install ##
+
+It is enough to copy code of any program and run it in any suitable development environment, or use the command
+line/terminal.
+
+## How to contribute ##
+
+If you want to take part in the development of this project, please read [this](<!--TODO-->) file.
