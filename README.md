@@ -470,7 +470,7 @@ time, it prints "FizzBuzz".
 
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](FizzBuzz.kt) in Kotlin.
 
-## HelloWorld ##
+### HelloWorld ###
 
 A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!". Such a
 program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming
@@ -495,7 +495,7 @@ In mathematics, a square is the result of multiplying a number by itself.
 
 [Here](IsSquare.java) you can see an example of defining a square in Java.
 
-## MultiplicationTableForNumber ##
+### MultiplicationTableForNumber ###
 
 This is a simple program that prints the multiplication table for a single number from 0 to 10.
 
