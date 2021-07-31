@@ -5,10 +5,14 @@
  * @version 1.0
  */
 public class MultiplicationTableForNumber {
+
+    /**
+     * Method that launches the program
+     */
     public static void main(String[] args) {
-        int secondNumber = 5;
+        int firstNumber = 5;
         StringBuilder multiplicationTableForNumber = new StringBuilder();
-        for (int firstNumber = 1; firstNumber < 11; firstNumber++) {
+        for (int secondNumber = 1; secondNumber < 11; secondNumber++) {
             multiplicationTableForNumber.append(firstNumber).append(" * ").append(secondNumber).append(" = ").append(firstNumber * secondNumber).append("\n");
         }
 
