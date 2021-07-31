@@ -497,6 +497,13 @@ In mathematics, a square is the result of multiplying a number by itself.
 
 ## MultiplicationTableForNumber ##
 
+This is a simple program that prints the multiplication table for a single number from 0 to 10.
+
+This task is on [Codewars](https://www.codewars.com/kata/5a2fd38b55519ed98f0000ce).
+
+[Here](MultiplicationTableForNumber.java) you can see the implementation of this program in Java
+and [here](MultiplicationTableForNumber.kt) in Kotlin.
+
 ### PerfectNumbers ###
 
 In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding
