@@ -36,7 +36,9 @@ the [list of all programs](#List-of-all-programs).
 - [FibonacciNumbers](#FibonacciNumbers)
 - [FirstUniqueCharacterInString](#FirstUniqueCharacterInString)
 - [FizzBuzz](#FizzBuzz)
+- [HelloWorld](#HelloWorld)
 - [IsSquare](#IsSquare)
+- [MultiplicationTableForNumber](#MultiplicationTableForNumber)
 - [PerfectNumbers](#PerfectNumbers)
 - [PrimeNumbers](#PrimeNumbers)
 - [RecamanSequence](#RecamanSequence)
@@ -468,6 +470,23 @@ time, it prints "FizzBuzz".
 
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](FizzBuzz.kt) in Kotlin.
 
+## HelloWorld ##
+
+A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!". Such a
+program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming
+language. It is often the first program written by people learning to code. It can also be used as a sanity test to make
+sure that a computer software intended to compile or run source code is correctly installed, and that the operator
+understands how to use it.
+
+While small test programs have existed since the development of programmable computers, the tradition of using the
+phrase "Hello, World!" as a test message was influenced by an example program in the seminal 1978 book "The C
+Programming Language". The example program in that book prints "", and was inherited from a 1974 Bell Laboratories
+internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
+
+(See more in [Wikipedia](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))
+
+[Here](HelloWorld.java) you can see an example of this program in Java and [here](HelloWorld.kt) in Kotlin.
+
 ### IsSquare ###
 
 In mathematics, a square is the result of multiplying a number by itself.
@@ -475,6 +494,8 @@ In mathematics, a square is the result of multiplying a number by itself.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Square_(algebra)))
 
 [Here](IsSquare.java) you can see an example of defining a square in Java.
+
+## MultiplicationTableForNumber ##
 
 ### PerfectNumbers ###
 
