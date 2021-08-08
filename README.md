@@ -41,6 +41,7 @@ the [list of all programs](#List-of-all-programs).
 - [MultiplicationTableForNumber](#MultiplicationTableForNumber)
 - [PerfectNumbers](#PerfectNumbers)
 - [PrimeNumbers](#PrimeNumbers)
+- [QuadraticEquation](#QuadraticEquation)
 - [RecamanSequence](#RecamanSequence)
 - [SquareEveryDigit](#SquareEveryDigit)
 - [TortoiseRacing](#TortoiseRacing)
@@ -557,6 +558,20 @@ ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Prime_number))
 
 [Here](PrimeNumbers.java) you can see the implementation of prime numbers in Java.
+
+### QuadraticEquation ###
+
+There are many ways to solve quadratic equations. This program uses the discriminant method and the p-q-method and
+allows you to solve simple quadratic equations.
+
+Of course, this program has limitations:
+
+- the program works only with decimal fractions (1 = 1.0)
+- the equation must be simplified in advance and reduced to the form ax^2 + bx + c = 0
+
+(See more in [Wikipedia](https://en.wikipedia.org/wiki/Quadratic_equation))
+
+[Here](QuadraticEquation.kt) you can see the implementation of this program in Kotlin.
 
 ### RecamanSequence ###
 
