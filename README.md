@@ -36,6 +36,7 @@ the [list of all programs](#List-of-all-programs).
 - [FibonacciNumbers](#FibonacciNumbers)
 - [FirstUniqueCharacterInString](#FirstUniqueCharacterInString)
 - [FizzBuzz](#FizzBuzz)
+- [HappyBirthday](#HappyBirthday)
 - [HelloWorld](#HelloWorld)
 - [IsSquare](#IsSquare)
 - [MultiplicationTableForNumber](#MultiplicationTableForNumber)
@@ -470,6 +471,16 @@ numbers that are multiples of five, - "Buzz". Instead of numbers that are multip
 time, it prints "FizzBuzz".
 
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](FizzBuzz.kt) in Kotlin.
+
+### HappyBirthday ###
+
+This simple program prints a cake to the console, the size of which depends on the age of the birthday person.
+
+A similar program is present in
+the [Android Basics in Kotlin](https://developer.android.com/codelabs/basic-android-kotlin-training-kotlin-birthday-message?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-one%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-kotlin-birthday-message#8)
+by Google.
+
+[Here](HappyBirthday.kt) you can see the implementation of this program in Kotlin.
 
 ### HelloWorld ###
 
