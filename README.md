@@ -1,10 +1,9 @@
-# Simple programs #
+# Simple programs
 
-This repository presents implementations of various algorithms in various programming languages (
-the [author](https://github.com/VitasSalvantes) mainly uses Java). You can suggest your own options for implementing
+This repository presents implementations of various algorithms in various programming languages (the [author](https://github.com/VitasSalvantes) mainly uses Java). You can suggest your own options for implementing
 existing examples (naming them in accordance with the samples) or new options in any programming language.
 
-## Content ##
+## Content
 
 - [How does it work](#How-does-it-work)
 - [List of all programs](#List-of-all-programs)
@@ -14,12 +13,12 @@ existing examples (naming them in accordance with the samples) or new options in
 - [How to install](#How-to-install)
 - [How to contribute](#How-to-contribute)
 
-## How does it work ##
+## How does it work
 
 For quick access to the description of the program and its implementation you can use
 the [list of all programs](#List-of-all-programs).
 
-## List of all programs ##
+## List of all programs
 
 - [AmountOfSalaries](#AmountOfSalaries)
 - [AnagramDetection](#AnagramDetection)
@@ -31,6 +30,7 @@ the [list of all programs](#List-of-all-programs).
 - [CodeWordCipher](#CodeWordCipher)
 - [CommonDenominators](#CommonDenominators)
 - [ConsoleCalc](#ConsoleCalc)
+- [CountTheDigit](#CountTheDigit)
 - [ExchangedValues](#ExchangedValues)
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
@@ -47,12 +47,12 @@ the [list of all programs](#List-of-all-programs).
 - [SquareEveryDigit](#SquareEveryDigit)
 - [TortoiseRacing](#TortoiseRacing)
 
-### AmountOfSalaries ###
+### AmountOfSalaries
 
 [Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the
 same class) is implemented in Java.
 
-### AnagramDetection ###
+### AnagramDetection
 
 An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the
 original letters exactly once. For example, the word *anagram* itself can be rearranged into *nag a ram*, also the word
@@ -66,7 +66,7 @@ serious or skilled anagrammatist is to produce anagrams that reflect or comment 
 
 [Here](AnagramDetection.java) you can see the implementation of the anagram detection in Java.
 
-### AtbashCipher ###
+### AtbashCipher
 
 The Atbash cipher is a particular type of monoalphabetic cipher formed by taking the alphabet (or abjad, syllabary,
 etc.) and mapping it to its reverse, so that the first letter becomes the last letter, the second letter becomes the
@@ -140,19 +140,19 @@ second to last letter, and so on. For example, the Latin alphabet would work lik
 
 [Here](AtbashCipher.java) you can see the implementation of Atbash Cipher in Java.
 
-### ArrayInitialization ###
+### ArrayInitialization
 
 [Here](ArrayInitialization.java) you can see how array initialization is implemented in the class constructor in Java.
 
-### BubbleSort ###
+### BubbleSort
 
 Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the
 list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated
 until the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "
 bubble" to the top of the list.
 
-Take an array of numbers " 5 1 4 2 8", and sort the array from lowest number to greatest number using bubble sort. In
-each step, elements written in bold are being compared. Three passes will be required;
+Take an array of numbers " 5 1 4 2 8" and sort the array from lowest number to greatest number using bubble sort. In
+each step, elements written in bold are being compared. Three passes will be required:
 
 **First Pass**
 
@@ -195,7 +195,7 @@ in [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort#:~:text=Bubble%20sort%2
 
 [Here](BubbleSort.kt) you can see example of bubble sort implementation in Kotlin.
 
-### CaesarCipher ###
+### CaesarCipher
 
 In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one
 of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in
@@ -275,13 +275,13 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 
 [Here](CaesarCipher.java) you can see the implementation of Caesar Cipher (i used offset to the right) in Java.
 
-### ChangingArrayType ###
+### ChangingArrayType
 
 [Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with
 String values) is implemented in Java. The second array takes all the values of the first array, converts them to String
 type and stores them in reverse order.
 
-### CodeWordCipher ###
+### CodeWordCipher
 
 Substitution of single letters separately — simple substitution — can be demonstrated by writing out the alphabet in
 some order to represent the substitution. This is termed a substitution alphabet. The cipher alphabet may be shifted or
@@ -359,7 +359,7 @@ Using this system, the keyword "zebras" gives us the following alphabets:
 
 [Here](CodeWordCipher.java) you can see the implementation of code word cipher in Java.
 
-### CommonDenominators ###
+### CommonDenominators
 
 This simple program converts any number of fractions to a common denominator.
 
@@ -376,17 +376,17 @@ This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d9
 
 [Here](CommonDenominators.java) you can see the implementation of this program in Java.
 
-### ConsoleCalc ###
+### ConsoleCalc
 
 [Here](ConsoleCalc.java) you can see the implementation of a simple calculator in Java. You can enter an unlimited
 number of numbers and perform various mathematical operations with them.
 
-### ExchangedValues ###
+### ExchangedValues
 
 [Here](ExchangedValues.java) you can see how to exchange values between two variables without using a third in Java
 and [here](ExchangedValues.kt) in Kotlin.
 
-### Factorial ###
+### Factorial
 
 In mathematics, the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than
 or equal to n:
@@ -430,7 +430,7 @@ The value of 0! is 1, according to the convention for an empty product.
 [Here](Factorial.java) you can see the implementation of Factorial in Java, [here](Factorial.kt) in Kotlin
 and [here](Factorial.py) in Python.
 
-### FibonacciNumbers ###
+### FibonacciNumbers
 
 In mathematics, the Fibonacci numbers, commonly denoted Fn, form a sequence, called the Fibonacci sequence, such that
 each number is the sum of the two preceding ones, starting from 0 and 1. That is,
@@ -452,7 +452,7 @@ The beginning of the sequence is thus:
 [Here](FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in Java, [here](FibonacciNumbers.kt)
 in Kotlin and [here](FibonacciNumbers.py) in Python.
 
-### FirstUniqueCharacterInString ###
+### FirstUniqueCharacterInString
 
 You need to find the first non-repeating character in the string that the user enters.
 
@@ -464,7 +464,7 @@ First unique character: "W".
 
 [Here](FirstUniqueCharacterInString.java) you can see the solution to this task in Java.
 
-### FizzBuzz ###
+### FizzBuzz
 
 The program should print numbers from 1 to 100. But instead of multiples of three, it prints "Fizz", and instead of
 numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same
@@ -472,7 +472,7 @@ time, it prints "FizzBuzz".
 
 [Here](FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](FizzBuzz.kt) in Kotlin.
 
-### HappyBirthday ###
+### HappyBirthday
 
 This simple program prints a cake to the console, the size of which depends on the age of the birthday person.
 
@@ -482,7 +482,7 @@ by Google.
 
 [Here](HappyBirthday.kt) you can see the implementation of this program in Kotlin.
 
-### HelloWorld ###
+### HelloWorld
 
 A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!". Such a
 program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming
@@ -499,7 +499,7 @@ internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
 
 [Here](HelloWorld.java) you can see an example of this program in Java and [here](HelloWorld.kt) in Kotlin.
 
-### IsSquare ###
+### IsSquare
 
 In mathematics, a square is the result of multiplying a number by itself.
 
@@ -507,7 +507,7 @@ In mathematics, a square is the result of multiplying a number by itself.
 
 [Here](IsSquare.java) you can see an example of defining a square in Java.
 
-### MultiplicationTableForNumber ###
+### MultiplicationTableForNumber
 
 This is a simple program that prints the multiplication table for a single number from 0 to 10.
 
@@ -516,7 +516,7 @@ This task is on [Codewars](https://www.codewars.com/kata/5a2fd38b55519ed98f0000c
 [Here](MultiplicationTableForNumber.java) you can see the implementation of this program in Java
 and [here](MultiplicationTableForNumber.kt) in Kotlin.
 
-### PerfectNumbers ###
+### PerfectNumbers
 
 In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding
 the number itself. For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect
@@ -554,7 +554,7 @@ number.
 
 **Attention! To display more than four numbers, you will have to wait!** :)
 
-### PrimeNumbers ###
+### PrimeNumbers
 
 A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers. A
 natural number greater than 1 that is not prime is called a composite number. For example, 5 is prime because the only
@@ -570,7 +570,7 @@ ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 
 
 [Here](PrimeNumbers.java) you can see the implementation of prime numbers in Java.
 
-### QuadraticEquation ###
+### QuadraticEquation
 
 There are many ways to solve quadratic equations. This program uses the discriminant method and the p-q-method and
 allows you to solve simple quadratic equations.
@@ -584,7 +584,7 @@ Of course, this program has limitations:
 
 [Here](QuadraticEquation.kt) you can see the implementation of this program in Kotlin.
 
-### RecamanSequence ###
+### RecamanSequence
 
 In mathematics and computer science, the Recamán's sequence (or Recaman's sequence) is a well known sequence defined by
 a recurrence relation, because its elements are related to the previous elements in a straightforward way, they are
@@ -612,7 +612,7 @@ I like the drawing better:
 
 [Here](RecamanSequence.java) you can see the implementation of the Recaman sequence in Java.
 
-### SquareEveryDigit ###
+### SquareEveryDigit
 
 It's necessary to display the squares of all digits included in the number entered by the user.
 
@@ -620,7 +620,7 @@ For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
 
 [Here](SquareEveryDigit.java) you can see the implementation of this algorithm in Java.
 
-### TortoiseRacing ###
+### TortoiseRacing
 
 Two tortoises started a race. The first tortoise starts right away, and the second gives is a head start. If the
 distance between the tortoises is known, how long will it take for the second to catch up with the first?
@@ -634,7 +634,7 @@ This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006
 
 [Here](TortoiseRacing.java) you can see the implementation of this program in Java.
 
-## Technologies ##
+## Technologies
 
 - [Java](https://www.oracle.com/java/) ([AdoptOpenJDK version 11.0.10](https://adoptopenjdk.net/)),
   [Kotlin](https://kotlinlang.org/) ([AdoptOpenJDK version 11.0.10](https://adoptopenjdk.net/))
@@ -647,7 +647,7 @@ This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006
 
 - [Microsoft To Do](https://todo.microsoft.com/tasks/) was used to schedule tasks.
 
-## Development progress ##
+## Development progress
 
 Development is in an active state.
 
@@ -655,7 +655,7 @@ As there is no clear plan, any interesting programs are welcome.
 
 **Freedom to be creative!**
 
-## Project statistics ##
+## Project statistics
 
 [![wakatime](https://wakatime.com/badge/github/VitasSalvantes/SimplePrograms.svg)](https://wakatime.com/badge/github/VitasSalvantes/SimplePrograms)
 
@@ -663,11 +663,11 @@ See more on [WakaTime](https://wakatime.com/@VitasSalvantes/projects/qomqnujpcs)
 
 *Activity tracking started on **July 1, 2021**.*
 
-## How to install ##
+## How to install
 
 It is enough to copy code of any program and run it in any suitable development environment, or use the command
 line/terminal.
 
-## How to contribute ##
+## How to contribute
 
 If you want to take part in the development of this project, please read [this](<!--TODO-->) file.
