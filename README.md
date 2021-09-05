@@ -1,6 +1,7 @@
 # Simple programs
 
-This repository presents implementations of various algorithms in various programming languages (the [author](https://github.com/VitasSalvantes) mainly uses Java). You can suggest your own options for implementing
+This repository presents implementations of various algorithms in various programming languages (
+the [author](https://github.com/VitasSalvantes) mainly uses Java). You can suggest your own options for implementing
 existing examples (naming them in accordance with the samples) or new options in any programming language.
 
 ## Content
@@ -380,6 +381,14 @@ This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d9
 
 [Here](ConsoleCalc.java) you can see the implementation of a simple calculator in Java. You can enter an unlimited
 number of numbers and perform various mathematical operations with them.
+
+### CountTheDigit
+
+In the range from 0 to largestNumber, you need to count the number of repetitions of one arbitrary digit.
+
+This task is on [Codewars](https://www.codewars.com/kata/566fc12495810954b1000030).
+
+[Here](CountTheDigit.kt) you can see the implementation of this program in Kotlin.
 
 ### ExchangedValues
 
