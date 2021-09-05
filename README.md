@@ -683,4 +683,5 @@ line/terminal.
 
 ## How to contribute
 
-If you want to take part in the development of this project, please read [this](<!--TODO-->) file.
+If you want to take part in the development of this project, please
+read [this](https://github.com/VitasSalvantes/SimplePrograms/blob/master/CONTRIBUTING.md) file.
