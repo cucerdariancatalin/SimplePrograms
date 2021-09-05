@@ -1,8 +1,9 @@
 # Simple programs
 
 This repository presents implementations of various algorithms in various programming languages (the
-[author](https://github.com/VitasSalvantes) mainly uses Java). You can suggest your own options for implementing
-existing examples (naming them in accordance with the samples) or new options in any programming language.
+[author](https://github.com/VitasSalvantes) mainly uses [Java](https://www.oracle.com/java/)
+and [Kotlin](https://kotlinlang.org/)). You can suggest your own options for implementing existing examples (naming them
+in accordance with the samples) or new options in any programming language.
 
 ## Content
 
