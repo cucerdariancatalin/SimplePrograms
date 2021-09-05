@@ -1,5 +1,8 @@
 # Simple programs
 
+[![GitHub license](https://img.shields.io/github/license/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/issues)
+
 This repository presents implementations of various algorithms in various programming languages (the
 [author](https://github.com/VitasSalvantes) mainly uses [Java](https://www.oracle.com/java/)
 and [Kotlin](https://kotlinlang.org/)). You can suggest your own options for implementing existing examples (naming them
