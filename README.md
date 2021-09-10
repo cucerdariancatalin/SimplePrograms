@@ -49,6 +49,7 @@ the [list of all programs](#List-of-all-programs).
 - [PrimeNumbers](#PrimeNumbers)
 - [QuadraticEquation](#QuadraticEquation)
 - [RecamanSequence](#RecamanSequence)
+- [Restaurant](#Restaurant)
 - [SquareEveryDigit](#SquareEveryDigit)
 - [TortoiseRacing](#TortoiseRacing)
 
@@ -599,13 +600,13 @@ Of course, this program has limitations:
 
 ### RecamanSequence
 
-In mathematics and computer science, the Recamán's sequence (or Recaman's sequence) is a well known sequence defined by
+In mathematics and computer science, the Recaman's sequence (or Recaman's sequence) is a well known sequence defined by
 a recurrence relation, because its elements are related to the previous elements in a straightforward way, they are
 often defined using recursion.
 
 It takes its name after its inventor Bernardo Recamán Santos (Bogotá, August 5, 1954), a Colombian mathematician.
 
-The Recamán's
+The Recaman's
 sequence <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda" alt="recaman-sequence-formula">
 is defined as:
 
@@ -623,7 +624,18 @@ I like the drawing better:
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
-[Here](RecamanSequence.java) you can see the implementation of the Recaman sequence in Java.
+[Here](RecamanSequence.java) you can see the implementation of the Recaman's sequence in Java.
+
+### Restaurant
+
+This simple program prints the order of a restaurant visitor to the console. During the development,
+the [builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) was used.
+
+A similar program is present in
+the [Android Basics in Kotlin](https://developer.android.com/codelabs/basic-android-kotlin-training-lists?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-2-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-lists#6)
+by Google.
+
+[Here](Restaurant.kt) you can see the implementation of this program in Kotlin.
 
 ### SquareEveryDigit
 
