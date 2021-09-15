@@ -16,12 +16,15 @@ fun main() {
     var minEquationRoot = -2
     var maxEquationRoot = 3
     val roots = mutableSetOf<Int>()
-    TODO("Add <Boolean>")
+    val notRoots = mutableSetOf<Int>()
 
     for (verifiableRoot in minEquationRoot..maxEquationRoot) {
-        if(checkRoot(coefficients, verifiableRoot)) {
+        if (roots.contains(verifiableRoot) || notRoots.contains(verifiableRoot)) continue
+
+        if (checkRoot(coefficients, verifiableRoot)) {
             roots.add(verifiableRoot)
-            TODO("Add if verifiableRoot exist...")
+        } else {
+            notRoots.add(verifiableRoot)
         }
     }
 
@@ -29,14 +32,15 @@ fun main() {
         println(roots)
     } else {
         println("Something is wrong...")
+        TODO("What's wrong?")
     }
 }
 
 fun checkRoot(coefficients: List<Int>, verifiableRoot: Int): Boolean {
     // Yeah!
     var result = 0
-    for (coefficients in coefficients) {
-        result = verifiableRoot * result + coefficients
+    for (coefficient in coefficients) {
+        result = verifiableRoot * result + coefficient
     }
     // Yeah!
     return result == 0
