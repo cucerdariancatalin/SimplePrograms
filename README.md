@@ -46,6 +46,7 @@ the [list of all programs](#List-of-all-programs).
 - [IsSquare](#IsSquare)
 - [MultiplicationTableForNumber](#MultiplicationTableForNumber)
 - [PerfectNumbers](#PerfectNumbers)
+- [Polynomial](#Polynomial)
 - [PrimeNumbers](#PrimeNumbers)
 - [QuadraticEquation](#QuadraticEquation)
 - [RecamanSequence](#RecamanSequence)
@@ -567,6 +568,12 @@ number.
 [Here](PerfectNumbers.java) you can see the implementation of a sequence of perfect numbers in Java.
 
 **Attention! To display more than four numbers, you will have to wait!** :)
+
+### Polynomial
+
+Coming soon...
+
+[Here](Polynomial.kt) you can see the implementation of this program in Kotlin.
 
 ### PrimeNumbers
 
