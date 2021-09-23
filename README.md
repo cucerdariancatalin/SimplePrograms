@@ -8,7 +8,7 @@ This repository presents implementations of various algorithms in various progra
 and [Kotlin](https://kotlinlang.org/)). You can suggest your own options for implementing existing examples (naming them
 in accordance with the samples) or new options in any programming language.
 
-## Content
+## Table of contents
 
 - [How does it work](#How-does-it-work)
 - [List of all programs](#List-of-all-programs)
