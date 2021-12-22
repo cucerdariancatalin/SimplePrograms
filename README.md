@@ -32,6 +32,7 @@ the [list of all programs](#List-of-all-programs).
 - [BubbleSort](#BubbleSort)
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
+- [Chocolate](#Chocolate)
 - [CodeWordCipher](#CodeWordCipher)
 - [CommonDenominators](#CommonDenominators)
 - [ConsoleCalc](#ConsoleCalc)
@@ -288,6 +289,18 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 [Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with
 String values) is implemented in Java. The second array takes all the values of the first array, converts them to String
 type and stores them in reverse order.
+
+### Chocolate
+
+Imagine a chocolate bar. Remember how it is usually split into smaller bits by a special grid?
+
+Now think of chocolate as an N x M rectangle divided into little segments: N segments in length and M in width. Each
+segment is 1x1 and unbreakable. Find out whether it is possible to break off exactly K segments from the chocolate with
+a single straight line: vertical or horizontal.
+
+This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2170).
+
+[Here](Chocolate.java) you can see the implementation of this program in Java.
 
 ### CodeWordCipher
 
