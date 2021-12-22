@@ -159,8 +159,8 @@ list, compares adjacent elements and swaps them if they are in the wrong order. 
 until the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "
 bubble" to the top of the list.
 
-Take an array of numbers " 5 1 4 2 8" and sort the array from lowest number to greatest number using bubble sort. In
-each step, elements written in bold are being compared. Three passes will be required:
+Take an array of numbers " 5 1 4 2 8" and sort the array from the lowest number to the greatest number using bubble
+sort. In each step, elements written in bold are being compared. Three passes will be required:
 
 **First Pass**
 
@@ -281,7 +281,7 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher))
 
-[Here](CaesarCipher.java) you can see the implementation of Caesar Cipher (i used offset to the right) in Java.
+[Here](CaesarCipher.java) you can see the implementation of Caesar Cipher (I used offset to the right) in Java.
 
 ### ChangingArrayType
 
