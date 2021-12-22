@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Simple program to find out whether the queens can capture each other
+ * Simple program to find out whether the queens can capture each other.
  *
  * @author VitasSalvantes
  * @version 1.0
@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Queens {
 
     /**
-     * Method that launches the program
+     * Method that launches the program.
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class Queens {
         boolean intersectHorizontallyOrVertically = x1 == x2 || y1 == y2;
         boolean intersectDiagonally = Math.abs(x1 - x2) == Math.abs(y1 - y2);
 
-        System.out.println("\n- Can queens capture each other?");
+        System.out.println("\nCan queens capture each other?");
         if (intersectHorizontallyOrVertically || intersectDiagonally) {
             System.out.println("YES");
         } else {
