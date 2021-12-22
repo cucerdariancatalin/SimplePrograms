@@ -49,6 +49,7 @@ the [list of all programs](#List-of-all-programs).
 - [Polynomial](#Polynomial)
 - [PrimeNumbers](#PrimeNumbers)
 - [QuadraticEquation](#QuadraticEquation)
+- [Queens](#Queens)
 - [RecamanSequence](#RecamanSequence)
 - [Restaurant](#Restaurant)
 - [SquareEveryDigit](#SquareEveryDigit)
@@ -604,6 +605,18 @@ Of course, this program has limitations:
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Quadratic_equation))
 
 [Here](QuadraticEquation.kt) you can see the implementation of this program in Kotlin.
+
+### Queens
+
+Queen is the most powerful and valuable attacking piece in the game of chess. It combines the powers of the bishop and
+the rook. It is able to move any number of unoccupied squares in a straight line: vertically, horizontally or
+diagonally.
+
+You are given coordinates of two queens on a chess board. Find out whether they can capture each other.
+
+This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2168).
+
+[Here](Queens.java) you can see the implementation of this program in Java.
 
 ### RecamanSequence
 
