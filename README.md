@@ -585,9 +585,14 @@ number.
 
 ### Polynomial
 
-Coming soon...
+In mathematics and computer science, Horner's method (or Horner's scheme) is an algorithm for polynomial evaluation.
+Although named after William George Horner, this method is much older, as it has been attributed to Joseph-Louis
+Lagrange by Horner himself, and can be traced back many hundreds of years to Chinese and Persian mathematicians. After
+the introduction of computers, this algorithm became fundamental for computing efficiently with polynomials.
 
-[Here](Polynomial.kt) you can see the implementation of this program in Kotlin.
+(See more in [Wikipedia](https://en.wikipedia.org/wiki/Horner%27s_method))
+
+[Here](Polynomial.kt) you can see the implementation of this algorithm in Kotlin.
 
 ### PrimeNumbers
 
