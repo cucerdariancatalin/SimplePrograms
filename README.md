@@ -54,6 +54,7 @@ the [list of all programs](#List-of-all-programs).
 - [RecamanSequence](#RecamanSequence)
 - [Restaurant](#Restaurant)
 - [SquareEveryDigit](#SquareEveryDigit)
+- [TicTacToe](#TicTacToe)
 - [TortoiseRacing](#TortoiseRacing)
 
 ### AmountOfSalaries
@@ -682,6 +683,12 @@ It's necessary to display the squares of all digits included in the number enter
 For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
 
 [Here](SquareEveryDigit.java) you can see the implementation of this algorithm in Java.
+
+### TicTacToe
+
+Coming soon...
+
+[Here](TicTacToe.java) you can see the implementation of this game in Java.
 
 ### TortoiseRacing
 
