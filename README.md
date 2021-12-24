@@ -46,6 +46,7 @@ the [list of all programs](#List-of-all-programs).
 - [HelloWorld](#HelloWorld)
 - [IsSquare](#IsSquare)
 - [MultiplicationTableForNumber](#MultiplicationTableForNumber)
+- [OrderedSequence](#OrderedSequence)
 - [PerfectNumbers](#PerfectNumbers)
 - [Polynomial](#Polynomial)
 - [PrimeNumbers](#PrimeNumbers)
@@ -545,6 +546,10 @@ This task is on [Codewars](https://www.codewars.com/kata/5a2fd38b55519ed98f0000c
 
 [Here](MultiplicationTableForNumber.java) you can see the implementation of this program in Java
 and [here](MultiplicationTableForNumber.kt) in Kotlin.
+
+### OrderedSequence
+
+Coming soon...
 
 ### PerfectNumbers
 
