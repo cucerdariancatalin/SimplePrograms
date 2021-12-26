@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Simple implementation of the Tic-tac-toe game.
  *
  * @author VitasSalvantes
- * @version 1.0
+ * @version 1.5
  */
 public class TicTacToe {
 
@@ -17,37 +17,33 @@ public class TicTacToe {
 
         // Get the current game state from the user
         System.out.println("What's going on?");
-        String ticTacToeState = scanner.nextLine();
+        String currentState = scanner.nextLine();
 
-        // The number of the elements in a line
-        int lineSize = 3;
-        // The number of the lines in the game
-        int numberOfLines = 3;
-        // The array of the lines
-        String[] lines = new String[numberOfLines];
+        // The number of the rows on the game field
+        int rows = 3;
+        // The number of the columns on the game field
+        int columns = 3;
+        // The two-dimensional array presenting the game field
+        char[][] field = new char[rows][columns];
 
-
-        // The beginning index of a substring, inclusive
-        int beginIndex = 0;
-        // The ending index of a substring, exclusive
-        int endIndex;
-
-        // Fill the lines array with substrings from the ticTacToeState string
-        for (int i = 0; i < numberOfLines; i++) {
-            endIndex = beginIndex + lineSize;
-            lines[i] = ticTacToeState.substring(beginIndex, endIndex).toUpperCase();
-            beginIndex += lineSize;
+        // Fill the game field with characters from the currentState string
+        int currentCharIndex = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                field[i][j] = currentState.charAt(currentCharIndex);
+                currentCharIndex++;
+            }
         }
 
         // Print the top border
         System.out.println("---------");
 
         // Print lines
-        for (String line : lines) {
+        for (char[] row : field) {
             // Print the left border
             System.out.print("| ");
             // Print one line
-            for (char character : line.toCharArray()) {
+            for (char character : row) {
                 System.out.print(character + " ");
             }
             // Print the right border
