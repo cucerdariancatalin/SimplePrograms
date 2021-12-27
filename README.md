@@ -33,6 +33,7 @@ the [list of all programs](#List-of-all-programs).
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
 - [Chocolate](#Chocolate)
+- [Cinema](#Cinema)
 - [CodeWordCipher](#CodeWordCipher)
 - [CommonDenominators](#CommonDenominators)
 - [ConsoleCalc](#ConsoleCalc)
@@ -304,6 +305,27 @@ a single straight line: vertical or horizontal.
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2170).
 
 [Here](Chocolate.java) you can see the implementation of this program in Java.
+
+### Cinema
+
+The cinema has **n** rows, each row consists of **m** seats (**n** and **m** do not exceed 20). A two-dimensional matrix
+stores the information on the sold tickets: the number **1** means that the ticket for this place is already sold, and
+the number **0** means that the place is available. You want to buy **k** tickets to neighboring seats in the same row.
+Find whether it can be done.
+
+**Input data format**
+
+On the input, the program gets the number of **n** rows and **m** seats. Then, there are **n** lines, each containing **
+m** numbers (**0** or **1**) separated by spaces. The last line contains the number **k**.
+
+**Output data format**
+
+The program should output the number of the row with **k** consecutive available seats. If there are several rows
+with **k** available seats, output the first row with these seats. If there is no such a row, output the number 0.
+
+This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1930).
+
+[Here](Cinema.java) you can see the solution of this task in Java.
 
 ### CodeWordCipher
 
@@ -690,10 +712,12 @@ A **right rotation** is an operation that shifts each element of an array to the
 
 Write a program that performs a right rotation on an array by a given number.
 
-**Input format:**
+**Input format**
+
 The first line is an array of numbers. The second line is the number of rotations.
 
-**Output format:**
+**Output format**
+
 Resulting array
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/3663).
