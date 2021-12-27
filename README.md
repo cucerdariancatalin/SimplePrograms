@@ -754,16 +754,15 @@ This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006
 
 ## Technologies
 
-- [Java](https://www.oracle.com/java/) ([AdoptOpenJDK version 11.0.10](https://adoptopenjdk.net/)),
-  [Kotlin](https://kotlinlang.org/) ([AdoptOpenJDK version 11.0.10](https://adoptopenjdk.net/))
+- [Java](https://www.oracle.com/java/) ([JDK version 17.0.1](https://docs.oracle.com/en/java/javase/17/)),
+  [Kotlin](https://kotlinlang.org/) ([JDK version 17.0.1](https://docs.oracle.com/en/java/javase/17/))
   and [Python](https://www.python.org/) programming languages were chosen for development.
 
-- Development was carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Ultimate Edition (license for
-  students).
+- Development is carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Community Edition.
 
-- [WakaTime](https://wakatime.com/) was used to track activity.
+- [WakaTime](https://wakatime.com/) is used to track activity.
 
-- [Microsoft To Do](https://todo.microsoft.com/tasks/) was used to schedule tasks.
+- [Microsoft To Do](https://todo.microsoft.com/tasks/) is used to schedule tasks.
 
 ## Development progress
 
