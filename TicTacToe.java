@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -15,22 +16,23 @@ public class TicTacToe {
         // The Scanner object to get the user input
         Scanner scanner = new Scanner(System.in);
 
-        // Get the current game state from the user
-        System.out.println("What's going on?");
-        String currentState = scanner.nextLine();
+        // Get the current field state from the user
+        // TODO: 27.12.2021 Check the length of the input
+        System.out.println("What's up on the field?");
+        System.out.print("Enter cells: ");
+        String currentFieldState = scanner.nextLine().toUpperCase();
 
-        // The number of the rows on the game field
-        int rows = 3;
-        // The number of the columns on the game field
-        int columns = 3;
+        // The size of the game field's side
+        int sideSize = 3;
+
         // The two-dimensional array presenting the game field
-        char[][] field = new char[rows][columns];
+        char[][] field = new char[sideSize][sideSize];
 
-        // Fill the game field with characters from the currentState string
+        // Fill the game field with characters from the currentFieldState string
         int currentCharIndex = 0;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                field[i][j] = currentState.charAt(currentCharIndex);
+        for (int i = 0; i < sideSize; i++) {
+            for (int j = 0; j < sideSize; j++) {
+                field[i][j] = currentFieldState.charAt(currentCharIndex);
                 currentCharIndex++;
             }
         }
@@ -52,5 +54,144 @@ public class TicTacToe {
 
         // Print the bottom border
         System.out.println("---------");
+
+        // Check the current game state
+        String currentGameState;
+
+        // X wins and how
+        boolean xWins;
+        boolean xWinsHorizontally = false;
+        boolean xWinsDiagonally = false;
+        boolean xWinsVertically = false;
+
+        // O wins and how
+        boolean oWins;
+        boolean oWinsHorizontally = false;
+        boolean oWinsDiagonally = false;
+        boolean oWinsVertically = false;
+
+        // Is the currentFieldState impossible
+        boolean impossible = false;
+
+        // Does the currentFieldState have any '_' characters
+        boolean gameNotFinished = false;
+
+        // The win combination of X or O
+        char[] oneCharacterRow = new char[sideSize];
+
+        // The rotated field to check columns
+        char[][] fieldRotated = new char[sideSize][sideSize];
+        for (int i = 0; i < sideSize; i++) {
+            for (int j = 0; j < sideSize; j++) {
+                fieldRotated[i][j] = field[j][i];
+            }
+        }
+
+        // Check X rows and columns in the field array
+        for (int i = 0; i < sideSize; i++) {
+            oneCharacterRow[i] = 'X';
+        }
+
+        // If a row of the field has three 'X', X wins
+        for (char[] row : field) {
+            if (Arrays.equals(oneCharacterRow, row)) {
+                xWinsHorizontally = true;
+                break;
+            }
+        }
+
+        // If a column of the field (a row of the rotatedField) has three 'X', X wins
+        for (char[] row : fieldRotated) {
+            if (Arrays.equals(oneCharacterRow, row)) {
+                xWinsVertically = true;
+                break;
+            }
+        }
+
+        // Check O rows and columns in the field array
+        for (int i = 0; i < sideSize; i++) {
+            oneCharacterRow[i] = 'O';
+        }
+
+        // If a row of the field has three 'O', O wins
+        for (char[] row : field) {
+            if (Arrays.equals(oneCharacterRow, row)) {
+                oWinsHorizontally = true;
+                break;
+            }
+        }
+
+        // If a column of the field (a row of the rotatedField) has three 'O', O wins
+        for (char[] row : fieldRotated) {
+            if (Arrays.equals(oneCharacterRow, row)) {
+                oWinsVertically = true;
+                break;
+            }
+        }
+
+        // Diagonals of the field
+        String firstDiagonal = "" + field[0][0] + field[1][1] + field[2][2];
+        String secondDiagonal = "" + field[0][2] + field[1][1] + field[2][0];
+
+        // If a diagonal has three 'X', X wins
+        if (firstDiagonal.equals("XXX") ^ secondDiagonal.equals("XXX")) {
+            xWinsDiagonally = true;
+        }
+
+        // If a diagonal has three 'O', O wins
+        if (firstDiagonal.equals("OOO") ^ secondDiagonal.equals("OOO")) {
+            oWinsDiagonally = true;
+        }
+
+        // Check impossible states
+        // How many Os and Xs does the field have
+        String onlyX = currentFieldState.replace("O", "").replace("_", "");
+        String onlyO = currentFieldState.replace("X", "").replace("_", "");
+
+        // Definite who is the winner
+        xWins = xWinsHorizontally || xWinsDiagonally || xWinsVertically;
+        oWins = oWinsHorizontally || oWinsDiagonally || oWinsVertically;
+
+        // Check both diagonals have three 'X' or three 'O'
+        if (firstDiagonal.equals("XXX") && secondDiagonal.equals("XXX")) impossible = true;
+        if (firstDiagonal.equals("OOO") && secondDiagonal.equals("OOO")) impossible = true;
+        // Check the number of characters is wrong
+        if (Math.abs(onlyX.length() - onlyO.length()) > 1) impossible = true;
+        // Check both row and column of the field have three 'X' or three 'O'
+        if (xWinsHorizontally && xWinsDiagonally
+                || xWinsDiagonally && xWinsVertically
+                || xWinsHorizontally && xWinsVertically) impossible = true;
+        if (oWinsHorizontally && oWinsDiagonally
+                || oWinsDiagonally && oWinsVertically
+                || oWinsHorizontally && oWinsVertically) impossible = true;
+        // Check both X and O win
+        if (oWins && xWins) impossible = true;
+
+        // Check game finished
+        CheckingGameFinished:
+        for (char[] row : field) {
+            for (char character : row) {
+                if (character == '_') {
+                    gameNotFinished = true;
+                    break CheckingGameFinished;
+                }
+            }
+        }
+
+        // Definite the current game state
+        if (impossible) {
+            currentGameState = "Impossible";
+        } else if (oWins) {
+            currentGameState = "O wins";
+        } else if (xWins) {
+            currentGameState = "X wins";
+        } else if (gameNotFinished) {
+            currentGameState = "Game not finished";
+        } else {
+            currentGameState = "Draw";
+        }
+
+        // Print the current game state
+        System.out.println(currentGameState);
     }
 }
