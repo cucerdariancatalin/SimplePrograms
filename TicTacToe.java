@@ -81,18 +81,18 @@ public class TicTacToe {
         boolean gameNotFinished = false;
 
         // The win combination of X or O
-        char[] oneCharacterRow = new char[sideSize];
+        char[] oneCharacterRow = new char[field.length];
 
         // The rotated field to check columns
-        char[][] fieldRotated = new char[sideSize][sideSize];
-        for (int i = 0; i < sideSize; i++) {
-            for (int j = 0; j < sideSize; j++) {
+        char[][] fieldRotated = new char[field.length][field.length];
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field.length; j++) {
                 fieldRotated[i][j] = field[j][i];
             }
         }
 
         // Check X rows and columns in the field array
-        for (int i = 0; i < sideSize; i++) {
+        for (int i = 0; i < field.length; i++) {
             oneCharacterRow[i] = 'X';
         }
 
@@ -113,7 +113,7 @@ public class TicTacToe {
         }
 
         // Check O rows and columns in the field array
-        for (int i = 0; i < sideSize; i++) {
+        for (int i = 0; i < field.length; i++) {
             oneCharacterRow[i] = 'O';
         }
 
@@ -197,5 +197,63 @@ public class TicTacToe {
 
         // Print the current game state
         System.out.println(currentGameState);
+
+        // Get a move from the user
+        // Coordinates of a cell
+        int coordinateX;
+        int coordinateY;
+
+        // Get and check coordinates
+        while (true) {
+            System.out.print("Enter the coordinates: ");
+
+            // Check coordinates are not numbers
+            if (scanner.hasNextInt()) {
+                coordinateX = scanner.nextInt() - 1;
+            } else {
+                System.out.println("You should enter numbers!");
+                continue;
+            }
+
+            if (scanner.hasNextInt()) {
+                coordinateY = scanner.nextInt() - 1;
+            } else {
+                System.out.println("You should enter numbers!");
+                continue;
+            }
+
+            // Check the cell doesn't exist and the cell isn't free
+            if (coordinateX > field.length - 1 || coordinateY > field.length - 1) {
+                System.out.println("Coordinates should be from 1 to 3!");
+            } else if (field[coordinateX][coordinateY] == 'X' || field[coordinateX][coordinateY] == 'O') {
+                System.out.println("This cell is occupied! Choose another one!");
+            } else {
+                field[coordinateX][coordinateY] = 'X';
+                break;
+            }
+        }
+
+        // Print the new field
+        // Print the top border
+        System.out.println("---------");
+
+        // Print lines
+        for (char[] row : field) {
+            // Print the left border
+            System.out.print("| ");
+            // Print one line
+            for (char character : row) {
+                if (character == '_') {
+                    System.out.print("  ");
+                } else {
+                    System.out.print(character + " ");
+                }
+            }
+            // Print the right border
+            System.out.print("|\n");
+        }
+
+        // Print the bottom border
+        System.out.println("---------");
     }
 }
