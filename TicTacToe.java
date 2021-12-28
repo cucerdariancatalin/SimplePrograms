@@ -46,7 +46,11 @@ public class TicTacToe {
             System.out.print("| ");
             // Print one line
             for (char character : row) {
-                System.out.print(character + " ");
+                if (character == '_') {
+                    System.out.print("  ");
+                } else {
+                    System.out.print(character + " ");
+                }
             }
             // Print the right border
             System.out.print("|\n");
