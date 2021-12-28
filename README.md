@@ -56,6 +56,7 @@ the [list of all programs](#List-of-all-programs).
 - [RecamanSequence](#RecamanSequence)
 - [Restaurant](#Restaurant)
 - [RightRotation](#RightRotation)
+- [RotateRectangleArray](#RotateRectangleArray)
 - [SquareEveryDigit](#SquareEveryDigit)
 - [TicTacToe](#TicTacToe)
 - [TortoiseRacing](#TortoiseRacing)
@@ -723,6 +724,23 @@ Resulting array
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/3663).
 
 [Here](RightRotation.java) you can see the solution of this task in Java.
+
+### RotateRectangleArray
+
+Given a rectangle array n×m in size. Rotate it by 90 degrees clockwise, by recording the result into the new array m×n
+in size.
+
+**Input data format**
+
+Input consists of the two numbers n and m, not exceeding 100, and then an array n×m in size.
+
+**Output data format**
+
+Output the resulting array. Separate numbers by a single space in the output.
+
+This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1927).
+
+[Here](RotateRectangleArray.java) you can see the solution of this task in Java.
 
 ### SquareEveryDigit
 
