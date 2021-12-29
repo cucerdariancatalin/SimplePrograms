@@ -573,7 +573,17 @@ and [here](MultiplicationTableForNumber.kt) in Kotlin.
 
 ### OrderedSequence
 
-Coming soon...
+Write a program that reads a sequence of integer numbers and outputs **true** if the sequence is ordered (in ascending
+or descending order), otherwise, **false**.
+
+Keep in mind, if a number has the same value as the following number, it does not break the order.
+
+The sequence ends with 0. Do not consider this number as a part of the sequence. The sequence always has at least one
+number (excluding 0).
+
+This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2734).
+
+[Here](OrderedSequence.java) you can see the implementation of this program in Java.
 
 ### PerfectNumbers
 
