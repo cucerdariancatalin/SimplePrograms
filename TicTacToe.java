@@ -20,14 +20,7 @@ public class TicTacToe {
         int sideSize = 3;
 
         // The two-dimensional array presenting the game field
-        char[][] field = new char[sideSize][sideSize];
-
-        // Create the empty game field
-        for (int i = 0; i < sideSize; i++) {
-            for (int j = 0; j < sideSize; j++) {
-                field[i][j] = ' ';
-            }
-        }
+        char[][] field = createEmptyField(sideSize);
 
         // The result of the game
         String result = "";
@@ -56,23 +49,7 @@ public class TicTacToe {
         boolean doNextMove = true;
 
         while (doNextMove) {
-            // Print the top border
-            System.out.println("---------");
-
-            // Print lines
-            for (char[] row : field) {
-                // Print the left border
-                System.out.print("| ");
-                // Print one line
-                for (char character : row) {
-                    System.out.print(character + " ");
-                }
-                // Print the right border
-                System.out.print("|\n");
-            }
-
-            // Print the bottom border
-            System.out.println("---------");
+            printField(field);
 
             // Get and check coordinates
             while (true) {
@@ -188,6 +165,14 @@ public class TicTacToe {
             }
         }
 
+        printField(field);
+
+        // Print the result
+        System.out.println(result);
+    }
+
+    // Print the field
+    public static void printField(char[][] field) {
         // Print the top border
         System.out.println("---------");
 
@@ -205,8 +190,18 @@ public class TicTacToe {
 
         // Print the bottom border
         System.out.println("---------");
+    }
 
-        // Print the result
-        System.out.println(result);
+    // Create the empty game field
+    public static char[][] createEmptyField(int sideSize) {
+        char[][] field = new char[sideSize][sideSize];
+
+        for (int i = 0; i < sideSize; i++) {
+            for (int j = 0; j < sideSize; j++) {
+                field[i][j] = ' ';
+            }
+        }
+
+        return field;
     }
 }
