@@ -47,7 +47,7 @@ public class TicTacToe {
         while (doNextMove) {
             printField(field);
 
-            field = getMove(field, scanner, move);
+            getMove(field, scanner, move);
 
             move++;
 
@@ -134,7 +134,7 @@ public class TicTacToe {
         System.out.println(result);
     }
 
-    private static char[][] getMove(char[][] field, Scanner scanner, int move) {
+    private static void getMove(char[][] field, Scanner scanner, int move) {
 
         // Get and check coordinates
         while (true) {
@@ -149,7 +149,7 @@ public class TicTacToe {
                 } else {
                     field[coordinateX][coordinateY] = 'O';
                 }
-                return field;
+                break;
             }
         }
     }
