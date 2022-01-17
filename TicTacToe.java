@@ -34,10 +34,6 @@ public class TicTacToe {
         // The win combination of X or O
         char[] oneCharacterRow = new char[field.length];
 
-        // Coordinates of a cell for a user move
-        int coordinateX;
-        int coordinateY;
-
         // Diagonals of the field
         String firstDiagonal;
         String secondDiagonal;
@@ -51,42 +47,9 @@ public class TicTacToe {
         while (doNextMove) {
             printField(field);
 
-            // Get and check coordinates
-            while (true) {
-                System.out.print("Enter the coordinates: ");
+            field = getMove(field, scanner, move);
 
-                // Check coordinates are not numbers
-                if (scanner.hasNextInt()) {
-                    coordinateX = scanner.nextInt() - 1;
-                } else {
-                    System.out.println("You should enter numbers!");
-                    scanner.nextLine();
-                    continue;
-                }
-
-                if (scanner.hasNextInt()) {
-                    coordinateY = scanner.nextInt() - 1;
-                } else {
-                    System.out.println("You should enter numbers!");
-                    scanner.nextLine();
-                    continue;
-                }
-
-                // Check the cell doesn't exist and the cell isn't free
-                if (coordinateX > field.length - 1 || coordinateY > field.length - 1) {
-                    System.out.println("Coordinates should be from 1 to 3!");
-                } else if (field[coordinateX][coordinateY] == 'X' || field[coordinateX][coordinateY] == 'O') {
-                    System.out.println("This cell is occupied! Choose another one!");
-                } else {
-                    if (move % 2 != 0) {
-                        field[coordinateX][coordinateY] = 'X';
-                    } else {
-                        field[coordinateX][coordinateY] = 'O';
-                    }
-                    move++;
-                    break;
-                }
-            }
+            move++;
 
             // The rotated field to check columns
             char[][] fieldRotated = new char[field.length][field.length];
@@ -169,6 +132,54 @@ public class TicTacToe {
 
         // Print the result
         System.out.println(result);
+    }
+
+    private static char[][] getMove(char[][] field, Scanner scanner, int move) {
+
+        // Get and check coordinates
+        while (true) {
+            System.out.print("Enter the coordinates: ");
+
+            int coordinateX = getCoordinate(scanner);
+            int coordinateY = getCoordinate(scanner);
+
+            if (checkMove(field, coordinateX, coordinateY)) {
+                if (move % 2 != 0) {
+                    field[coordinateX][coordinateY] = 'X';
+                } else {
+                    field[coordinateX][coordinateY] = 'O';
+                }
+                return field;
+            }
+        }
+    }
+
+    // Check if user's move is correct
+    private static boolean checkMove(char[][] field, int coordinateX, int coordinateY) {
+        // Check the cell doesn't exist and the cell isn't free
+        if (coordinateX > field.length - 1 || coordinateY > field.length - 1) {
+            System.out.println("Coordinates should be from 1 to 3!");
+        } else if (field[coordinateX][coordinateY] == 'X' || field[coordinateX][coordinateY] == 'O') {
+            System.out.println("This cell is occupied! Choose another one!");
+        } else {
+            return true;
+        }
+        return false;
+    }
+
+    // Get a coordinate
+    private static int getCoordinate(Scanner scanner) {
+        while (true) {
+
+            // Check coordinates are not numbers
+            if (scanner.hasNextInt()) {
+                return scanner.nextInt() - 1;
+            } else {
+                System.out.println("You should enter numbers!");
+                scanner.nextLine();
+                continue;
+            }
+        }
     }
 
     // Print the field
