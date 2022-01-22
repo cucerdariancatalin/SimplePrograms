@@ -13,6 +13,7 @@ public class CollatzConjecture {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("- Number?");
         int number = scanner.nextInt();
         StringBuilder sequence = new StringBuilder(number + " ");
 
