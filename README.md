@@ -35,6 +35,7 @@ the [list of all programs](#List-of-all-programs).
 - [Chocolate](#Chocolate)
 - [Cinema](#Cinema)
 - [CodeWordCipher](#CodeWordCipher)
+- [CollatzConjecture](#CollatzConjecture)
 - [CommonDenominators](#CommonDenominators)
 - [ConsoleCalc](#ConsoleCalc)
 - [CountTheDigit](#CountTheDigit)
@@ -405,6 +406,18 @@ Using this system, the keyword "zebras" gives us the following alphabets:
 (See more in [Wikipedia](https://en.m.wikipedia.org/wiki/Substitution_cipher))
 
 [Here](CodeWordCipher.java) you can see the implementation of code word cipher in Java.
+
+### CollatzConjecture
+
+The Collatz conjecture in mathematics asks whether repeating two simple arithmetic operations will eventually transform
+every positive integer into one. It concerns sequences of integers in which each term is obtained from the previous term
+as follows: if the previous term is even, the next term is one half of the previous term. If the previous term is odd,
+the next term is 3 times the previous term plus 1. The conjecture is that these sequences always reach 1, no matter
+which positive integer is chosen to start the sequence.
+
+(See more in [Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture))
+
+[Here](CollatzConjecture.java) you can see the implementation of this algorithm in Java.
 
 ### CommonDenominators
 
