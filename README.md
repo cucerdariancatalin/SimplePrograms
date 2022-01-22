@@ -29,6 +29,7 @@ the [list of all programs](#List-of-all-programs).
 - [AnagramDetection](#AnagramDetection)
 - [AtbashCipher](#AtbashCipher)
 - [ArrayInitialization](#ArrayInitialization)
+- [Boxes](#Boxes)
 - [BubbleSort](#BubbleSort)
 - [CaesarCipher](#CaesarCipher)
 - [ChangingArrayType](#ChangingArrayType)
@@ -158,6 +159,29 @@ second to last letter, and so on. For example, the Latin alphabet would work lik
 ### ArrayInitialization
 
 [Here](ArrayInitialization.java) you can see how array initialization is implemented in the class constructor in Java.
+
+### Boxes
+
+There are two boxes on the table. The first box has a size of X1 x Y1 x Z1, and the second box has a size of X2 x Y2 x
+Z2. You need to determine whether one of the boxes can be put inside the other. It should go in without sticking out.
+You can rotate both boxes as you want.
+
+**Important**: two equally sized boxes cannot be placed inside one another. See the third test case as an example of how
+the borderline case should be treated.
+
+Input consists of two lines:
+
+the first line contains numbers X1, Y1, Z1; the second line contains numbers X2, Y2, Z2. All numbers are integers and
+greater than 0.
+
+Output:
+
+"Box 1 < Box 2", if the first box can be put inside the second box;
+"Box 1 > Box 2", if the second box can be put inside the first box; otherwise, output "Incompatible".
+
+This task is on [JetBrains Academy](https://hyperskill.org/learn/step/10613).
+
+[Here](Boxes.java) you can see the solution of this task in Java.
 
 ### BubbleSort
 
