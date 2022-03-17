@@ -25,7 +25,6 @@ the [list of all programs](#List-of-all-programs).
 
 ## List of all programs
 
-- [AmountOfSalaries](#AmountOfSalaries)
 - [AnagramDetection](#AnagramDetection)
 - [AtbashCipher](#AtbashCipher)
 - [ArrayInitialization](#ArrayInitialization)
@@ -62,11 +61,6 @@ the [list of all programs](#List-of-all-programs).
 - [SquareEveryDigit](#SquareEveryDigit)
 - [TicTacToe](#TicTacToe)
 - [TortoiseRacing](#TortoiseRacing)
-
-### AmountOfSalaries
-
-[Here](AmountOfSalaries.java) you can see how the static method of summing salaries of two workers (instances of the
-same class) is implemented in Java.
 
 ### AnagramDetection
 
