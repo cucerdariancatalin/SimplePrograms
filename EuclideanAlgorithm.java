@@ -52,7 +52,7 @@ public class EuclideanAlgorithm {
      */
     public int calculateGCD() {
         int remainder;
-        var gcd = 1;
+        var gcdCandidate = 1;
         var biggestNumber = Math.max(this.firstNumber, this.secondNumber);
         var smallestNumber = Math.min(this.firstNumber, this.secondNumber);
 
@@ -60,10 +60,10 @@ public class EuclideanAlgorithm {
             remainder = biggestNumber % smallestNumber;
 
             if (remainder == 0) {
-                return gcd;
+                return gcdCandidate;
             }
 
-            gcd = remainder;
+            gcdCandidate = remainder;
             biggestNumber = smallestNumber;
             smallestNumber = remainder;
         }
