@@ -27,7 +27,6 @@ the [list of all programs](#List-of-all-programs).
 
 - [AnagramDetection](#AnagramDetection)
 - [AtbashCipher](#AtbashCipher)
-- [ArrayInitialization](#ArrayInitialization)
 - [Boxes](#Boxes)
 - [BubbleSort](#BubbleSort)
 - [CaesarCipher](#CaesarCipher)
@@ -150,10 +149,6 @@ second to last letter, and so on. For example, the Latin alphabet would work lik
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Atbash))
 
 [Here](AtbashCipher.java) you can see the implementation of Atbash Cipher in Java.
-
-### ArrayInitialization
-
-[Here](ArrayInitialization.java) you can see how array initialization is implemented in the class constructor in Java.
 
 ### Boxes
 
