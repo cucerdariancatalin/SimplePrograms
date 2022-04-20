@@ -45,7 +45,6 @@ the [list of all programs](#List-of-all-programs).
 - [FizzBuzz](#FizzBuzz)
 - [HappyBirthday](#HappyBirthday)
 - [HelloWorld](#HelloWorld)
-- [IsSquare](#IsSquare)
 - [MultiplicationTableForNumber](#MultiplicationTableForNumber)
 - [OrderedSequence](#OrderedSequence)
 - [PerfectNumbers](#PerfectNumbers)
@@ -586,14 +585,6 @@ internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))
 
 [Here](HelloWorld.java) you can see an example of this program in Java and [here](HelloWorld.kt) in Kotlin.
-
-### IsSquare
-
-In mathematics, a square is the result of multiplying a number by itself.
-
-(See more in [Wikipedia](https://en.wikipedia.org/wiki/Square_(algebra)))
-
-[Here](IsSquare.java) you can see an example of defining a square in Java.
 
 ### MultiplicationTableForNumber
 
