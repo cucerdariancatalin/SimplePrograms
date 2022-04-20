@@ -1,5 +1,7 @@
 # Simple programs
 
+![logo](/res/img/logo.png)
+
 [![GitHub license](https://img.shields.io/github/license/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/issues)
 
