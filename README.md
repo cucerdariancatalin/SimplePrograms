@@ -45,7 +45,6 @@ the [list of all programs](#List-of-all-programs).
 - [FizzBuzz](#FizzBuzz)
 - [HappyBirthday](#HappyBirthday)
 - [HelloWorld](#HelloWorld)
-- [MultiplicationTableForNumber](#MultiplicationTableForNumber)
 - [OrderedSequence](#OrderedSequence)
 - [PerfectNumbers](#PerfectNumbers)
 - [Polynomial](#Polynomial)
@@ -585,15 +584,6 @@ internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))
 
 [Here](HelloWorld.java) you can see an example of this program in Java and [here](HelloWorld.kt) in Kotlin.
-
-### MultiplicationTableForNumber
-
-This is a simple program that prints the multiplication table for a single number from 0 to 10.
-
-This task is on [Codewars](https://www.codewars.com/kata/5a2fd38b55519ed98f0000ce).
-
-[Here](MultiplicationTableForNumber.java) you can see the implementation of this program in Java
-and [here](MultiplicationTableForNumber.kt) in Kotlin.
 
 ### OrderedSequence
 
