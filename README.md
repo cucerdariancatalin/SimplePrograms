@@ -30,7 +30,6 @@ the [list of all programs](#List-of-all-programs).
 - [Boxes](#Boxes)
 - [BubbleSort](#BubbleSort)
 - [CaesarCipher](#CaesarCipher)
-- [ChangingArrayType](#ChangingArrayType)
 - [Chocolate](#Chocolate)
 - [Cinema](#Cinema)
 - [CodeWordCipher](#CodeWordCipher)
@@ -303,12 +302,6 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher))
 
 [Here](CaesarCipher.java) you can see the implementation of Caesar Cipher (I used offset to the right) in Java.
-
-### ChangingArrayType
-
-[Here](ChangingArrayType.java) you can see how a class with two arrays (the first with int values, the second with
-String values) is implemented in Java. The second array takes all the values of the first array, converts them to String
-type and stores them in reverse order.
 
 ### Chocolate
 
