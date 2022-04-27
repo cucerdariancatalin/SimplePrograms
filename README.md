@@ -27,7 +27,7 @@ the [list of all programs](#List-of-all-programs).
 
 ## List of all programs
 
-- [AnagramDetection](#AnagramDetection)
+- [AnagramDetector](#AnagramDetector)
 - [AtbashCipher](#AtbashCipher)
 - [Boxes](#Boxes)
 - [BubbleSort](#BubbleSort)
@@ -61,7 +61,7 @@ the [list of all programs](#List-of-all-programs).
 - [TicTacToe](#TicTacToe)
 - [TortoiseRacing](#TortoiseRacing)
 
-### AnagramDetection
+### AnagramDetector
 
 An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the
 original letters exactly once. For example, the word *anagram* itself can be rearranged into *nag a ram*, also the word
@@ -73,7 +73,7 @@ serious or skilled anagrammatist is to produce anagrams that reflect or comment 
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Anagram))
 
-[Here](AnagramDetection.java) you can see the implementation of the anagram detection in Java.
+[Here](AnagramDetector.java) you can see the implementation of the anagram detection in Java.
 
 ### AtbashCipher
 
