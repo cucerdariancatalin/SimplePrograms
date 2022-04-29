@@ -1,68 +1,33 @@
-import java.util.ArrayList;
-
 /**
- * Class for encrypting messages with Atbash cipher
+ * The program to en- and decrypt messages using the Atbash cipher.
  *
  * @author VitasSalvantes
- * @version 3.0
+ * @version 4.0
  */
-
 public class AtbashCipher {
 
     /**
-     * List of letters of the English alphabet
+     * The method en- and decrypts the message using the Atbash cipher.
      */
-    private final ArrayList<Character> englishAlphabet = new ArrayList<Character>();
+    public String processWord(final String inputMessage) {
+        final StringBuilder outputMessage = new StringBuilder();
+
+        for (int i = 0; i < inputMessage.length(); i++) {
+            outputMessage.append((char) (Character.MAX_VALUE - inputMessage.charAt(i)));
+        }
+
+        return outputMessage.toString();
+    }
 
     /**
-     * En- or decrypted message
-     */
-    private String outputMessage = "";
-
-    /**
-     * Message from user
-     */
-    private char[] inputMessage;
-
-    /**
-     * Method that launches the program
+     * The method launches the program.
      */
     public static void main(String[] args) {
-        AtbashCipher ac = new AtbashCipher();
-        ac.setInputMessage("Hello world!");
-        System.out.println(ac.encryption());
-    }
+        final AtbashCipher ac = new AtbashCipher();
+        final String userMessage = "Hello, World!";
 
-    /**
-     * Method for creating letters of the English alphabet
-     */
-    private void createEnglishAlphabet() {
-        for (char letter = 'a'; letter <= 'z'; letter++) {
-            englishAlphabet.add(letter);
-        }
-    }
-
-    /**
-     * Setter for {@link AtbashCipher#inputMessage}
-     */
-    public void setInputMessage(String inputMessage) {
-        this.inputMessage = inputMessage.toLowerCase().toCharArray();
-    }
-
-    /**
-     * Method for encrypting a user message with Atbash cipher
-     */
-    public String encryption() {
-        createEnglishAlphabet();
-
-        for (char c : inputMessage) {
-            if (englishAlphabet.contains(c)) {
-                outputMessage += englishAlphabet.get(25 - englishAlphabet.indexOf(c));
-            } else {
-                outputMessage += c;
-            }
-        }
-
-        return outputMessage;
+        System.out.println(userMessage);
+        System.out.println(ac.processWord(userMessage));
+        System.out.println(ac.processWord("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE"));
     }
 }
