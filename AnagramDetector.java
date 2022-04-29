@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Simple program for detecting anagram.
+ * The program to detect an anagram.
  *
  * @author VitasSalvantes
  * @version 2.0
@@ -14,7 +14,7 @@ public class AnagramDetector {
     private char[] characterSet;
 
     /**
-     * Getter for the {@link #characterSet}.
+     * The getter for the {@link #characterSet}.
      *
      * @return {@link #characterSet}
      */
@@ -23,7 +23,7 @@ public class AnagramDetector {
     }
 
     /**
-     * Setter for the {@link #characterSet}.
+     * The setter for the {@link #characterSet}.
      *
      * @param characterSet - new value for the {@link #characterSet}
      */
