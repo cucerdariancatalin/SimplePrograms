@@ -59,7 +59,7 @@ public class AnagramDetector {
      * The method launches the program.
      */
     public static void main(String[] args) {
-        final AnagramDetector detector = new AnagramDetector('l', 'l', 'a', 'a');
+        final var detector = new AnagramDetector('l', 'l', 'a', 'a');
 
         System.out.println(detector.checkForAnagram("alla"));
         System.out.println(detector.checkForAnagram("lala"));
