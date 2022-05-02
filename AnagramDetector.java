@@ -16,7 +16,7 @@ public class AnagramDetector {
     /**
      * The getter for the {@link #characterSet}.
      *
-     * @return {@link #characterSet}
+     * @return {@link #characterSet}.
      */
     public char[] getCharacterSet() {
         return characterSet;
@@ -25,7 +25,7 @@ public class AnagramDetector {
     /**
      * The setter for the {@link #characterSet}.
      *
-     * @param characterSet - new value for the {@link #characterSet}
+     * @param characterSet - new value for the {@link #characterSet}.
      */
     public void setCharacterSet(char... characterSet) {
         this.characterSet = characterSet.clone();
@@ -35,7 +35,7 @@ public class AnagramDetector {
     /**
      * The default constructor.
      *
-     * @param characterSet - a value for the {@link #characterSet}
+     * @param characterSet - a value for the {@link #characterSet}.
      */
     public AnagramDetector(char... characterSet) {
         this.characterSet = characterSet;
@@ -45,8 +45,8 @@ public class AnagramDetector {
     /**
      * Check the {@link #characterSet} is an anagram of the input word.
      *
-     * @param word - the word to be checked
-     * @return boolean true if it is and boolean false if is not
+     * @param word - the word to be checked.
+     * @return boolean true if it is and boolean false if is not.
      */
     public boolean checkForAnagram(String word) {
         final char[] wordLetters = word.toCharArray();
