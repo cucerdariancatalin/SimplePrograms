@@ -29,7 +29,7 @@ the [list of all programs](#List-of-all-programs).
 
 - [AnagramDetector](#AnagramDetector)
 - [AtbashCipher](#AtbashCipher)
-- [Boxes](#Boxes)
+- [BoxComparator](#BoxComparator)
 - [BubbleSort](#BubbleSort)
 - [CaesarCipher](#CaesarCipher)
 - [Chocolate](#Chocolate)
@@ -147,9 +147,9 @@ second to last letter, and so on. For example, the Latin alphabet would work lik
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Atbash))
 
-[Here](AtbashCipher.java) you can see the implementation of Atbash Cipher in Java.
+[Here](AtbashCipher.java) you can see the implementation of the Atbash Cipher in Java.
 
-### Boxes
+### BoxComparator
 
 There are two boxes on the table. The first box has a size of X1 x Y1 x Z1, and the second box has a size of X2 x Y2 x
 Z2. You need to determine whether one of the boxes can be put inside the other. It should go in without sticking out.
@@ -170,7 +170,7 @@ Output:
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/10613).
 
-[Here](Boxes.java) you can see the solution of this task in Java.
+[Here](BoxComparator.java) you can see the solution of this task in Java.
 
 ### BubbleSort
 
