@@ -30,7 +30,7 @@ the [list of all programs](#List-of-all-programs).
 - [AnagramDetector](#AnagramDetector)
 - [AtbashCipher](#AtbashCipher)
 - [BoxComparator](#BoxComparator)
-- [BubbleSort](#BubbleSort)
+- [BubbleSorter](#BubbleSorter)
 - [CaesarCipher](#CaesarCipher)
 - [Chocolate](#Chocolate)
 - [Cinema](#Cinema)
@@ -172,7 +172,7 @@ This task is on [JetBrains Academy](https://hyperskill.org/learn/step/10613).
 
 [Here](BoxComparator.java) you can see the solution of this task in Java.
 
-### BubbleSort
+### BubbleSorter
 
 Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the
 list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated
@@ -221,7 +221,7 @@ This simple algorithm performs poorly in real world use and is used primarily as
 (See more
 in [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort#:~:text=Bubble%20sort%2C%20sometimes%20referred%20to%20as%20sinking%20sort%2C,list%20is%20repeated%20until%20the%20list%20is%20sorted.))
 
-[Here](BubbleSort.kt) you can see example of bubble sort implementation in Kotlin.
+[Here](BubbleSorter.kt) you can see example of bubble sort implementation in Kotlin.
 
 ### CaesarCipher
 
