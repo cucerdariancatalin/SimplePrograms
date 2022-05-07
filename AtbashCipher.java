@@ -9,7 +9,7 @@ public class AtbashCipher {
     /**
      * The method en- and decrypts the message using the Atbash cipher.
      */
-    public String processWord(final String inputMessage) {
+    public String processMessage(final String inputMessage) {
         final var outputMessage = new StringBuilder();
 
         for (int i = 0; i < inputMessage.length(); i++) {
@@ -27,7 +27,7 @@ public class AtbashCipher {
         final var userMessage = "Hello, World!";
 
         System.out.println(userMessage);
-        System.out.println(cipher.processWord(userMessage));
-        System.out.println(cipher.processWord("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE"));
+        System.out.println(cipher.processMessage(userMessage));
+        System.out.println(cipher.processMessage("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE"));
     }
 }
