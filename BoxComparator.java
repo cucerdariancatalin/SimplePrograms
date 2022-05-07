@@ -9,8 +9,8 @@ public class BoxComparator {
     /**
      * The method checks the boxes can be nested within each other.
      *
-     * @param box1 - the box to be compared with box2. It must have 3 elements: width, length and height.
-     * @param box2 - the box to be compared with box1. It must have 3 elements: width, length and height.
+     * @param box1 the box to be compared with box2. It must have 3 elements: width, length and height.
+     * @param box2 the box to be compared with box1. It must have 3 elements: width, length and height.
      * @return the "Box 1 > Box 2" string if the second box can be nested within the box1;
      * the "Box 1 < Box 2" string if the box1 can be nested within the second box;
      * the "Incompatible" string if the boxes can not be nested within each other.
@@ -41,7 +41,7 @@ public class BoxComparator {
     }
 
     /**
-     * Method that launches the program.
+     * The method launches the program.
      */
     public static void main(String[] args) {
         final var comparator = new BoxComparator();
