@@ -9,6 +9,7 @@ public class AtbashCipher {
     /**
      * The method en- or decrypts the message using the Atbash cipher.
      *
+     * @param inputMessage - the message to be en- or decrypted.
      * @return the en- or decrypted message.
      */
     public String processMessage(final String inputMessage) {
