@@ -1,112 +1,116 @@
-import java.util.ArrayList;
+import java.util.Objects;
 
 /**
- * Class with methods for encrypting messages with Caesar cipher
+ * The program to en- and decrypt messages using the Caesar cipher.
  *
  * @author VitasSalvantes
- * @version 6.0
+ * @version 7.0
  */
 
 public class CaesarCipher {
 
     /**
-     * En- or decrypted message
+     * The key is used to en- or decrypt the message.
      */
-    private String outputMessage = "";
+    private String key;
 
     /**
-     * List of letters of the English alphabet
+     * The constructor sets a default value of the {@link #key}.
+     *
+     * @param key - a default value of the {@link #key}.
      */
-    final private ArrayList<Character> englishAlphabet = new ArrayList<Character>();
+    public CaesarCipher(final String key) {
+        this.key = Objects.requireNonNullElse(key, "");
+    }
 
     /**
-     * Message from user
+     * The setter for the {@link #key}.
+     *
+     * @param key a new value of the {@link #key}.
      */
-    private char[] inputMessage;
+    public void setKey(final String key) {
+        this.key = Objects.requireNonNullElse(key, "");
+    }
 
     /**
-     * Key used for encryption
+     * The getter for the {@link #key}.
+     *
+     * @return the {@link #key}.
      */
-    private int key;
+    public String getKey() {
+        return this.key;
+    }
 
     /**
-     * Method that launches the program
+     * The method converts the {@link #key} to a number.
+     *
+     * @return the {@link #key} as a number.
+     */
+    private int convertKeyToInt() {
+        int numberKey = 0;
+
+        for (int i = 0; i < this.key.length(); i++) {
+            numberKey += Character.getNumericValue(this.key.charAt(i));
+        }
+
+        return numberKey % Character.MAX_CODE_POINT;
+    }
+
+    /**
+     * The method en- or decrypt the message using the Atbash cipher.
+     *
+     * @param inputMessage the message to be en- or decrypted.
+     * @param isEncryption the flag to choose the process option (en- or decrypt).
+     * @return the en- or decrypted message .
+     */
+    public String processMessage(final String inputMessage,
+                                 final boolean isEncryption) {
+        if (inputMessage == null) {
+            return "";
+        }
+
+        final int numberKey = convertKeyToInt();
+        final var outputMessage = new StringBuilder();
+
+        for (int i = 0; i < inputMessage.length(); i++) {
+            if (isEncryption) {
+                outputMessage.append(Character.toString(inputMessage.charAt(i) + numberKey));
+            } else {
+                outputMessage.append(Character.toString(inputMessage.charAt(i) - numberKey));
+            }
+        }
+
+        return outputMessage.toString();
+    }
+
+    /**
+     * The method launches the program.
      */
     public static void main(String[] args) {
-        CaesarCipher cc = new CaesarCipher();
-        cc.setInputMessage("Hello world!");
-        cc.setKey(4);
-        System.out.println(cc.encryption());
-    }
+        final var cipher = new CaesarCipher("");
 
-    /**
-     * Method for creating letters of the English alphabet
-     */
-    private void createEnglishAlphabet() {
-        for (char letter = 'a'; letter <= 'z'; letter++) {
-            englishAlphabet.add(letter);
-        }
-    }
+        final String[] keys = {"My key", "", null, Character.toString(Character.MAX_VALUE - 1)};
+        final String message = "Hello, World!";
+        final var encryptedMessage = new StringBuilder();
+        final var decryptedMessage = new StringBuilder();
 
-    /**
-     * Setter for inputMessage {@link CaesarCipher#inputMessage}
-     */
-    public void setInputMessage(String inputMessage) {
-        this.inputMessage = inputMessage.toLowerCase().toCharArray();
-    }
+        for (String key : keys) {
+            cipher.setKey(key);
 
-    /**
-     * Setter for key {@link CaesarCipher#key}
-     */
-    public void setKey(int key) {
-        this.key = Math.abs(key % 25);
-    }
+            System.out.println(cipher.getKey() + ":\n");
 
-    /**
-     * Method for encrypting a user message with Caesar cipher
-     *
-     * @return outputMessage {@link CaesarCipher#outputMessage}
-     */
-    public String encryption() {
-        createEnglishAlphabet();
+            encryptedMessage.append(cipher.processMessage(message, true));
+            decryptedMessage.append(cipher.processMessage(encryptedMessage.toString(), false));
 
-        for (char c : inputMessage) {
-            if (englishAlphabet.contains(c)) {
-                if ((englishAlphabet.indexOf(c) + key) > 25) {
-                    outputMessage += englishAlphabet.get(Math.abs(26 - (englishAlphabet.indexOf(c) + key)));
-                    continue;
-                }
-                outputMessage += englishAlphabet.get(englishAlphabet.indexOf(c) + key);
+            System.out.println(message);
+            System.out.println(encryptedMessage);
+            System.out.println(decryptedMessage + "\n");
 
-            } else {
-                outputMessage += c;
+            // Change the message to null to check the message is null
+            if (message != null) {
+                encryptedMessage.delete(0, message.length());
+                decryptedMessage.delete(0, message.length());
             }
         }
-
-        return outputMessage;
-    }
-
-    /**
-     * Method for decrypting a user message with Caesar cipher
-     *
-     * @return outputMessage {@link CaesarCipher#outputMessage}
-     */
-    public String decryption() {
-        createEnglishAlphabet();
-
-        for (char c : inputMessage) {
-            if (englishAlphabet.contains(c)) {
-                if ((englishAlphabet.indexOf(c) - key) < 0) {
-                    outputMessage += englishAlphabet.get(Math.abs(26 - (key - englishAlphabet.indexOf(c))));
-                    continue;
-                }
-                outputMessage += englishAlphabet.get(englishAlphabet.indexOf(c) - key);
-
-            } else {
-                outputMessage += c;
-            }
-        }
-
-        return outputMessage;
     }
 }
