@@ -2,12 +2,14 @@
  * The program to en- and decrypt messages using the Atbash cipher.
  *
  * @author VitasSalvantes
- * @version 4.0
+ * @version 4.5
  */
 public class AtbashCipher {
 
     /**
-     * The method en- and decrypts the message using the Atbash cipher.
+     * The method en- or decrypts the message using the Atbash cipher.
+     *
+     * @return the en- or decrypted message.
      */
     public String processMessage(final String inputMessage) {
         final var outputMessage = new StringBuilder();
