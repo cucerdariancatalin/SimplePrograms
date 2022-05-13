@@ -14,6 +14,16 @@ public class AnagramDetector {
     private char[] characterSet;
 
     /**
+     * The default constructor.
+     *
+     * @param characterSet a value for the {@link #characterSet}.
+     */
+    public AnagramDetector(char... characterSet) {
+        this.characterSet = characterSet;
+        Arrays.sort(this.characterSet);
+    }
+
+    /**
      * The getter for the {@link #characterSet}.
      *
      * @return {@link #characterSet}.
@@ -29,16 +39,6 @@ public class AnagramDetector {
      */
     public void setCharacterSet(char... characterSet) {
         this.characterSet = characterSet.clone();
-        Arrays.sort(this.characterSet);
-    }
-
-    /**
-     * The default constructor.
-     *
-     * @param characterSet a value for the {@link #characterSet}.
-     */
-    public AnagramDetector(char... characterSet) {
-        this.characterSet = characterSet;
         Arrays.sort(this.characterSet);
     }
 
@@ -75,6 +75,5 @@ public class AnagramDetector {
         System.out.println(detector.checkForAnagram("lala"));
         System.out.println(detector.checkForAnagram("apo"));
         System.out.println(detector.checkForAnagram("opa"));
-
     }
 }
