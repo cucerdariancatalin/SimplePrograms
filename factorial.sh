@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# The script calculates the factorial of the argument
+#******************************************************#
+# The script calculates the factorial of the argument. #
+#                                                      #
+# Author: VitasSalvantes                               #
+# Version: 1.0                                         #
+#******************************************************#
+
 echo "File: $0"
 echo "Number of arguments: $#"
 echo
