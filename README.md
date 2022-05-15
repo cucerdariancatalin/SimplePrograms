@@ -516,7 +516,7 @@ The value of 0! is 1, according to the convention for an empty product.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Factorial))
 
 [Here](Factorial.java) you can see the implementation of Factorial in Java, [here](Factorial.kt) in
-Kotlin, [here](Factorial.py) in Python and [here](factorial.sh) in bash.
+Kotlin, [here](Factorial.py) in Python and [here](factorial.sh) in Bash.
 
 ### FibonacciNumbers
 
