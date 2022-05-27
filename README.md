@@ -32,7 +32,7 @@ the [list of all programs](#List-of-all-programs).
 - [BoxComparator](#BoxComparator)
 - [BubbleSorter](#BubbleSorter)
 - [CaesarCipher](#CaesarCipher)
-- [Chocolate](#Chocolate)
+- [ChocolateBreaker](#ChocolateBreaker)
 - [Cinema](#Cinema)
 - [CodeWordCipher](#CodeWordCipher)
 - [CollatzConjecture](#CollatzConjecture)
@@ -303,7 +303,7 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 
 [Here](CaesarCipher.java) you can see the implementation of Caesar Cipher (I used offset to the right) in Java.
 
-### Chocolate
+### ChocolateBreaker
 
 Imagine a chocolate bar. Remember how it is usually split into smaller bits by a special grid?
 
@@ -313,7 +313,7 @@ a single straight line: vertical or horizontal.
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2170).
 
-[Here](Chocolate.java) you can see the implementation of this program in Java.
+[Here](ChocolateBreaker.java) you can see the implementation of this program in Java.
 
 ### Cinema
 
