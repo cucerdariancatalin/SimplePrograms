@@ -109,7 +109,19 @@ public class ChocolateBreaker {
     public static void main(String[] args) {
         final var scanner = new Scanner(System.in);
         final var breaker = new ChocolateBreaker(scanner.nextInt(), scanner.nextInt());
+        System.out.printf("Length: %d%n", breaker.getChocolateLength());
+        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
+        System.out.println();
 
         breaker.checkBreakPossibility(scanner.nextInt());
+
+        System.out.println();
+        breaker.setChocolateLength(12);
+        breaker.setChocolateWidth(24);
+        System.out.printf("Length: %d%n", breaker.getChocolateLength());
+        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
+        System.out.println();
+
+        breaker.checkBreakPossibility(6);
     }
 }
