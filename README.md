@@ -47,6 +47,7 @@ the [list of all programs](#List-of-all-programs).
 - [FizzBuzz](#FizzBuzz)
 - [HappyBirthday](#HappyBirthday)
 - [HelloWorld](#HelloWorld)
+- [NumberBaseConverter](#NumberBaseConverter)
 - [OrderedSequence](#OrderedSequence)
 - [PerfectNumbers](#PerfectNumbers)
 - [Polynomial](#Polynomial)
@@ -586,6 +587,26 @@ internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))
 
 [Here](HelloWorld.java) you can see an example of this program in Java and [here](HelloWorld.kt) in Kotlin.
+
+### NumberBaseConverter
+
+We’re all quite used to our good old decimal system of numerals. But let’s not forget that there are other ways to
+count! Whether we need to convert numbers from one system to another just for fun or to store large data more
+efficiently, a converter proves helpful. In this project, you will create your own tool that will help you convert
+numbers from one system to another.
+
+To convert a fractional number from one base to another, you need to split the number into two parts: integer and
+fractional. Convert each part from their base to decimal independently and then convert them (once again, separately) to
+the target base. Finally, combine both parts and get the final result!
+
+The most challenging part will probably be converting the decimal fractional part to the target base. Don't worry,
+though: since you already know how to convert fractions from decimal to binary, it should not be a problem for you!
+Converting fractions from decimal to any base is practically the same: just use the proper denominator, which is the
+target base, instead of 2.
+
+This task is on [JetBrains Academy](https://hyperskill.org/projects/181).
+
+[Here](NumberBaseConverter.java) you can see the implementation of this program in Java.
 
 ### OrderedSequence
 
