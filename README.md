@@ -10,6 +10,8 @@ This repository presents implementations of various algorithms in various progra
 and [Kotlin](https://kotlinlang.org/)). You can suggest your own options for implementing existing examples (naming them
 in accordance with the samples) or new options in any programming language.
 
+**Attention! Some of the programs need to be updated!** Already updated programs are marked with *updated*.
+
 ## Table of contents
 
 - [How does it work](#How-does-it-work)
@@ -27,12 +29,12 @@ the [list of all programs](#List-of-all-programs).
 
 ## List of all programs
 
-- [AnagramDetector](#AnagramDetector)
-- [AtbashCipher](#AtbashCipher)
-- [BoxComparator](#BoxComparator)
-- [BubbleSorter](#BubbleSorter)
-- [CaesarCipher](#CaesarCipher)
-- [ChocolateBreaker](#ChocolateBreaker)
+- [AnagramDetector](#AnagramDetector) *updated*
+- [AtbashCipher](#AtbashCipher) *updated*
+- [BoxComparator](#BoxComparator) *updated*
+- [BubbleSorter](#BubbleSorter) *updated*
+- [CaesarCipher](#CaesarCipher) *updated*
+- [ChocolateBreaker](#ChocolateBreaker) *updated*
 - [Cinema](#Cinema)
 - [CodeWordCipher](#CodeWordCipher)
 - [CollatzConjecture](#CollatzConjecture)
@@ -47,7 +49,7 @@ the [list of all programs](#List-of-all-programs).
 - [FizzBuzz](#FizzBuzz)
 - [HappyBirthday](#HappyBirthday)
 - [HelloWorld](#HelloWorld)
-- [NumberBaseConverter](#NumberBaseConverter)
+- [NumberBaseConverter](#NumberBaseConverter) *updated*
 - [OrderedSequence](#OrderedSequence)
 - [PerfectNumbers](#PerfectNumbers)
 - [Polynomial](#Polynomial)
