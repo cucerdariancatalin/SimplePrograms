@@ -2,6 +2,8 @@ package com.simpleprograms;
 
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * JUnit tests for the {@link AnagramDetector}.
  *
@@ -29,37 +31,37 @@ class AnagramDetectorTest {
     @DisplayName("Constructor")
     void testConstructor() {
         anagramDetector = new AnagramDetector(testString);
-        Assertions.assertEquals(anagramDetector.getPrimaryString(), testString);
+        assertEquals(anagramDetector.getPrimaryString(), testString);
     }
 
     @Test
     @DisplayName("Primary word getter")
     void testGetter() {
         anagramDetector = new AnagramDetector(testString);
-        Assertions.assertEquals(anagramDetector.getPrimaryString(), testString);
+        assertEquals(anagramDetector.getPrimaryString(), testString);
     }
 
     @Test
     @DisplayName("Primary word setter")
     void testSetter() {
         anagramDetector.setPrimaryString(testString);
-        Assertions.assertEquals(anagramDetector.getPrimaryString(), testString);
+        assertEquals(anagramDetector.getPrimaryString(), testString);
     }
 
     @Test
     @DisplayName("Null string")
     void testNullCharacterSet() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> new AnagramDetector(null));
-        Assertions.assertThrows(IllegalArgumentException.class, () -> anagramDetector.setPrimaryString(null));
-        Assertions.assertThrows(IllegalArgumentException.class, () -> anagramDetector.checkForAnagram(null));
+        assertThrows(IllegalArgumentException.class, () -> new AnagramDetector(null));
+        assertThrows(IllegalArgumentException.class, () -> anagramDetector.setPrimaryString(null));
+        assertThrows(IllegalArgumentException.class, () -> anagramDetector.checkForAnagram(null));
     }
 
     @Test
     @DisplayName("Empty string")
     void testEmpty() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> new AnagramDetector(""));
-        Assertions.assertThrows(IllegalArgumentException.class, () -> anagramDetector.setPrimaryString(""));
-        Assertions.assertThrows(IllegalArgumentException.class, () -> anagramDetector.checkForAnagram(""));
+        assertThrows(IllegalArgumentException.class, () -> new AnagramDetector(""));
+        assertThrows(IllegalArgumentException.class, () -> anagramDetector.setPrimaryString(""));
+        assertThrows(IllegalArgumentException.class, () -> anagramDetector.checkForAnagram(""));
     }
 
     @Test
@@ -68,32 +70,32 @@ class AnagramDetectorTest {
         anagramDetector.setPrimaryString("mama");
 
         testString = "amam";
-        Assertions.assertTrue(anagramDetector.checkForAnagram(testString));
+        assertTrue(anagramDetector.checkForAnagram(testString));
 
         testString = "amma";
-        Assertions.assertTrue(anagramDetector.checkForAnagram(testString));
+        assertTrue(anagramDetector.checkForAnagram(testString));
 
         testString = "aamm";
-        Assertions.assertTrue(anagramDetector.checkForAnagram(testString));
+        assertTrue(anagramDetector.checkForAnagram(testString));
 
         testString = "mama ";
-        Assertions.assertFalse(anagramDetector.checkForAnagram(testString));
+        assertFalse(anagramDetector.checkForAnagram(testString));
 
         testString = "ma";
-        Assertions.assertFalse(anagramDetector.checkForAnagram(testString));
+        assertFalse(anagramDetector.checkForAnagram(testString));
 
         testString = "MamA";
-        Assertions.assertFalse(anagramDetector.checkForAnagram(testString));
+        assertFalse(anagramDetector.checkForAnagram(testString));
 
         testString = "maaaammmmma";
-        Assertions.assertFalse(anagramDetector.checkForAnagram(testString));
+        assertFalse(anagramDetector.checkForAnagram(testString));
 
         anagramDetector.setPrimaryString("papa");
 
         testString = "appa";
-        Assertions.assertTrue(anagramDetector.checkForAnagram(testString));
+        assertTrue(anagramDetector.checkForAnagram(testString));
 
         testString = "mama";
-        Assertions.assertFalse(anagramDetector.checkForAnagram(testString));
+        assertFalse(anagramDetector.checkForAnagram(testString));
     }
 }
