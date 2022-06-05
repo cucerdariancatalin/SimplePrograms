@@ -30,7 +30,7 @@ the [list of all programs](#List-of-all-programs).
 ## List of all programs
 
 - [AnagramDetector](#AnagramDetector) *updated*
-- [src.com.simpleprograms.main.java.com.simpleprograms.AtbashCipher](#AtbashCipher) *updated*
+- [AtbashCipher](#AtbashCipher) *updated*
 - [BoxComparator](#BoxComparator) *updated*
 - [BubbleSorter](#BubbleSorter) *updated*
 - [CaesarCipher](#CaesarCipher) *updated*
