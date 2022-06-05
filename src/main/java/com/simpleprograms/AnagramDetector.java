@@ -52,7 +52,7 @@ public class AnagramDetector {
      * Validate an input string.
      *
      * @param string the string to be validated.
-     * @throws NullPointerException     if the string is null.
+     * @throws IllegalArgumentException if the string is null.
      * @throws IllegalArgumentException if the string is empty.
      */
     private void validateString(final String string) throws IllegalArgumentException {
