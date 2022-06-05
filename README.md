@@ -150,7 +150,7 @@ second to last letter, and so on. For example, the Latin alphabet would work lik
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Atbash))
 
-[Here](src/main/java/com/simpleprograms/AtbashCipher.java) you can see the implementation of the Atbash Cipher in Java.
+[Here](src/main/java/com/simpleprograms/AtbashCipher.java) you can see the implementation of the Atbash Cipher in Java and [here](src/test/java/com/simpleprograms/AtbashCipherTest.java) - the JUnit tests.
 
 ### BoxComparator
 
