@@ -36,21 +36,21 @@ class AnagramDetectorTest {
 
     @Test
     @DisplayName("Primary word getter")
-    void testGetter() {
+    void getPrimaryString() {
         anagramDetector = new AnagramDetector(testString);
         assertEquals(anagramDetector.getPrimaryString(), testString);
     }
 
     @Test
     @DisplayName("Primary word setter")
-    void testSetter() {
+    void setPrimaryString() {
         anagramDetector.setPrimaryString(testString);
         assertEquals(anagramDetector.getPrimaryString(), testString);
     }
 
     @Test
     @DisplayName("Null string")
-    void testNullCharacterSet() {
+    void testNullString() {
         assertThrows(IllegalArgumentException.class, () -> new AnagramDetector(null));
         assertThrows(IllegalArgumentException.class, () -> anagramDetector.setPrimaryString(null));
         assertThrows(IllegalArgumentException.class, () -> anagramDetector.checkForAnagram(null));
@@ -58,7 +58,7 @@ class AnagramDetectorTest {
 
     @Test
     @DisplayName("Empty string")
-    void testEmpty() {
+    void testEmptyString() {
         assertThrows(IllegalArgumentException.class, () -> new AnagramDetector(""));
         assertThrows(IllegalArgumentException.class, () -> anagramDetector.setPrimaryString(""));
         assertThrows(IllegalArgumentException.class, () -> anagramDetector.checkForAnagram(""));
@@ -66,7 +66,7 @@ class AnagramDetectorTest {
 
     @Test
     @DisplayName("Checking for an anagram")
-    void testCheckForAnagram() {
+    void checkForAnagram() {
         anagramDetector.setPrimaryString("mama");
 
         testString = "amam";
