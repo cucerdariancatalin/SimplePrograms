@@ -76,7 +76,8 @@ serious or skilled anagrammatist is to produce anagrams that reflect or comment 
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Anagram))
 
-[Here](src/main/java/com/simpleprograms/AnagramDetector.java) you can see the implementation of the anagram detection in Java and [here](src/test/java/com/simpleprograms/AnagramDetectorTest.java) - the JUnit tests.
+[Here](src/main/java/com/simpleprograms/AnagramDetector.java) you can see the implementation of the anagram detection in
+Java and [here](src/test/java/com/simpleprograms/AnagramDetectorTest.java) - the JUnit tests.
 
 ### AtbashCipher
 
@@ -150,7 +151,8 @@ second to last letter, and so on. For example, the Latin alphabet would work lik
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Atbash))
 
-[Here](src/main/java/com/simpleprograms/AtbashCipher.java) you can see the implementation of the Atbash Cipher in Java and [here](src/test/java/com/simpleprograms/AtbashCipherTest.java) - the JUnit tests.
+[Here](src/main/java/com/simpleprograms/AtbashCipher.java) you can see the implementation of the Atbash Cipher in Java
+and [here](src/test/java/com/simpleprograms/AtbashCipherTest.java) - the JUnit tests.
 
 ### BoxComparator
 
@@ -173,7 +175,8 @@ Output:
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/10613).
 
-[Here](src/main/java/com/simpleprograms/BoxComparator.java) you can see the solution of this task in Java.
+[Here](src/main/java/com/simpleprograms/BoxComparator.java) you can see the solution of this task in Java
+and [here](src/test/java/com/simpleprograms/BoxComparatorTest.java) - the JUnit tests.
 
 ### BubbleSorter
 
@@ -304,7 +307,8 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher))
 
-[Here](src/main/java/com/simpleprograms/CaesarCipher.java) you can see the implementation of Caesar Cipher (I used offset to the right) in Java.
+[Here](src/main/java/com/simpleprograms/CaesarCipher.java) you can see the implementation of Caesar Cipher (I used
+offset to the right) in Java.
 
 ### ChocolateBreaker
 
@@ -427,7 +431,8 @@ which positive integer is chosen to start the sequence.
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture))
 
-[Here](src/main/java/com/simpleprograms/CollatzConjecture.java) you can see the implementation of this algorithm in Java.
+[Here](src/main/java/com/simpleprograms/CollatzConjecture.java) you can see the implementation of this algorithm in
+Java.
 
 ### CommonDenominators
 
@@ -448,7 +453,8 @@ This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d9
 
 ### ConsoleCalc
 
-[Here](src/main/java/com/simpleprograms/ConsoleCalc.java) you can see the implementation of a simple calculator in Java. You can enter an unlimited
+[Here](src/main/java/com/simpleprograms/ConsoleCalc.java) you can see the implementation of a simple calculator in Java.
+You can enter an unlimited
 number of numbers and perform various mathematical operations with them.
 
 ### CountTheDigit
@@ -470,11 +476,13 @@ many other number-theoretic and cryptographic calculations.
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Euclidean_algorithm))
 
-[Here](src/main/java/com/simpleprograms/EuclideanAlgorithm.java) you can see the implementation of this algorithm in Java.
+[Here](src/main/java/com/simpleprograms/EuclideanAlgorithm.java) you can see the implementation of this algorithm in
+Java.
 
 ### ExchangedValues
 
-[Here](src/main/java/com/simpleprograms/ExchangedValues.java) you can see how to exchange values between two variables without using a third in Java
+[Here](src/main/java/com/simpleprograms/ExchangedValues.java) you can see how to exchange values between two variables
+without using a third in Java
 and [here](src/main/kotlin/com/simpleprograms/ExchangedValues.kt) in Kotlin.
 
 ### Factorial
@@ -518,8 +526,10 @@ The value of 0! is 1, according to the convention for an empty product.
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Factorial))
 
-[Here](src/main/java/com/simpleprograms/Factorial.java) you can see the implementation of Factorial in Java, [here](src/main/kotlin/com/simpleprograms/Factorial.kt) in
-Kotlin, [here](src/main/python/com/SimplePrograms/Factorial.py) in Python and [here](src/main/bash/com/SimplePrograms/factorial.sh) in Bash.
+[Here](src/main/java/com/simpleprograms/Factorial.java) you can see the implementation of Factorial in
+Java, [here](src/main/kotlin/com/simpleprograms/Factorial.kt) in
+Kotlin, [here](src/main/python/com/SimplePrograms/Factorial.py) in Python
+and [here](src/main/bash/com/SimplePrograms/factorial.sh) in Bash.
 
 ### FibonacciNumbers
 
@@ -540,7 +550,8 @@ The beginning of the sequence is thus:
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
 
-[Here](src/main/java/com/simpleprograms/FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in Java, [here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt)
+[Here](src/main/java/com/simpleprograms/FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in
+Java, [here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt)
 in Kotlin and [here](src/main/python/com/SimplePrograms/FibonacciNumbers.py) in Python.
 
 ### FirstUniqueCharacterInString
@@ -553,7 +564,8 @@ Given the string: "Hello World! Hello!".
 
 First unique character: "W".
 
-[Here](src/main/java/com/simpleprograms/FirstUniqueCharacterInString.java) you can see the solution to this task in Java.
+[Here](src/main/java/com/simpleprograms/FirstUniqueCharacterInString.java) you can see the solution to this task in
+Java.
 
 ### FizzBuzz
 
@@ -561,7 +573,8 @@ The program should print numbers from 1 to 100. But instead of multiples of thre
 numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same
 time, it prints "FizzBuzz".
 
-[Here](src/main/java/com/simpleprograms/FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java and [here](src/main/kotlin/com/simpleprograms/FizzBuzz.kt) in Kotlin.
+[Here](src/main/java/com/simpleprograms/FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java
+and [here](src/main/kotlin/com/simpleprograms/FizzBuzz.kt) in Kotlin.
 
 ### HappyBirthday
 
@@ -588,7 +601,8 @@ internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))
 
-[Here](src/main/java/com/simpleprograms/HelloWorld.java) you can see an example of this program in Java and [here](src/main/kotlin/com/simpleprograms/HelloWorld.kt) in Kotlin.
+[Here](src/main/java/com/simpleprograms/HelloWorld.java) you can see an example of this program in Java
+and [here](src/main/kotlin/com/simpleprograms/HelloWorld.kt) in Kotlin.
 
 ### NumberBaseConverter
 
@@ -608,7 +622,8 @@ target base, instead of 2.
 
 This task is on [JetBrains Academy](https://hyperskill.org/projects/181).
 
-[Here](src/main/java/com/simpleprograms/NumberBaseConverter.java) you can see the implementation of this program in Java.
+[Here](src/main/java/com/simpleprograms/NumberBaseConverter.java) you can see the implementation of this program in
+Java.
 
 ### OrderedSequence
 
@@ -658,7 +673,8 @@ number.
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Perfect_number))
 
-[Here](src/main/java/com/simpleprograms/PerfectNumbers.java) you can see the implementation of a sequence of perfect numbers in Java.
+[Here](src/main/java/com/simpleprograms/PerfectNumbers.java) you can see the implementation of a sequence of perfect
+numbers in Java.
 
 **Attention! To display more than four numbers, you will have to wait!** :)
 
@@ -701,7 +717,8 @@ Of course, this program has limitations:
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Quadratic_equation))
 
-[Here](src/main/kotlin/com/simpleprograms/QuadraticEquation.kt) you can see the implementation of this program in Kotlin.
+[Here](src/main/kotlin/com/simpleprograms/QuadraticEquation.kt) you can see the implementation of this program in
+Kotlin.
 
 ### Queens
 
@@ -741,7 +758,8 @@ I like the drawing better:
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
-[Here](src/main/java/com/simpleprograms/RecamanSequence.java) you can see the implementation of the Recaman's sequence in Java.
+[Here](src/main/java/com/simpleprograms/RecamanSequence.java) you can see the implementation of the Recaman's sequence
+in Java.
 
 ### Restaurant
 
