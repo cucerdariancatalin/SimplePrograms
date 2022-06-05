@@ -14,13 +14,13 @@ class AnagramDetectorTest {
     private String testString;
 
     @BeforeEach
-    void instantiateAnagramDetector() {
+    void setUp() {
         anagramDetector = new AnagramDetector("Primary string");
         testString = "Java";
     }
 
     @AfterEach
-    void resetAnagramDetector() {
+    void tearDown() {
         anagramDetector = null;
         testString = null;
     }
