@@ -76,7 +76,7 @@ serious or skilled anagrammatist is to produce anagrams that reflect or comment 
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Anagram))
 
-[Here](AnagramDetector.java) you can see the implementation of the anagram detection in Java.
+[Here](AnagramDetector/AnagramDetector.java) you can see the implementation of the anagram detection in Java and [here](AnagramDetector/AnagramDetectorTest.java) - the JUnit tests.
 
 ### AtbashCipher
 
