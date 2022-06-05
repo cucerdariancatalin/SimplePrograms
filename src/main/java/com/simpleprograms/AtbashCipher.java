@@ -32,8 +32,7 @@ public class AtbashCipher {
      * Validate an input message.
      *
      * @param message the string to be validated.
-     * @throws IllegalArgumentException if the message is null.
-     * @throws IllegalArgumentException if the message is empty.
+     * @throws IllegalArgumentException if the message is null or empty.
      */
     private void validateMessage(final String message) throws IllegalArgumentException {
         if (message == null) {
