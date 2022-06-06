@@ -1,8 +1,12 @@
 package com.simpleprograms;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * JUnit tests for the {@link CaesarCipher}.
@@ -64,14 +68,14 @@ class CaesarCipherTest {
     @Test
     @DisplayName("Null input")
     void testNullInput() {
-        assertThrows(IllegalArgumentException.class, () -> caesarCipher = new CaesarCipher(null));
+        assertThrows(IllegalArgumentException.class, () -> new CaesarCipher(null));
         assertThrows(IllegalArgumentException.class, () -> caesarCipher.setKey(null));
     }
 
     @Test
     @DisplayName("Empty input")
     void testEmptyInput() {
-        assertThrows(IllegalArgumentException.class, () -> caesarCipher = new CaesarCipher(""));
+        assertThrows(IllegalArgumentException.class, () -> new CaesarCipher(""));
         assertThrows(IllegalArgumentException.class, () -> caesarCipher.setKey(""));
     }
 }
