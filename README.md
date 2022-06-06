@@ -308,7 +308,7 @@ equivalent to a right shift of 23 (the shift parameter is used as the key):
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher))
 
 [Here](src/main/java/com/simpleprograms/CaesarCipher.java) you can see the implementation of Caesar Cipher (I used
-offset to the right) in Java.
+offset to the right) in Java and [here](src/test/java/com/simpleprograms/CaesarCipherTest.java) - the JUnit tests.
 
 ### ChocolateBreaker
 
