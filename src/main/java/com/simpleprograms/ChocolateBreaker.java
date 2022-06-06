@@ -28,6 +28,7 @@ public class ChocolateBreaker {
      */
     public ChocolateBreaker(final int chocolateLength, final int chocolateWidth) {
         validateChocolateSize(chocolateLength, chocolateWidth);
+
         this.chocolateLength = chocolateLength;
         this.chocolateWidth = chocolateWidth;
     }
@@ -48,6 +49,7 @@ public class ChocolateBreaker {
      */
     public void setChocolateLength(final int chocolateLength) {
         validateChocolateSize(chocolateLength, 1);
+
         this.chocolateLength = chocolateLength;
     }
 
@@ -67,6 +69,7 @@ public class ChocolateBreaker {
      */
     public void setChocolateWidth(final int chocolateWidth) {
         validateChocolateSize(1, chocolateWidth);
+
         this.chocolateWidth = chocolateWidth;
     }
 
@@ -77,7 +80,7 @@ public class ChocolateBreaker {
      * @param chocolateWidth  a new value of the {@link #chocolateWidth} to be checked.
      * @throws IllegalArgumentException if at least one of the values is less than 1.
      */
-    private void validateChocolateSize(final int chocolateLength, final int chocolateWidth) {
+    private void validateChocolateSize(final int chocolateLength, final int chocolateWidth) throws IllegalArgumentException {
         if (chocolateLength < 1 || chocolateWidth < 1) {
             throw new IllegalArgumentException("The values must be greater than 0!");
         }
