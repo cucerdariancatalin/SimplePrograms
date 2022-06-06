@@ -71,7 +71,7 @@ public class CaesarCipher {
     }
 
     /**
-     * The method converts the {@link #key} to a number.
+     * Converts the {@link #key} to a number.
      *
      * @return the {@link #key} as a number.
      */
@@ -86,7 +86,7 @@ public class CaesarCipher {
     }
 
     /**
-     * The method en- or decrypt the message using the Atbash cipher.
+     * En- or decrypts the message using the Atbash cipher.
      *
      * @param inputMessage the message to be en- or decrypted.
      * @param isEncryption the flag to choose the process option (en- or decrypt).
@@ -111,7 +111,7 @@ public class CaesarCipher {
     }
 
     /**
-     * Validate the user input.<br>
+     * Validates the user input.<br>
      * The method is used to validate a new value of the {@link #key} and the input message.
      *
      * @param input the user input (string) to be validated.

@@ -35,7 +35,7 @@ import org.jetbrains.annotations.NotNull;
 public class AtbashCipher {
 
     /**
-     * The method en- or decrypts the message using the Atbash cipher.
+     * En- or decrypts the message using the Atbash cipher.
      *
      * @param inputMessage the message to be en- or decrypted.
      * @return the en- or decrypted message.
@@ -53,7 +53,7 @@ public class AtbashCipher {
     }
 
     /**
-     * Validate an input message.
+     * Validates an input message.
      *
      * @param message the string to be validated.
      * @throws IllegalArgumentException if the message is null or empty.

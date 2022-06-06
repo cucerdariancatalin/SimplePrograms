@@ -98,7 +98,7 @@ public class ChocolateBreaker {
     }
 
     /**
-     * Validate new values of the {@link #chocolateLength} and the {@link #chocolateWidth}.
+     * Validates new values of the {@link #chocolateLength} and the {@link #chocolateWidth}.
      *
      * @param chocolateLength a new value of the {@link #chocolateLength} to be checked.
      * @param chocolateWidth  a new value of the {@link #chocolateWidth} to be checked.
@@ -111,7 +111,7 @@ public class ChocolateBreaker {
     }
 
     /**
-     * Print "YES" if it is possible to break off exactly the number of segments from the chocolate with
+     * Prints "YES" if it is possible to break off exactly the number of segments from the chocolate with
      * a single straight line: vertical or horizontal, and "NO" otherwise.
      *
      * @param segmentsNumber the number of the segments.
@@ -133,7 +133,7 @@ public class ChocolateBreaker {
     }
 
     /**
-     * The method launches the program.
+     * The example of using the program.
      */
     public static void main(String[] args) {
         final var scanner = new Scanner(System.in);

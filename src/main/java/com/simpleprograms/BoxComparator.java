@@ -37,7 +37,7 @@ import java.util.Arrays;
 public class BoxComparator {
 
     /**
-     * The method checks the boxes can be nested within each other.
+     * Checks the boxes can be nested within each other.
      *
      * @param box1 the box to be compared with box2. It must have 3 elements: width, length and height.
      * @param box2 the box to be compared with box1. It must have 3 elements: width, length and height.
@@ -75,7 +75,7 @@ public class BoxComparator {
     }
 
     /**
-     * Validate a box.
+     * Validates a box.
      *
      * @param box the box to be validated.
      * @throws IllegalArgumentException if the box is null or unsuitable.

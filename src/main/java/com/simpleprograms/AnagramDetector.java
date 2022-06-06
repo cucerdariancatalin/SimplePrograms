@@ -73,7 +73,7 @@ public class AnagramDetector {
     }
 
     /**
-     * Validate an input string.
+     * Validates an input string.
      *
      * @param string the string to be validated.
      * @throws IllegalArgumentException if the string is null.
@@ -90,7 +90,7 @@ public class AnagramDetector {
     }
 
     /**
-     * Check the {@link #primaryString} is an anagram of the input string.
+     * Checks the {@link #primaryString} is an anagram of the input string.
      *
      * @param string the string to be checked.
      * @return boolean true if it is and boolean false if is not.
