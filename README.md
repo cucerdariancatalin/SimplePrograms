@@ -320,7 +320,8 @@ a single straight line: vertical or horizontal.
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2170).
 
-[Here](src/main/java/com/simpleprograms/ChocolateBreaker.java) you can see the implementation of this program in Java.
+[Here](src/main/java/com/simpleprograms/ChocolateBreaker.java) you can see the implementation of this program in Java
+and [here](src/test/java/com/simpleprograms/ChocolateBreakerTest.java) - the JUnit tests.
 
 ### Cinema
 
