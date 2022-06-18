@@ -49,12 +49,6 @@ class BoxComparatorTest {
         testBox2 = new int[]{4, 5, 6};
     }
 
-    @AfterEach
-    void tearDown() {
-        testBox1 = null;
-        testBox2 = null;
-    }
-
     @Test
     @DisplayName("Check the boxes are nestable")
     void checkNestable() {

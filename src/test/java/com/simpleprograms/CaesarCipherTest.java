@@ -49,12 +49,6 @@ class CaesarCipherTest {
         caesarCipher = new CaesarCipher(testKey);
     }
 
-    @AfterEach
-    void tearDown() {
-        testKey = null;
-        caesarCipher = null;
-    }
-
     @Test
     @DisplayName("Constructor")
     void testConstructor() {

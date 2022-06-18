@@ -51,12 +51,6 @@ class AnagramDetectorTest {
         testString = "Java";
     }
 
-    @AfterEach
-    void tearDown() {
-        anagramDetector = null;
-        testString = null;
-    }
-
     @Test
     @DisplayName("Constructor")
     void testConstructor() {

@@ -50,12 +50,6 @@ class AtbashCipherTest {
         testMessage = "Java";
     }
 
-    @AfterEach
-    void tearDown() {
-        atbashCipher = null;
-        testMessage = null;
-    }
-
     @Test
     @DisplayName("Process message")
     void processMessage() {

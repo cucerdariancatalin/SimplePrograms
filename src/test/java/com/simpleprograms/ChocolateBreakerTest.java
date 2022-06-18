@@ -49,13 +49,6 @@ class ChocolateBreakerTest {
         chocolateBreaker = new ChocolateBreaker(testChocolateLength, testChocolateWidth);
     }
 
-    @AfterEach
-    void tearDown() {
-        testChocolateLength = 0;
-        testChocolateWidth = 0;
-        chocolateBreaker = null;
-    }
-
     @Test
     @DisplayName("Constructor")
     void testConstructor() {
