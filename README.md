@@ -35,7 +35,7 @@ the [list of all programs](#List-of-all-programs).
 - [BubbleSorter](#BubbleSorter) *updated*
 - [CaesarCipher](#CaesarCipher) *updated*
 - [ChocolateBreaker](#ChocolateBreaker) *updated*
-- [Cinema](#Cinema)
+- [Cinema](#Cinema) *updated*
 - [CodeWordCipher](#CodeWordCipher)
 - [CollatzConjecture](#CollatzConjecture)
 - [CommonDenominators](#CommonDenominators)
