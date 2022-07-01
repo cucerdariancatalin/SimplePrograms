@@ -16,7 +16,7 @@ public class Cinema {
      * The representation of the cinema current state.<br>
      * The sold seats are marked with "0", free seats - with "1".
      */
-    private final int[][] seats;
+    private int[][] seats;
 
     /**
      * The default constructor sets the value of the {@link #seats}.
@@ -24,6 +24,26 @@ public class Cinema {
      * @param seats the value of the {@link #seats}.
      */
     public Cinema(final int @NotNull [] @NotNull [] seats) {
+        validateSeats(seats);
+
+        this.seats = seats.clone();
+    }
+
+    /**
+     * The getter for the {@link #seats}.
+     *
+     * @return a copy of the {@link #seats}.
+     */
+    public int @NotNull [] @NotNull [] getSeats() {
+        return seats.clone();
+    }
+
+    /**
+     * The setter for the {@link #seats}.
+     *
+     * @param seats a new value of the {@link #seats}.
+     */
+    public void setSeats(int @NotNull [] @NotNull [] seats) {
         validateSeats(seats);
 
         this.seats = seats.clone();
@@ -88,7 +108,7 @@ public class Cinema {
         final var scanner = new Scanner(System.in);
         final int rowsNumber = scanner.nextInt();
         final int seatsNumber = scanner.nextInt();
-        final int[][] seats = new int[rowsNumber][seatsNumber];
+        int[][] seats = new int[rowsNumber][seatsNumber];
 
         for (int i = 0; i < rowsNumber; i++) {
             for (int j = 0; j < seatsNumber; j++) {
@@ -98,6 +118,15 @@ public class Cinema {
 
         final Cinema cinema = new Cinema(seats);
         final int ticketsNumber = scanner.nextInt();
+        seats = cinema.getSeats();
+
+        for (int[] row : seats) {
+            for (int seatIndex = 0; seatIndex < row.length; seatIndex++) {
+                final char splitter = (seatIndex == row.length - 1) ? '\n' : ' ';
+
+                System.out.printf("%d%c", row[seatIndex], splitter);
+            }
+        }
 
         System.out.println(cinema.findConsecutiveAvailableSeats(ticketsNumber));
     }
