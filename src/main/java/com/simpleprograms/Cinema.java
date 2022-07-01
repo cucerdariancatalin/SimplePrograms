@@ -1,65 +1,104 @@
 package com.simpleprograms;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 /**
  * Simple program to find the suitable row in the cinema.
  *
  * @author VitasSalvantes
- * @version 1.0
+ * @version 2.0
  */
 public class Cinema {
-    public static void main(String[] args) {
-        // The Scanner object to get the user input
-        Scanner scanner = new Scanner(System.in);
 
-        // The number of rows in the cinema
-        int rows = scanner.nextInt();
+    /**
+     * The representation of the cinema current state.<br>
+     * The sold seats are marked with "0", free seats - with "1".
+     */
+    private final int[][] seats;
 
-        // The number of seats in the row
-        int seats = scanner.nextInt();
+    /**
+     * The default constructor sets the value of the {@link #seats}.
+     *
+     * @param seats the value of the {@link #seats}.
+     */
+    public Cinema(final int @NotNull [] @NotNull [] seats) {
+        validateSeats(seats);
 
-        // The two-dimensional array representing all seat in the cinema
-        int[][] cinemaSeats = new int[rows][seats];
+        this.seats = seats.clone();
+    }
 
-        // The number of free seats in the row
-        int freeSeats = 1;
-
-        // The suitable row
-        int luckyRow = 0;
-
-        // Obtaining information about free seats from the user and filling the cinemaSeats array
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < seats; j++) {
-                cinemaSeats[i][j] = scanner.nextInt();
-            }
+    /**
+     * Validates seats.
+     *
+     * @param seats the value to be validated.
+     * @throws IllegalArgumentException if the value either is null or contains null or unsuitable number.
+     */
+    private void validateSeats(final int[][] seats) throws IllegalArgumentException {
+        if (seats == null) {
+            throw new IllegalArgumentException("The seats must not be null");
         }
 
-        // The number of free neighbouring seats to find
-        int tickets = scanner.nextInt();
+        for (int[] row : seats) {
+            if (row == null) {
+                throw new IllegalArgumentException("The row must not be null");
+            }
 
-        // Look for the suitable row with free neighboring seats
-        SearchingFreeSeats:
-        for (int i = 0; i < cinemaSeats.length; i++) {
-            for (int j = 1; j < cinemaSeats[i].length; j++) {
-                if (cinemaSeats[i][j] == 0 && cinemaSeats[i][j] == cinemaSeats[i][j - 1]) {
+            for (int seat : row) {
+                if (seat != 0 && seat != 1) {
+                    throw new IllegalArgumentException("The seat must be either 1 or 0");
+                }
+            }
+        }
+    }
+
+    /**
+     * Finds the row which contains a desired number of hte consecutive seats.
+     *
+     * @param consecutiveSeatsNumber the desired number of the consecutive seats.
+     * @return the number of the first found suitable row or 0 if the row was not found.
+     */
+    public int findConsecutiveAvailableSeats(final int consecutiveSeatsNumber) {
+        int freeSeats = 0;
+
+        for (int i = 0; i < seats.length; i++) {
+            for (int j = 0; j < seats[i].length; j++) {
+                if (seats[i][j] == 0) {
                     freeSeats++;
-                } else {
-                    freeSeats = 1;
-                }
 
-                // If the suitable row is founded, stop the loop
-                if (freeSeats == tickets) {
-                    luckyRow = i + 1;
-                    break SearchingFreeSeats;
+                    if (freeSeats == consecutiveSeatsNumber) {
+                        return i + 1;
+                    }
+                } else {
+                    freeSeats = 0;
                 }
             }
 
-            // Set the number to default before checking the next row
-            freeSeats = 1;
+            freeSeats = 0;
         }
 
-        // Print the number of the suitable row
-        System.out.println(luckyRow);
+        return 0;
+    }
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var scanner = new Scanner(System.in);
+        final int rowsNumber = scanner.nextInt();
+        final int seatsNumber = scanner.nextInt();
+        final int[][] seats = new int[rowsNumber][seatsNumber];
+
+        for (int i = 0; i < rowsNumber; i++) {
+            for (int j = 0; j < seatsNumber; j++) {
+                seats[i][j] = scanner.nextInt();
+            }
+        }
+
+        final Cinema cinema = new Cinema(seats);
+        final int ticketsNumber = scanner.nextInt();
+
+        System.out.println(cinema.findConsecutiveAvailableSeats(ticketsNumber));
     }
 }
