@@ -37,7 +37,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * JUnit tests for the {@link Cinema}.
  *
  * @author VitasSalvantes
- * @version 1.0
+ * @version 1.0.0
  */
 class CinemaTest {
 

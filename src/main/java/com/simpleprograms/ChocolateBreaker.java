@@ -30,7 +30,7 @@ import java.util.Scanner;
  * The program to find out whether it is possible to break off exactly the number of segments from the chocolate bar.
  *
  * @author VitasSalvantes
- * @version 2.0
+ * @version 2.0.0
  */
 public class ChocolateBreaker {
 

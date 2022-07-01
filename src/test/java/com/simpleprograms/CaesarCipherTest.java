@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link CaesarCipher}.
  *
  * @author VitasSalvantes
- * @version 1.0
+ * @version 1.0.1
  */
 class CaesarCipherTest {
 

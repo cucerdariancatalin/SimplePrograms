@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * The program to en- and decrypt messages using the Caesar cipher.
  *
  * @author VitasSalvantes
- * @version 7.5
+ * @version 7.5.0
  */
 public class CaesarCipher {
 

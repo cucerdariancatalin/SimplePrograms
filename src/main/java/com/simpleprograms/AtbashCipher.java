@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * The program to en- and decrypt messages using the Atbash cipher.
  *
  * @author VitasSalvantes
- * @version 5.0
+ * @version 5.0.0
  */
 public class AtbashCipher {
 

@@ -34,6 +34,12 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/**
+ * JUnit tests for the {@link ChocolateBreaker}.
+ *
+ * @author VitasSalvantes
+ * @version 1.0.1
+ */
 class ChocolateBreakerTest {
 
     private ChocolateBreaker chocolateBreaker;
