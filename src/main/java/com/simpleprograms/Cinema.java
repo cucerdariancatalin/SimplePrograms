@@ -16,7 +16,7 @@ public class Cinema {
      * The representation of the cinema current state.<br>
      * The sold seats are marked with "0", free seats - with "1".
      */
-    private int[][] seats;
+    private final int[][] seats;
 
     /**
      * The default constructor sets the value of the {@link #seats}.
@@ -36,17 +36,6 @@ public class Cinema {
      */
     public int @NotNull [] @NotNull [] getSeats() {
         return seats.clone();
-    }
-
-    /**
-     * The setter for the {@link #seats}.
-     *
-     * @param seats a new value of the {@link #seats}.
-     */
-    public void setSeats(int @NotNull [] @NotNull [] seats) {
-        validateSeats(seats);
-
-        this.seats = seats.clone();
     }
 
     /**
