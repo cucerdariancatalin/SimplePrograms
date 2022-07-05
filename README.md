@@ -43,7 +43,6 @@ the [list of all programs](#List-of-all-programs).
 - [FirstUniqueCharacterInString](#FirstUniqueCharacterInString)
 - [FizzBuzz](#FizzBuzz)
 - [HappyBirthday](#HappyBirthday)
-- [HelloWorld](#HelloWorld)
 - [NumberBaseConverter](#NumberBaseConverter)
 - [OrderedSequence](#OrderedSequence)
 - [PerfectNumbers](#PerfectNumbers)
@@ -491,24 +490,6 @@ the [Android Basics in Kotlin](https://developer.android.com/codelabs/basic-andr
 by Google.
 
 [Here](src/main/kotlin/com/simpleprograms/HappyBirthday.kt) you can see the implementation of this program in Kotlin.
-
-### HelloWorld
-
-A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!". Such a
-program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming
-language. It is often the first program written by people learning to code. It can also be used as a sanity test to make
-sure that a computer software intended to compile or run source code is correctly installed, and that the operator
-understands how to use it.
-
-While small test programs have existed since the development of programmable computers, the tradition of using the
-phrase "Hello, World!" as a test message was influenced by an example program in the seminal 1978 book "The C
-Programming Language". The example program in that book prints "", and was inherited from a 1974 Bell Laboratories
-internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
-
-(See more in [Wikipedia](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))
-
-[Here](src/main/java/com/simpleprograms/HelloWorld.java) you can see an example of this program in Java
-and [here](src/main/kotlin/com/simpleprograms/HelloWorld.kt) in Kotlin.
 
 ### NumberBaseConverter
 
