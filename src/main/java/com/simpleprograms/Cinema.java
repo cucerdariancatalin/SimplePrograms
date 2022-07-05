@@ -32,7 +32,7 @@ import java.util.Scanner;
  * Simple program to find the suitable row in the cinema.
  *
  * @author VitasSalvantes
- * @version 2.0.2
+ * @version 2.0.3
  */
 public class Cinema {
 
@@ -66,9 +66,8 @@ public class Cinema {
      * Validates seats.
      *
      * @param seats the value to be validated.
-     * @throws IllegalArgumentException if the value either is null or contains null or unsuitable number.
      */
-    private void validateSeats(final int[][] seats) throws IllegalArgumentException {
+    private void validateSeats(final int[][] seats) {
         if (seats == null) {
             throw new IllegalArgumentException("The seats must not be null");
         }

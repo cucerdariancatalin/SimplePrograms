@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * The program to en- and decrypt messages using the Caesar cipher.
  *
  * @author VitasSalvantes
- * @version 7.5.1
+ * @version 7.5.2
  */
 public class CaesarCipher {
 
@@ -115,9 +115,8 @@ public class CaesarCipher {
      * The method is used to validate a new value of the {@link #key} and the input message.
      *
      * @param input the user input (string) to be validated.
-     * @throws IllegalArgumentException if either the {@link #key} or the user input are null or empty.
      */
-    private void validateInput(final String input) throws IllegalArgumentException {
+    private void validateInput(final String input) {
         if (input == null) {
             throw new IllegalArgumentException("The input must not be null");
         }

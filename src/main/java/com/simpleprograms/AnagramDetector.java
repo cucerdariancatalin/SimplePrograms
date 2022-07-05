@@ -32,7 +32,7 @@ import java.util.Arrays;
  * The program to detect an anagram.
  *
  * @author VitasSalvantes
- * @version 3.0.1
+ * @version 3.0.2
  */
 public class AnagramDetector {
 
@@ -76,10 +76,8 @@ public class AnagramDetector {
      * Validates an input string.
      *
      * @param string the string to be validated.
-     * @throws IllegalArgumentException if the string is null.
-     * @throws IllegalArgumentException if the string is empty.
      */
-    private void validateString(final String string) throws IllegalArgumentException {
+    private void validateString(final String string) {
         if (string == null) {
             throw new IllegalArgumentException("The string must not be null.");
         }

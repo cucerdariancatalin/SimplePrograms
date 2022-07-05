@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * The program to en- and decrypt messages using the Atbash cipher.
  *
  * @author VitasSalvantes
- * @version 5.0.0
+ * @version 5.0.1
  */
 public class AtbashCipher {
 
@@ -56,9 +56,8 @@ public class AtbashCipher {
      * Validates an input message.
      *
      * @param message the string to be validated.
-     * @throws IllegalArgumentException if the message is null or empty.
      */
-    private void validateMessage(final String message) throws IllegalArgumentException {
+    private void validateMessage(final String message) {
         if (message == null) {
             throw new IllegalArgumentException("The message must not be null.");
         }
