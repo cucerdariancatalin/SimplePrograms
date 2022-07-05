@@ -36,7 +36,6 @@ the [list of all programs](#List-of-all-programs).
 - [Cinema](#Cinema)
 - [CollatzConjecture](#CollatzConjecture)
 - [CommonDenominators](#CommonDenominators)
-- [ConsoleCalc](#ConsoleCalc)
 - [CountTheDigit](#CountTheDigit)
 - [EuclideanAlgorithm](#EuclideanAlgorithm)
 - [ExchangedValues](#ExchangedValues)
@@ -370,12 +369,6 @@ The algorithm of work is quite simple:
 This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d95).
 
 [Here](src/main/java/com/simpleprograms/CommonDenominators.java) you can see the implementation of this program in Java.
-
-### ConsoleCalc
-
-[Here](src/main/java/com/simpleprograms/ConsoleCalc.java) you can see the implementation of a simple calculator in Java.
-You can enter an unlimited
-number of numbers and perform various mathematical operations with them.
 
 ### CountTheDigit
 
