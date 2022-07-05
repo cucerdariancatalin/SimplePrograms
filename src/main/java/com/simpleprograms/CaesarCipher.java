@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * The program to en- and decrypt messages using the Caesar cipher.
  *
  * @author VitasSalvantes
- * @version 7.5.0
+ * @version 7.5.1
  */
 public class CaesarCipher {
 
@@ -67,7 +67,7 @@ public class CaesarCipher {
      * @return the {@link #key}.
      */
     public @NotNull String getKey() {
-        return this.key;
+        return key;
     }
 
     /**
@@ -78,8 +78,8 @@ public class CaesarCipher {
     private int convertKeyToInt() {
         int numberKey = 0;
 
-        for (int i = 0; i < this.key.length(); i++) {
-            numberKey += Character.getNumericValue(this.key.charAt(i));
+        for (int i = 0; i < key.length(); i++) {
+            numberKey += Character.getNumericValue(key.charAt(i));
         }
 
         return numberKey % Character.MAX_CODE_POINT;

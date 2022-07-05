@@ -30,7 +30,7 @@ import java.util.Scanner;
  * The program to find out whether it is possible to break off exactly the number of segments from the chocolate bar.
  *
  * @author VitasSalvantes
- * @version 2.0.0
+ * @version 2.0.1
  */
 public class ChocolateBreaker {
 
@@ -63,7 +63,7 @@ public class ChocolateBreaker {
      * @return the {@link #chocolateLength}.
      */
     public int getChocolateLength() {
-        return this.chocolateLength;
+        return chocolateLength;
     }
 
     /**
@@ -83,7 +83,7 @@ public class ChocolateBreaker {
      * @return the {@link #chocolateWidth}.
      */
     public int getChocolateWidth() {
-        return this.chocolateWidth;
+        return chocolateWidth;
     }
 
     /**
@@ -120,10 +120,10 @@ public class ChocolateBreaker {
         validateChocolateSize(1, segmentsNumber);
 
         // The number of the segments is not greater than the number of the segments in the chocolate bar
-        boolean hasSuitableSize = segmentsNumber <= this.chocolateLength * this.chocolateWidth;
+        boolean hasSuitableSize = segmentsNumber <= chocolateLength * chocolateWidth;
 
         // It could be broken off as a single straight line
-        boolean isDivider = segmentsNumber % this.chocolateLength == 0 || segmentsNumber % this.chocolateWidth == 0;
+        boolean isDivider = segmentsNumber % chocolateLength == 0 || segmentsNumber % chocolateWidth == 0;
 
         if (hasSuitableSize && isDivider) {
             System.out.println("YES");

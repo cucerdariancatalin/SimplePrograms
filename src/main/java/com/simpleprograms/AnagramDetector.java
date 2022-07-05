@@ -32,7 +32,7 @@ import java.util.Arrays;
  * The program to detect an anagram.
  *
  * @author VitasSalvantes
- * @version 3.0.0
+ * @version 3.0.1
  */
 public class AnagramDetector {
 
@@ -58,7 +58,7 @@ public class AnagramDetector {
      * @return the {@link #primaryString}.
      */
     public @NotNull String getPrimaryString() {
-        return this.primaryString;
+        return primaryString;
     }
 
     /**
@@ -95,10 +95,10 @@ public class AnagramDetector {
      * @param string the string to be checked.
      * @return boolean true if it is and boolean false if is not.
      */
-    public boolean checkForAnagram(@NotNull String string) {
+    public boolean checkForAnagram(final @NotNull String string) {
         validateString(string);
 
-        final char[] primaryWordLetters = this.primaryString.toCharArray();
+        final char[] primaryWordLetters = primaryString.toCharArray();
         final char[] wordLetters = string.toCharArray();
 
         Arrays.sort(primaryWordLetters);
