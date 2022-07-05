@@ -54,7 +54,6 @@ the [list of all programs](#List-of-all-programs).
 - [Restaurant](#Restaurant)
 - [RightRotation](#RightRotation)
 - [RotateRectangleArray](#RotateRectangleArray)
-- [SquareEveryDigit](#SquareEveryDigit)
 - [TicTacToe](#TicTacToe)
 - [TortoiseRacing](#TortoiseRacing)
 
@@ -695,14 +694,6 @@ Output the resulting array. Separate numbers by a single space in the output.
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1927).
 
 [Here](src/main/java/com/simpleprograms/RotateRectangleArray.java) you can see the solution of this task in Java.
-
-### SquareEveryDigit
-
-It's necessary to display the squares of all digits included in the number entered by the user.
-
-For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
-
-[Here](src/main/java/com/simpleprograms/SquareEveryDigit.java) you can see the implementation of this algorithm in Java.
 
 ### TicTacToe
 
