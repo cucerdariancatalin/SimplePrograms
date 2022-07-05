@@ -38,7 +38,6 @@ the [list of all programs](#List-of-all-programs).
 - [CommonDenominators](#CommonDenominators)
 - [CountTheDigit](#CountTheDigit)
 - [EuclideanAlgorithm](#EuclideanAlgorithm)
-- [ExchangedValues](#ExchangedValues)
 - [Factorial](#Factorial)
 - [FibonacciNumbers](#FibonacciNumbers)
 - [FirstUniqueCharacterInString](#FirstUniqueCharacterInString)
@@ -391,12 +390,6 @@ many other number-theoretic and cryptographic calculations.
 
 [Here](src/main/java/com/simpleprograms/EuclideanAlgorithm.java) you can see the implementation of this algorithm in
 Java.
-
-### ExchangedValues
-
-[Here](src/main/java/com/simpleprograms/ExchangedValues.java) you can see how to exchange values between two variables
-without using a third in Java
-and [here](src/main/kotlin/com/simpleprograms/ExchangedValues.kt) in Kotlin.
 
 ### Factorial
 
