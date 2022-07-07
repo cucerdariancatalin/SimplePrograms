@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * The program to reduce fractions to a common denominator.
  *
  * @author VitasSalvantes
- * @version 2.0.1
+ * @version 2.1.0
  */
 public class CommonDenominators {
 
@@ -112,9 +112,13 @@ public class CommonDenominators {
         int commonDenominatorCandidate = fractions[0][1];
 
         for (int i = 1; i < fractions.length; i++) {
-            for (int multiplier = 2; commonDenominatorCandidate % fractions[i][1] != 0; multiplier++) {
-                commonDenominatorCandidate *= multiplier;
+            int multiplier = 1;
+
+            while (commonDenominatorCandidate * multiplier % fractions[i][1] != 0) {
+                multiplier++;
             }
+
+            commonDenominatorCandidate *= multiplier;
         }
 
         return commonDenominatorCandidate;
