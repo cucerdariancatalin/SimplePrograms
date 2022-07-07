@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * The program to reduce fractions to a common denominator.
  *
  * @author VitasSalvantes
- * @version 2.0.0
+ * @version 2.0.1
  */
 public class CommonDenominators {
 
@@ -140,7 +140,7 @@ public class CommonDenominators {
      * The example of using the program.
      */
     public static void main(String[] args) {
-        final int[][] listOfFractions = {{10, 20}, {200, 300}, {6, 8}, {1, 6}};
-        System.out.printf("Fractions with a common denominator: %s%n", CommonDenominators.makeDenominatorsCommon(listOfFractions));
+        final int[][] fractions = {{10, 20}, {200, 300}, {6, 8}, {1, 6}};
+        System.out.printf("Fractions with a common denominator: %s%n", CommonDenominators.makeDenominatorsCommon(fractions));
     }
 }
