@@ -352,13 +352,13 @@ Java.
 
 ### CommonDenominators
 
-This simple program converts any number of fractions to a common denominator.
+The program converts any number of fractions to a common denominator.
 
-The algorithm of work is quite simple:
+The algorithm is quite simple:
 
 1. We get a two-dimensional array, where each element is a fraction and consists of the first number (numerator) and the
    second (denominator), and we simplify it (we reduce the numerator and denominator)
-2. We are looking for the least common multiple for all denominators
+2. We look for the least common multiple for all denominators
 3. We bring all fractions to a common denominator (it is equal to the least common multiple)
 4. We get the answer as a string like "(numerator_1,denominator_1)(numerator_2,denominator_2)...(numerator_n,
    denominator_n)"
