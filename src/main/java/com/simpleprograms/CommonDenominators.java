@@ -1,114 +1,122 @@
 package com.simpleprograms;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
- * A program for reducing fractions to a common denominator
+ * The program to reduce fractions to a common denominator.
  *
  * @author VitasSalvantes
- * @version 1.0
+ * @version 2.0.0
  */
 public class CommonDenominators {
 
     /**
-     * Method that launches the program
+     * Calculates the common denominators of the given fractions.
+     *
+     * @param fractions the fractions to be processed. The fractions[n][0] is a numerator and the fractions[n][1] is a denominator, n >= 0.
+     * @return the string containing the processed fractions.
+     */
+    public static @NotNull String makeDenominatorsCommon(final int @NotNull [] @NotNull [] fractions) {
+        validateFractions(fractions);
+        reduceFractions(fractions);
+
+        final int commonDenominator = findCommonDenominator(fractions);
+
+        for (int[] fraction : fractions) {
+            //noinspection SuspiciousIntegerDivAssignment
+            fraction[0] *= commonDenominator / fraction[1];
+            fraction[1] = commonDenominator;
+        }
+
+        return convertFractionsToString(fractions);
+    }
+
+    /**
+     * Validates fractions.
+     *
+     * @param fractions the fractions to be validated.
+     */
+    private static void validateFractions(final int[][] fractions) {
+        if (fractions == null) {
+            throw new IllegalArgumentException("The fractions must not be null");
+        }
+
+        if (fractions.length == 0) {
+            throw new IllegalArgumentException("The fractions must not be empty");
+        }
+
+        for (int[] fraction : fractions) {
+            if (fraction == null) {
+                throw new IllegalArgumentException("Each fraction must not be null");
+            }
+
+            if (fraction.length != 2) {
+                throw new IllegalArgumentException("Each fraction must have only both a numerator and a denominator");
+
+            }
+
+            if (fraction[1] == 0) {
+                throw new IllegalArgumentException("The denominator must not be null");
+            }
+        }
+    }
+
+    /**
+     * Reduces the fractions.
+     *
+     * @param fractions the fractions to be reduced.
+     */
+    private static void reduceFractions(final int @NotNull [] @NotNull [] fractions) {
+        for (int[] fraction : fractions) {
+
+            for (int i = 2; i <= Math.min(fraction[0], fraction[1]); i++) {
+                while (fraction[0] % i == 0 && fraction[1] % i == 0) {
+                    fraction[0] /= i;
+                    fraction[1] /= i;
+                }
+            }
+        }
+    }
+
+    /**
+     * Finds the common denominator of fractions.
+     *
+     * @param fractions the fractions to be processed.
+     * @return the common denominator.
+     */
+    private static int findCommonDenominator(int @NotNull [] @NotNull [] fractions) {
+        int commonDenominatorCandidate = fractions[0][1];
+
+        for (int i = 1; i < fractions.length; i++) {
+            for (int multiplier = 2; commonDenominatorCandidate % fractions[i][1] != 0; multiplier++) {
+                commonDenominatorCandidate *= multiplier;
+            }
+        }
+
+        return commonDenominatorCandidate;
+    }
+
+    /**
+     * Converts fractions to a string.
+     *
+     * @param fractions the fractions to be converted.
+     * @return the string
+     */
+    private static @NotNull String convertFractionsToString(int @NotNull [] @NotNull [] fractions) {
+        final StringBuilder fractionString = new StringBuilder();
+
+        for (int[] fraction : fractions) {
+            fractionString.append("(").append(fraction[0]).append(",").append(fraction[1]).append(")");
+        }
+
+        return fractionString.toString();
+    }
+
+    /**
+     * The example of using the program.
      */
     public static void main(String[] args) {
-        CommonDenominators cd = new CommonDenominators();
-        int[][] listOfFractions = {{10, 20}, {200, 300}, {6, 8}, {1, 6}};
-
-        String output = cd.getCommonDenominators(listOfFractions);
-        System.out.println("Fractions with a common denominator: " + output);
-    }
-
-    /**
-     * A method that simplifies the original fractions (abbreviates by multiples of 10 and the first 100 primes)
-     */
-    private int[][] reduceFractions(int[][] listOfFractions) {
-        for (int[] fraction : listOfFractions) {
-            int[] primeNumbers = createPrimeNumbers();
-
-            while (fraction[0] % 10 == 0 && fraction[1] % 10 == 0) {
-                fraction[0] /= 10;
-                fraction[1] /= 10;
-            }
-
-            for (int i = 0; i < primeNumbers.length; ) {
-                if (fraction[0] % primeNumbers[i] == 0 && fraction[1] % primeNumbers[i] == 0) {
-                    fraction[0] /= primeNumbers[i];
-                    fraction[1] /= primeNumbers[i];
-                    continue;
-                }
-
-                i++;
-            }
-        }
-
-        return listOfFractions;
-    }
-
-    /**
-     * Method for creating array containing 100 prime numbers
-     */
-    private int[] createPrimeNumbers() {
-        int[] primeNumbers = new int[100];
-        int quantity = 100;
-        int number = 2;
-        int element = 0;
-
-        while (quantity > 0) {
-
-            for (int i = 2; i <= number; i++) {
-
-                if (number % i == 0 && number != i) {
-                    break;
-                }
-
-                if (number == i) {
-                    primeNumbers[element] = number;
-                    element++;
-                    quantity--;
-                }
-            }
-
-            number++;
-        }
-        return primeNumbers;
-    }
-
-    /**
-     * A method that finds the least common multiple of all denominators
-     */
-    private int findLeastCommonMultipleForDenominators(int[][] listOfFractions) {
-        int oldLeastCommonMultiple = 1, newLeastCommonMultiple = 1, counter = 2;
-
-        for (int[] fraction : listOfFractions) {
-            while (newLeastCommonMultiple % fraction[1] != 0) {
-                newLeastCommonMultiple = oldLeastCommonMultiple;
-                newLeastCommonMultiple *= counter;
-                counter++;
-            }
-            oldLeastCommonMultiple = newLeastCommonMultiple;
-            counter = 2;
-        }
-
-        return oldLeastCommonMultiple;
-    }
-
-    /**
-     * A method that returns fractions, converting to a common denominator, as a string
-     */
-    public String getCommonDenominators(int[][] listOfFractions) {
-        StringBuilder formattedOutput = new StringBuilder();
-        listOfFractions = reduceFractions(listOfFractions);
-        int leastCommonMultipleForDenominators = findLeastCommonMultipleForDenominators(listOfFractions);
-
-        System.out.println("Least common multiple for the denominators of fractions: " + leastCommonMultipleForDenominators);
-
-        for (int[] fraction : listOfFractions) {
-            int numerator = fraction[0] * leastCommonMultipleForDenominators / fraction[1];
-            int denominator = leastCommonMultipleForDenominators;
-            formattedOutput.append("(").append(numerator).append(",").append(denominator).append(")");
-        }
-
-        return formattedOutput.toString();
+        final int[][] listOfFractions = {{10, 20}, {200, 300}, {6, 8}, {1, 6}};
+        System.out.printf("Fractions with a common denominator: %s%n", CommonDenominators.makeDenominatorsCommon(listOfFractions));
     }
 }
