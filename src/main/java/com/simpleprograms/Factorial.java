@@ -25,7 +25,7 @@
 package com.simpleprograms;
 
 /**
- * Class-example of factorial implementation
+ * Class-example of factorial implementation.
  *
  * @author VitasSalvantes
  * @version 3.1.0
