@@ -432,8 +432,7 @@ The value of 0! is 1, according to the convention for an empty product.
 
 [Here](src/main/java/com/simpleprograms/Factorial.java) you can see the implementation of Factorial in
 Java, [here](src/main/kotlin/com/simpleprograms/Factorial.kt) in
-Kotlin, [here](src/main/python/com/SimplePrograms/Factorial.py) in Python
-and [here](src/main/bash/com/SimplePrograms/factorial.sh) in Bash.
+Kotlin and [here](src/main/bash/com/SimplePrograms/factorial.sh) in Bash.
 
 ### FibonacciNumbers
 
@@ -455,8 +454,8 @@ The beginning of the sequence is thus:
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
 
 [Here](src/main/java/com/simpleprograms/FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in
-Java, [here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt)
-in Kotlin and [here](src/main/python/com/SimplePrograms/FibonacciNumbers.py) in Python.
+Java and [here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt)
+in Kotlin.
 
 ### FirstUniqueCharacterInString
 
