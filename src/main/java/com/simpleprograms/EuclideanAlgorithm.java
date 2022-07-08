@@ -28,7 +28,7 @@ package com.simpleprograms;
  * The implementation of the Euclidean algorithm for positive integers.
  *
  * @author VitasSalvantes
- * @version 1.1.0
+ * @version 1.1.1
  */
 public class EuclideanAlgorithm {
 
@@ -74,7 +74,6 @@ public class EuclideanAlgorithm {
      * The example of using the program.
      */
     public static void main(String[] args) {
-        System.out.println(EuclideanAlgorithm.calculateGCD(18, 12));
         System.out.println(EuclideanAlgorithm.calculateGCD(391, 544));
     }
 }
