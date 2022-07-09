@@ -28,7 +28,7 @@ package com.simpleprograms;
  * The solution of the famous "FizzBuzz" task.
  *
  * @author VitasSalvantes
- * @version 3.0.0
+ * @version 3.0.1
  */
 
 public class FizzBuzz {
@@ -36,7 +36,7 @@ public class FizzBuzz {
     /**
      * Prints numbers from 1 to 100. It prints "Fizz" instead of multiples of three,
      * "Buzz" instead of multiples of five and "FizzBuzz" instead of multiples of both
-     * three and five at the same time
+     * three and five at the same time.
      */
     public static void doFizzBuzz() {
         for (int i = 1; i <= 100; i++) {
