@@ -30,16 +30,16 @@ package com.simpleprograms
  * three and five at the same time.
  *
  * @author VitasSalvantes
- * @version 1.1.0
+ * @version 1.1.1
  */
 fun main() {
     for (i in 1..100) {
         val output = if (i % 15 == 0) {
-            "FizzBuzz "
+            "FizzBuzz"
         } else if (i % 5 == 0) {
-            "Buzz "
+            "Buzz"
         } else if (i % 3 == 0) {
-            "Fizz "
+            "Fizz"
         } else {
             "$i"
         }
