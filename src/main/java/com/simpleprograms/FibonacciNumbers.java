@@ -32,7 +32,7 @@ import java.math.BigInteger;
  * Simple implementation of the Fibonacci numbers.
  *
  * @author VitasSalvantes
- * @version 2.0.2
+ * @version 2.0.3
  */
 public class FibonacciNumbers {
 
@@ -48,26 +48,11 @@ public class FibonacciNumbers {
         BigInteger sum = BigInteger.ONE;
 
         for (int index = 1; index <= maxIndex; index++) {
-            System.out.printf("%s%s", nextNumber, defineSplitter(index == maxIndex));
+            System.out.printf("%s%s", nextNumber, index == maxIndex ? "\n" : ", ");
 
             BigInteger currentNumber = nextNumber;
             nextNumber = sum;
             sum = sum.add(currentNumber);
-        }
-    }
-
-    /**
-     * Defines the splitter to be printed.
-     *
-     * @param isLast the condition to define.
-     * @return a new line character if the condition is true or a comma with a
-     * whitespace otherwise.
-     */
-    private static @NotNull String defineSplitter(final boolean isLast) {
-        if (isLast) {
-            return "\n";
-        } else {
-            return ", ";
         }
     }
 
