@@ -24,13 +24,15 @@
 
 package com.simpleprograms;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.math.BigInteger;
 
 /**
  * Simple implementation of the Fibonacci numbers.
  *
  * @author VitasSalvantes
- * @version 2.0.0
+ * @version 2.0.1
  */
 public class FibonacciNumbers {
 
@@ -61,7 +63,7 @@ public class FibonacciNumbers {
      * @return a new line character if the condition is true or a comma with a
      * whitespace otherwise.
      */
-    private static String defineSplitter(final boolean isLast) {
+    private static @NotNull String defineSplitter(final boolean isLast) {
         if (isLast) {
             return "\n";
         } else {
