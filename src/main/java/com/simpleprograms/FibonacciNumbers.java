@@ -32,7 +32,7 @@ import java.math.BigInteger;
  * Simple implementation of the Fibonacci numbers.
  *
  * @author VitasSalvantes
- * @version 2.0.1
+ * @version 2.0.2
  */
 public class FibonacciNumbers {
 
@@ -77,7 +77,9 @@ public class FibonacciNumbers {
      * @param index the index to be validated.
      */
     private static void validateIndex(final int index) {
-        assert (index > 0) : "Illegal argument! The index must be greater than 0!";
+        if (index < 1) {
+            throw new IllegalArgumentException("The index must be greater than 0");
+        }
     }
 
     /**
