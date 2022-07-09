@@ -24,15 +24,13 @@
 
 package com.simpleprograms;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.math.BigInteger;
 
 /**
  * Simple implementation of the Fibonacci numbers.
  *
  * @author VitasSalvantes
- * @version 2.0.3
+ * @version 2.0.4
  */
 public class FibonacciNumbers {
 
