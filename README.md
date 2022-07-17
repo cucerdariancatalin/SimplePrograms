@@ -27,35 +27,44 @@ the [list of all programs](#List-of-all-programs).
 
 ## List of all programs
 
-- [AnagramDetector](#AnagramDetector)
-- [AtbashCipher](#AtbashCipher)
-- [BoxComparator](#BoxComparator)
-- [BubbleSorter](#BubbleSorter)
-- [CaesarCipher](#CaesarCipher)
-- [ChocolateBreaker](#ChocolateBreaker)
-- [Cinema](#Cinema)
-- [CollatzConjecture](#CollatzConjecture)
-- [CommonDenominators](#CommonDenominators)
-- [CountTheDigit](#CountTheDigit)
-- [EuclideanAlgorithm](#EuclideanAlgorithm)
-- [Factorial](#Factorial)
-- [FibonacciNumbers](#FibonacciNumbers)
-- [FirstUniqueCharacterInString](#FirstUniqueCharacterInString)
-- [FizzBuzz](#FizzBuzz)
-- [HappyBirthday](#HappyBirthday)
-- [NumberBaseConverter](#NumberBaseConverter)
-- [OrderedSequence](#OrderedSequence)
-- [PerfectNumbers](#PerfectNumbers)
-- [Polynomial](#Polynomial)
-- [PrimeNumbers](#PrimeNumbers)
-- [QuadraticEquation](#QuadraticEquation)
-- [Queens](#Queens)
-- [RecamanSequence](#RecamanSequence)
-- [Restaurant](#Restaurant)
-- [RightRotation](#RightRotation)
-- [RotateRectangleArray](#RotateRectangleArray)
-- [TicTacToe](#TicTacToe)
-- [TortoiseRacing](#TortoiseRacing)
+- [Simple programs](#simple-programs)
+  - [Table of contents](#table-of-contents)
+  - [How does it work](#how-does-it-work)
+  - [List of all programs](#list-of-all-programs)
+    - [AnagramDetector](#anagramdetector)
+    - [AtbashCipher](#atbashcipher)
+    - [BoxComparator](#boxcomparator)
+    - [BubbleSorter](#bubblesorter)
+    - [CaesarCipher](#caesarcipher)
+    - [ChocolateBreaker](#chocolatebreaker)
+    - [Cinema](#cinema)
+    - [CollatzConjecture](#collatzconjecture)
+    - [CommonDenominators](#commondenominators)
+    - [CountTheDigit](#countthedigit)
+    - [EuclideanAlgorithm](#euclideanalgorithm)
+    - [Factorial](#factorial)
+    - [FibonacciNumbers](#fibonaccinumbers)
+    - [FirstUniqueCharacterInString](#firstuniquecharacterinstring)
+    - [FizzBuzz](#fizzbuzz)
+    - [HappyBirthday](#happybirthday)
+    - [NumberBaseConverter](#numberbaseconverter)
+    - [OrderedSequence](#orderedsequence)
+    - [PerfectNumbers](#perfectnumbers)
+    - [Polynomial](#polynomial)
+    - [PrimeNumbers](#primenumbers)
+    - [QuadraticEquation](#quadraticequation)
+    - [Queens](#queens)
+    - [RecamanSequence](#recamansequence)
+    - [Restaurant](#restaurant)
+    - [RightRotation](#rightrotation)
+    - [RotateRectangleArray](#rotaterectanglearray)
+    - [TicTacToe](#tictactoe)
+    - [TortoiseRacing](#tortoiseracing)
+  - [Technologies](#technologies)
+  - [Development progress](#development-progress)
+  - [Project statistics](#project-statistics)
+  - [How to install](#how-to-install)
+  - [How to contribute](#how-to-contribute)
 
 ### AnagramDetector
 
@@ -716,11 +725,10 @@ This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006
 
 ## Technologies
 
-- [Java](https://www.oracle.com/java/) ([JDK version 17.0.1](https://docs.oracle.com/en/java/javase/17/)),
-  [Kotlin](https://kotlinlang.org/) ([JDK version 17.0.1](https://docs.oracle.com/en/java/javase/17/))
-  and [Python](https://www.python.org/) programming languages were chosen for development.
+- The [Java](https://www.oracle.com/java/) and the
+  [Kotlin](https://kotlinlang.org/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/)) programming languages were chosen for development.
 
-- Development is carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Community Edition.
+- Development is carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Ultimate Edition.
 
 - [WakaTime](https://wakatime.com/) is used to track activity.
 
