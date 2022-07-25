@@ -12,13 +12,13 @@ in accordance with the samples) or new options in any programming language.
 
 ## Table of contents
 
-- [How does it work](#How-does-it-work)
-- [List of all programs](#List-of-all-programs)
-- [Technologies](#Technologies)
-- [Development progress](#Development-progress)
-- [Project statistics](#Project-statistics)
-- [How to install](#How-to-install)
-- [How to contribute](#How-to-contribute)
+- [How does it work](#how-does-it-work)
+- [List of all programs](#list-of-all-programs)
+- [Technologies](#technologies)
+- [Development progress](#development-progress)
+- [Project statistics](#project-statistics)
+- [How to install](#how-to-install)
+- [How to contribute](#how-to-contribute)
 
 ## How does it work
 
@@ -27,44 +27,36 @@ the [list of all programs](#List-of-all-programs).
 
 ## List of all programs
 
-- [Simple programs](#simple-programs)
-  - [Table of contents](#table-of-contents)
-  - [How does it work](#how-does-it-work)
-  - [List of all programs](#list-of-all-programs)
-    - [AnagramDetector](#anagramdetector)
-    - [AtbashCipher](#atbashcipher)
-    - [BoxComparator](#boxcomparator)
-    - [BubbleSorter](#bubblesorter)
-    - [CaesarCipher](#caesarcipher)
-    - [ChocolateBreaker](#chocolatebreaker)
-    - [Cinema](#cinema)
-    - [CollatzConjecture](#collatzconjecture)
-    - [CommonDenominators](#commondenominators)
-    - [CountTheDigit](#countthedigit)
-    - [EuclideanAlgorithm](#euclideanalgorithm)
-    - [Factorial](#factorial)
-    - [FibonacciNumbers](#fibonaccinumbers)
-    - [FirstUniqueCharacterInString](#firstuniquecharacterinstring)
-    - [FizzBuzz](#fizzbuzz)
-    - [HappyBirthday](#happybirthday)
-    - [NumberBaseConverter](#numberbaseconverter)
-    - [OrderedSequence](#orderedsequence)
-    - [PerfectNumbers](#perfectnumbers)
-    - [Polynomial](#polynomial)
-    - [PrimeNumbers](#primenumbers)
-    - [QuadraticEquation](#quadraticequation)
-    - [Queens](#queens)
-    - [RecamanSequence](#recamansequence)
-    - [Restaurant](#restaurant)
-    - [RightRotation](#rightrotation)
-    - [RotateRectangleArray](#rotaterectanglearray)
-    - [TicTacToe](#tictactoe)
-    - [TortoiseRacing](#tortoiseracing)
-  - [Technologies](#technologies)
-  - [Development progress](#development-progress)
-  - [Project statistics](#project-statistics)
-  - [How to install](#how-to-install)
-  - [How to contribute](#how-to-contribute)
+- [AnagramDetector](#anagramdetector)
+- [AtbashCipher](#atbashcipher)
+- [BoxComparator](#boxcomparator)
+- [BubbleSorter](#bubblesorter)
+- [CaesarCipher](#caesarcipher)
+- [ChocolateBreaker](#chocolatebreaker)
+- [Cinema](#cinema)
+- [CollatzConjecture](#collatzconjecture)
+- [CommonDenominators](#commondenominators)
+- [CountTheDigit](#countthedigit)
+- [EuclideanAlgorithm](#euclideanalgorithm)
+- [Factorial](#factorial)
+- [FibonacciNumbers](#fibonaccinumbers)
+- [FirstUniqueCharacterInString](#firstuniquecharacterinstring)
+- [FizzBuzz](#fizzbuzz)
+- [HappyBirthday](#happybirthday)
+- [NumberBaseConverter](#numberbaseconverter)
+- [OrderedSequence](#orderedsequence)
+- [PerfectNumbers](#perfectnumbers)
+- [Polynomial](#polynomial)
+- [PrimeNumbers](#primenumbers)
+- [QuadraticEquation](#quadraticequation)
+- [Queens](#queens)
+- [RecamanSequence](#recamansequence)
+- [Restaurant](#restaurant)
+- [RightRotation](#rightrotation)
+- [RotateRectangleArray](#rotaterectanglearray)
+- [SimpleCurrencyConverter](#simplecurrencyconverter)
+- [TicTacToe](#tictactoe)
+- [TortoiseRacing](#tortoiseracing)
 
 ### AnagramDetector
 
@@ -703,6 +695,42 @@ This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1927).
 
 [Here](src/main/java/com/simpleprograms/RotateRectangleArray.java) you can see the solution of this task in Java.
 
+### SimpleCurrencyConverter
+
+Have you ever wondered how many Japanese yens you can have for 100 USD? In this project, you will write a program that
+converts a provided currency to another.
+
+We will loop our program to make it run continuously until the exit command is prompted.
+
+First, ask the user what they want to do.
+
+Give two choices to users: one is conversion, the other is the exit. Users need to input 1 and 2, respectively.
+
+In case of any wrong input, you need to ask again for the input and repeat the process.
+
+Output the following message: What do you want to convert? After this, users provide input that indicates a currency to
+convert from and a currency to convert to. Don't forget to handle all unknown and invalid inputs.
+
+Calculate and output the result that must take 4 decimal places.
+
+To simplify getting input from the console, we're using a JS library, check out
+the [documentation](https://github.com/hyperskill/sync-input#usage) to see how it's used.
+
+Don’t forget that when getting the input for the desired currency, the program should be able to process lower and
+uppercase letters. Also, if an unknown input is provided by users, print the following message:
+"Unknown currency".
+
+The value for the converted amount should not be less than 1. If it's less, output "The amount cannot be less than 1".
+If the amount is not a number, output "The amount has to be a number".
+
+Print the following message when users choose to exit the program: "Have a nice day!".
+
+Print the following message when unknown input occurs: "Unknown input".
+
+This task is on [JetBrains Academy](https://hyperskill.org/projects/231).
+
+[Here](src/main/js/com/simpleprograms/SimpleCurrencyConverter.js) you can see the solution of this task in JavaScript.
+
 ### TicTacToe
 
 Coming soon...
@@ -726,7 +754,8 @@ This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006
 ## Technologies
 
 - The [Java](https://www.oracle.com/java/) and the
-  [Kotlin](https://kotlinlang.org/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/)) programming languages were chosen for development.
+  [Kotlin](https://kotlinlang.org/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/)) programming languages
+  were chosen for development.
 
 - Development is carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Ultimate Edition.
 
