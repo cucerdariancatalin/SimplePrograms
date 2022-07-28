@@ -1,3 +1,26 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
 package com.simpleprograms;
 
 import java.math.BigDecimal;
@@ -8,7 +31,7 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author VitasSalvantes
- * @version 1.0
+ * @version 1.0.0
  */
 public class NumberBaseConverter {
 
@@ -32,9 +55,7 @@ public class NumberBaseConverter {
      * The default constructor sets both the {@link #sourceBase} and the {@link #targetBase} as <b>decimal</b> and the {@link #scale} as <b>5</b>.
      */
     public NumberBaseConverter() {
-        this.sourceBase = 10;
-        this.targetBase = 10;
-        this.scale = 5;
+        this(10, 10, 5);
     }
 
     /**
@@ -43,11 +64,12 @@ public class NumberBaseConverter {
      * @param sourceBase a default value of the {@link #sourceBase}.
      * @param targetBase a default value of the {@link #targetBase}.
      * @param scale      a default value of the {@link #scale}.
-     * @see #validateBases(int...)
+     * @see #validateBase(int)
      * @see #validateScale(int)
      */
     public NumberBaseConverter(final int sourceBase, final int targetBase, final int scale) {
-        validateBases(sourceBase, targetBase);
+        validateBase(sourceBase);
+        validateBase(targetBase);
         validateScale(scale);
 
         this.sourceBase = sourceBase;
@@ -68,10 +90,10 @@ public class NumberBaseConverter {
      * The setter for the {@link #sourceBase}.
      *
      * @param sourceBase a new value of the {@link #sourceBase}.
-     * @see #validateBases(int...)
+     * @see #validateBase(int)
      */
     public void setSourceBase(final int sourceBase) {
-        validateBases(sourceBase);
+        validateBase(sourceBase);
 
         this.sourceBase = sourceBase;
     }
@@ -89,10 +111,10 @@ public class NumberBaseConverter {
      * The setter for the {@link #targetBase}.
      *
      * @param targetBase a new value of the {@link #targetBase}.
-     * @see #validateBases(int...)
+     * @see #validateBase(int)
      */
     public void setTargetBase(final int targetBase) {
-        validateBases(targetBase);
+        validateBase(targetBase);
 
         this.targetBase = targetBase;
     }
@@ -119,20 +141,18 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Validate new values of the {@link #sourceBase} and the {@link #targetBase}. Each value must be greater than 1 and less than 36.
+     * Validates a base. The value must be greater than 1 and less than 36.
      *
-     * @param bases the values to be validated.
+     * @param base the value to be validated.
      */
-    private void validateBases(final int... bases) {
-        for (int base : bases) {
-            if (base < 2 || base > 35) {
-                throw new IllegalArgumentException("The base must be greater than 1 and less than 36.");
-            }
+    private void validateBase(final int base) {
+        if (base < 2 || base > 35) {
+            throw new IllegalArgumentException("The base must be greater than 1 and less than 36");
         }
     }
 
     /**
-     * Validate a new value of the {@link #scale}. It must be a positive integer.
+     * Validates a new value of the {@link #scale}. It must be a positive integer.
      *
      * @param scale the value to be validated.
      */
@@ -143,7 +163,7 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Convert the integer part of the number from the {@link #sourceBase} to the {@link #targetBase}.<br>
+     * Converts the integer part of the number from the {@link #sourceBase} to the {@link #targetBase}.<br>
      * The integer part of the number is all the digits until the point. For example, <b>1</b> is the integer part of the number <b>1.234</b>.<br>
      * The algorithm is:
      * <ol>
@@ -160,7 +180,7 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Convert the integer part of the number from the {@link #sourceBase} to the decimal.
+     * Converts the integer part of the number from the {@link #sourceBase} to the decimal.
      *
      * @param integerPart the integer part of the number to be converted.
      * @return the converted integer part of the number.
@@ -170,7 +190,7 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Convert the fractional part of the number from the {@link #sourceBase} to the {@link #targetBase}.<br>
+     * Converts the fractional part of the number from the {@link #sourceBase} to the {@link #targetBase}.<br>
      * The fractional part of the number is all the digits after the point. For example, <b>0.234</b> is the fractional part of the number <b>1.234</b>.<br>
      * The algorithm is:
      *  <ol>
@@ -184,6 +204,7 @@ public class NumberBaseConverter {
      * @see #convertFractionalPartToDecimal(String)
      */
     private String convertFractionalPartToTargetBase(final String fractionalPart) {
+        // TODO: 28.07.2022 improve logic
         BigDecimal product;
         final var convertedFractionalPart = new StringBuilder("0.");
         BigDecimal fractionalPartInDecimal = (this.sourceBase == 10) ? new BigDecimal(fractionalPart) : convertFractionalPartToDecimal(fractionalPart);
@@ -200,25 +221,21 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Convert the fractional part of the number from the {@link #sourceBase} to the decimal.
+     * Converts the fractional part of the number from the {@link #sourceBase} to the decimal.
      *
      * @param fractionalPart the fractional part of the number to be converted.
      * @return the converted fractional part of the number.
      */
     private BigDecimal convertFractionalPartToDecimal(final String fractionalPart) {
+        // TODO: 28.07.2022 improve logic
         BigDecimal fractionalPartInDecimal = BigDecimal.ZERO;
-        BigDecimal sourceBaseToPowerOfPosition;
-        BigDecimal digitInDecimal;
-        String digitInSourceBase;
 
         // "0." is not been processing
         for (int i = 2; i < fractionalPart.length(); i++) {
             // "0." is not been processing
-            sourceBaseToPowerOfPosition = BigDecimal.valueOf(Math.pow(this.sourceBase, -(i - 1)));
-
-            digitInSourceBase = String.valueOf(fractionalPart.charAt(i));
-
-            digitInDecimal = new BigDecimal(convertIntegerPartToDecimal(digitInSourceBase));
+            final BigDecimal sourceBaseToPowerOfPosition = BigDecimal.valueOf(Math.pow(this.sourceBase, -(i - 1)));
+            final String digitInSourceBase = String.valueOf(fractionalPart.charAt(i));
+            final BigDecimal digitInDecimal = new BigDecimal(convertIntegerPartToDecimal(digitInSourceBase));
 
             fractionalPartInDecimal = fractionalPartInDecimal.add(digitInDecimal.multiply(sourceBaseToPowerOfPosition));
         }
@@ -227,11 +244,12 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Run the interaction with the user.
+     * Runs the interaction with the user.
      *
      * @param scanner the {@link java.util.Scanner} object to get the input data from the user.
      */
     public void run(final Scanner scanner) {
+        // TODO: 28.07.2022 improve logic
         String inputLine;
 
         while (true) {
@@ -262,23 +280,25 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Validate the user input.
+     * Validates the user input.
      *
      * @param inputLine the input to be validated.
      */
     private void validateInputLine(final String inputLine) {
+        // TODO: 28.07.2022 improve logic
         if (inputLine.isBlank()) {
             throw new IllegalArgumentException("The input must not be blank.");
         }
     }
 
     /**
-     * Define the sign of the number to be converted and delete it.
+     * Defines the sign of the number to be converted and delete it.
      *
      * @param number the number to be converted.
      * @return the sign of the number ("" or "-").
      */
     private String defineAndDeleteNumberSign(final StringBuilder number) {
+        // TODO: 28.07.2022 improve logic
         if (number.charAt(0) == '-') {
             number.deleteCharAt(0);
             return "-";
@@ -288,11 +308,12 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Get the bases values from a string and set the values of the {@link #sourceBase} and the {@link #targetBase}.
+     * Gets the bases values from a string and sets the values of the {@link #sourceBase} and the {@link #targetBase}.
      *
      * @param basesString the string that contains the values of the bases.
      */
     private void processBases(final String basesString) {
+        // TODO: 28.07.2022 improve logic
         final String[] bases = basesString.split(" ");
 
         this.setSourceBase(Integer.parseInt(bases[0]));
@@ -300,14 +321,15 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Convert a number from the {@link #sourceBase} to the {@link #targetBase}.
+     * Converts a number from the {@link #sourceBase} to the {@link #targetBase}.
      *
      * @param numberToBeConverted the number to be converted.
      * @return a string that represents the converted number.
      */
     private String convertNumber(final StringBuilder numberToBeConverted) {
+        // TODO: 28.07.2022 improve logic
         final String numberSign = defineAndDeleteNumberSign(numberToBeConverted);
-        final var convertedNumber = new StringBuilder();
+        final StringBuilder convertedNumber = new StringBuilder();
         final String[] numberParts = numberToBeConverted.toString().split("\\.");
 
         final String convertedIntegerPart = convertIntegerPartToTargetBase(numberParts[0]);
@@ -326,13 +348,14 @@ public class NumberBaseConverter {
     }
 
     /**
-     * The method launches the program.
+     * The example of using the program.
      *
      * @param args some unnecessary command line parameters.
      */
     public static void main(String[] args) {
-        final var converter = new NumberBaseConverter();
-        final var scanner = new Scanner(System.in);
+        // TODO: 28.07.2022 improve logic
+        final NumberBaseConverter converter = new NumberBaseConverter();
+        final Scanner scanner = new Scanner(System.in);
 
         converter.run(scanner);
     }
