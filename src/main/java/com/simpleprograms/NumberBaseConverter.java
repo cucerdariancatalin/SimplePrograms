@@ -33,17 +33,17 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author VitasSalvantes
- * @version 1.1.1
+ * @version 1.2.2
  */
 public class NumberBaseConverter {
 
     /**
-     * The number base to convert the number from. It must be greater than 1 and less than 36.
+     * The number base to convert the number from. It must be greater than 1 and less than 37.
      */
     private int sourceBase;
 
     /**
-     * The number base to convert the number to. It must be greater than 1 and less than 36.
+     * The number base to convert the number to. It must be greater than 1 and less than 37.
      */
     private int targetBase;
 
@@ -148,8 +148,8 @@ public class NumberBaseConverter {
      * @param base the value to be validated.
      */
     private void validateBase(final int base) {
-        if (base < 2 || base > 35) {
-            throw new IllegalArgumentException("The base must be greater than 1 and less than 36");
+        if (base < Character.MIN_RADIX || base > Character.MAX_RADIX) {
+            throw new IllegalArgumentException("The base must be greater than 1 and less than 37");
         }
     }
 
@@ -180,7 +180,7 @@ public class NumberBaseConverter {
             return convertedIntegerPart;
         } else {
             final boolean isFractionalPartInvaluable = numberParts.length == 1
-                    || numberParts[1].replaceAll("0", "").isEmpty();
+                    || numberParts[1].matches("0+");
 
             final String convertedFractionalPart = isFractionalPartInvaluable
                     ? "0".repeat(scale)
@@ -204,8 +204,13 @@ public class NumberBaseConverter {
             throw new IllegalArgumentException("The number must not be an empty string");
         }
 
-        // TODO: 29.07.2022 add regex
-        // TODO: 29.07.2022 use point instead of comma
+        if (number.contains(",")) {
+            throw new IllegalArgumentException("Please use \".\" instead of \",\"");
+        }
+
+        if (!number.matches("[-+]?[0-9a-zA-Z]+[.]?[0-9a-zA-Z]*")) {
+            throw new IllegalArgumentException("The format of the number is wrong");
+        }
     }
 
     /**
