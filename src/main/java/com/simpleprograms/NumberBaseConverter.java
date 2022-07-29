@@ -23,6 +23,8 @@
 
 package com.simpleprograms;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -31,17 +33,17 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author VitasSalvantes
- * @version 1.0.0
+ * @version 1.1.1
  */
 public class NumberBaseConverter {
 
     /**
-     * The number base the user wants to convert the number from. It must be greater than 1 and less than 36.
+     * The number base to convert the number from. It must be greater than 1 and less than 36.
      */
     private int sourceBase;
 
     /**
-     * The number base the user wants to convert the number to. It must be greater than 1 and less than 36.
+     * The number base to convert the number to. It must be greater than 1 and less than 36.
      */
     private int targetBase;
 
@@ -158,8 +160,52 @@ public class NumberBaseConverter {
      */
     private void validateScale(final int scale) {
         if (scale < 0) {
-            throw new IllegalArgumentException("The scale must be positive.");
+            throw new IllegalArgumentException("The scale must be positive");
         }
+    }
+
+    /**
+     * Converts a number from the {@link #sourceBase} to the {@link #targetBase}.
+     *
+     * @param number a string representation of the number to be converted.
+     * @return a string representation of the converted number. The form is "1.00" (in this case, the scale is 2).
+     */
+    public @NotNull String convertNumber(final @NotNull String number) {
+        validateNumber(number);
+
+        final String[] numberParts = number.split("\\.");
+        final String convertedIntegerPart = convertIntegerPartToTargetBase(numberParts[0]);
+
+        if (scale == 0) {
+            return convertedIntegerPart;
+        } else {
+            final boolean isFractionalPartInvaluable = numberParts.length == 1
+                    || numberParts[1].replaceAll("0", "").isEmpty();
+
+            final String convertedFractionalPart = isFractionalPartInvaluable
+                    ? "0".repeat(scale)
+                    : convertFractionalPartToTargetBase(numberParts[1]);
+
+            return scale == 0 ? convertedIntegerPart : convertedIntegerPart + "." + convertedFractionalPart;
+        }
+    }
+
+    /**
+     * Validates an input string representation of the number.
+     *
+     * @param number the string representation of the number to be validated.
+     */
+    private void validateNumber(final String number) {
+        if (number == null) {
+            throw new IllegalArgumentException("The number must not be null");
+        }
+
+        if (number.isEmpty()) {
+            throw new IllegalArgumentException("The number must not be an empty string");
+        }
+
+        // TODO: 29.07.2022 add regex
+        // TODO: 29.07.2022 use point instead of comma
     }
 
     /**
@@ -175,8 +221,8 @@ public class NumberBaseConverter {
      * @return a string that represents the converted integer part of the number.
      * @see #convertIntegerPartToDecimal(String)
      */
-    private String convertIntegerPartToTargetBase(final String integerPart) {
-        return convertIntegerPartToDecimal(integerPart).toString(this.targetBase);
+    private @NotNull String convertIntegerPartToTargetBase(final @NotNull String integerPart) {
+        return convertIntegerPartToDecimal(integerPart).toString(targetBase);
     }
 
     /**
@@ -185,13 +231,13 @@ public class NumberBaseConverter {
      * @param integerPart the integer part of the number to be converted.
      * @return the converted integer part of the number.
      */
-    private BigInteger convertIntegerPartToDecimal(final String integerPart) {
-        return new BigInteger(integerPart, this.sourceBase);
+    private @NotNull BigInteger convertIntegerPartToDecimal(final @NotNull String integerPart) {
+        return new BigInteger(integerPart, sourceBase);
     }
 
     /**
      * Converts the fractional part of the number from the {@link #sourceBase} to the {@link #targetBase}.<br>
-     * The fractional part of the number is all the digits after the point. For example, <b>0.234</b> is the fractional part of the number <b>1.234</b>.<br>
+     * The fractional part of the number is all the digits after the point. For example, <b>234</b> is the fractional part of the number <b>1.234</b>.<br>
      * The algorithm is:
      *  <ol>
      *      <li>Convert the fractional part of the number from the {@link #sourceBase} to the decimal.</li>
@@ -203,17 +249,19 @@ public class NumberBaseConverter {
      * @return a string that represents the converted fractional part of the number.
      * @see #convertFractionalPartToDecimal(String)
      */
-    private String convertFractionalPartToTargetBase(final String fractionalPart) {
-        // TODO: 28.07.2022 improve logic
+    private @NotNull String convertFractionalPartToTargetBase(final @NotNull String fractionalPart) {
+        BigDecimal fractionalPartInDecimal = (sourceBase == 10)
+                ? new BigDecimal("0." + fractionalPart)
+                : convertFractionalPartToDecimal(fractionalPart);
+
+        final StringBuilder convertedFractionalPart = new StringBuilder();
+        final BigDecimal targetBase = BigDecimal.valueOf(this.targetBase);
         BigDecimal product;
-        final var convertedFractionalPart = new StringBuilder("0.");
-        BigDecimal fractionalPartInDecimal = (this.sourceBase == 10) ? new BigDecimal(fractionalPart) : convertFractionalPartToDecimal(fractionalPart);
 
+        // Rounds down to optimize performance
         for (int i = 0; i < this.scale; i++) {
-            product = fractionalPartInDecimal.multiply(BigDecimal.valueOf(this.targetBase));
-
+            product = fractionalPartInDecimal.multiply(targetBase);
             convertedFractionalPart.append(product.toBigInteger().toString(this.targetBase));
-
             fractionalPartInDecimal = product.remainder(BigDecimal.ONE);
         }
 
@@ -224,20 +272,17 @@ public class NumberBaseConverter {
      * Converts the fractional part of the number from the {@link #sourceBase} to the decimal.
      *
      * @param fractionalPart the fractional part of the number to be converted.
-     * @return the converted fractional part of the number.
+     * @return a BigDecimal representation of the converted fractional part of the number.
      */
-    private BigDecimal convertFractionalPartToDecimal(final String fractionalPart) {
-        // TODO: 28.07.2022 improve logic
+    private @NotNull BigDecimal convertFractionalPartToDecimal(final @NotNull String fractionalPart) {
         BigDecimal fractionalPartInDecimal = BigDecimal.ZERO;
 
-        // "0." is not been processing
-        for (int i = 2; i < fractionalPart.length(); i++) {
-            // "0." is not been processing
-            final BigDecimal sourceBaseToPowerOfPosition = BigDecimal.valueOf(Math.pow(this.sourceBase, -(i - 1)));
-            final String digitInSourceBase = String.valueOf(fractionalPart.charAt(i));
-            final BigDecimal digitInDecimal = new BigDecimal(convertIntegerPartToDecimal(digitInSourceBase));
+        for (int i = 0; i < fractionalPart.length(); i++) {
+            final BigDecimal positionPower = BigDecimal.valueOf(Math.pow(sourceBase, -(i + 1)));
+            final char digitInSourceBase = fractionalPart.charAt(i);
+            final BigDecimal digitInDecimal = new BigDecimal(new BigInteger(String.valueOf(digitInSourceBase), sourceBase));
 
-            fractionalPartInDecimal = fractionalPartInDecimal.add(digitInDecimal.multiply(sourceBaseToPowerOfPosition));
+            fractionalPartInDecimal = fractionalPartInDecimal.add(digitInDecimal.multiply(positionPower));
         }
 
         return fractionalPartInDecimal;
@@ -248,7 +293,7 @@ public class NumberBaseConverter {
      *
      * @param scanner the {@link java.util.Scanner} object to get the input data from the user.
      */
-    public void run(final Scanner scanner) {
+    public void run(final @NotNull Scanner scanner) {
         // TODO: 28.07.2022 improve logic
         String inputLine;
 
@@ -274,7 +319,7 @@ public class NumberBaseConverter {
                     break;
                 }
 
-                System.out.printf("Conversion result: %s%n", convertNumber(new StringBuilder(inputLine)));
+                System.out.printf("Conversion result: %s%n", convertNumber(inputLine));
             }
         }
     }
@@ -292,59 +337,16 @@ public class NumberBaseConverter {
     }
 
     /**
-     * Defines the sign of the number to be converted and delete it.
-     *
-     * @param number the number to be converted.
-     * @return the sign of the number ("" or "-").
-     */
-    private String defineAndDeleteNumberSign(final StringBuilder number) {
-        // TODO: 28.07.2022 improve logic
-        if (number.charAt(0) == '-') {
-            number.deleteCharAt(0);
-            return "-";
-        } else {
-            return "";
-        }
-    }
-
-    /**
      * Gets the bases values from a string and sets the values of the {@link #sourceBase} and the {@link #targetBase}.
      *
      * @param basesString the string that contains the values of the bases.
      */
-    private void processBases(final String basesString) {
+    private void processBases(final @NotNull String basesString) {
         // TODO: 28.07.2022 improve logic
         final String[] bases = basesString.split(" ");
 
-        this.setSourceBase(Integer.parseInt(bases[0]));
-        this.setTargetBase(Integer.parseInt(bases[1]));
-    }
-
-    /**
-     * Converts a number from the {@link #sourceBase} to the {@link #targetBase}.
-     *
-     * @param numberToBeConverted the number to be converted.
-     * @return a string that represents the converted number.
-     */
-    private String convertNumber(final StringBuilder numberToBeConverted) {
-        // TODO: 28.07.2022 improve logic
-        final String numberSign = defineAndDeleteNumberSign(numberToBeConverted);
-        final StringBuilder convertedNumber = new StringBuilder();
-        final String[] numberParts = numberToBeConverted.toString().split("\\.");
-
-        final String convertedIntegerPart = convertIntegerPartToTargetBase(numberParts[0]);
-        final StringBuilder convertedFractionalPart;
-
-        if (numberParts.length == 1) {
-            convertedFractionalPart = new StringBuilder();
-        } else {
-            convertedFractionalPart = new StringBuilder(convertFractionalPartToTargetBase("0." + numberParts[1]));
-            convertedFractionalPart.deleteCharAt(0);
-        }
-
-        convertedNumber.append(numberSign).append(convertedIntegerPart).append(convertedFractionalPart);
-
-        return convertedNumber.toString();
+        setSourceBase(Integer.parseInt(bases[0]));
+        setTargetBase(Integer.parseInt(bases[1]));
     }
 
     /**
