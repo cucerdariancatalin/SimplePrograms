@@ -33,7 +33,7 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author VitasSalvantes
- * @version 1.2.2
+ * @version 1.3.2
  */
 public class NumberBaseConverter {
 
@@ -52,13 +52,6 @@ public class NumberBaseConverter {
      * It must be a positive integer.
      */
     private int scale;
-
-    /**
-     * The default constructor sets both the {@link #sourceBase} and the {@link #targetBase} as <b>decimal</b> and the {@link #scale} as <b>5</b>.
-     */
-    public NumberBaseConverter() {
-        this(10, 10, 5);
-    }
 
     /**
      * The constructor sets the {@link #sourceBase} and {@link #targetBase}.
@@ -298,72 +291,68 @@ public class NumberBaseConverter {
      *
      * @param scanner the {@link java.util.Scanner} object to get the input data from the user.
      */
-    public void run(final @NotNull Scanner scanner) {
-        // TODO: 28.07.2022 improve logic
-        String inputLine;
+    public void runDialog(final @NotNull Scanner scanner) {
+        validateScanner(scanner);
 
         while (true) {
             System.out.println("Enter two numbers in format: {source base} {target base} (To quit type /exit)");
-            inputLine = scanner.nextLine().toLowerCase();
+            final String inputBases = scanner.nextLine().toLowerCase();
 
-            validateInputLine(inputLine);
-
-            if ("/exit".equals(inputLine)) {
+            if ("/exit".equals(inputBases)) {
                 break;
             }
 
-            processBases(inputLine);
+            validateInputBases(inputBases);
+
+            final String[] bases = inputBases.split(" ");
+            setSourceBase(Integer.parseInt(bases[0]));
+            setTargetBase(Integer.parseInt(bases[1]));
 
             while (true) {
                 System.out.printf("Enter number in base %d to convert to base %d (To go back type /back)%n", sourceBase, targetBase);
-                inputLine = scanner.nextLine().toLowerCase();
+                final String inputNumber = scanner.nextLine().toLowerCase();
 
-                validateInputLine(inputLine);
-
-                if ("/back".equals(inputLine)) {
+                if ("/back".equals(inputNumber)) {
                     break;
+                } else {
+                    System.out.printf("Conversion result: %s%n", convertNumber(inputNumber));
                 }
-
-                System.out.printf("Conversion result: %s%n", convertNumber(inputLine));
             }
         }
     }
 
     /**
-     * Validates the user input.
+     * Validates a scanner object.
      *
-     * @param inputLine the input to be validated.
+     * @param scanner the scanner object to be validated.
      */
-    private void validateInputLine(final String inputLine) {
-        // TODO: 28.07.2022 improve logic
-        if (inputLine.isBlank()) {
-            throw new IllegalArgumentException("The input must not be blank.");
+    private void validateScanner(final Scanner scanner) {
+        if (scanner == null) {
+            throw new IllegalArgumentException("The scanner must not be null");
         }
     }
 
     /**
-     * Gets the bases values from a string and sets the values of the {@link #sourceBase} and the {@link #targetBase}.
+     * Validates a string representation of the input bases.
      *
-     * @param basesString the string that contains the values of the bases.
+     * @param inputBases the string representation of the input bases to be validated.
      */
-    private void processBases(final @NotNull String basesString) {
-        // TODO: 28.07.2022 improve logic
-        final String[] bases = basesString.split(" ");
+    private void validateInputBases(final String inputBases) {
+        if (inputBases == null) {
+            throw new IllegalArgumentException("The input bases must not be null");
+        }
 
-        setSourceBase(Integer.parseInt(bases[0]));
-        setTargetBase(Integer.parseInt(bases[1]));
+        if (!inputBases.matches("\\d\\d? \\d\\d?")) {
+            throw new IllegalArgumentException("Wrong input bases format");
+        }
     }
 
     /**
      * The example of using the program.
-     *
-     * @param args some unnecessary command line parameters.
      */
     public static void main(String[] args) {
-        // TODO: 28.07.2022 improve logic
-        final NumberBaseConverter converter = new NumberBaseConverter();
-        final Scanner scanner = new Scanner(System.in);
+        final NumberBaseConverter converter = new NumberBaseConverter(10, 10, 5);
 
-        converter.run(scanner);
+        converter.runDialog(new Scanner(System.in));
     }
 }
