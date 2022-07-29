@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * The program to en- and decrypt messages using the Atbash cipher.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 5.0.1
  */
 public class AtbashCipher {

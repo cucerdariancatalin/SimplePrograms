@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * Simple implementation of the Collatz conjecture.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 2.0.1
  */
 public class CollatzConjecture {

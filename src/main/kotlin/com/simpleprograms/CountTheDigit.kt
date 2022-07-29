@@ -26,7 +26,7 @@ package com.simpleprograms
 /**
  * The program to count the number of repetitions of a digit in range of numbers.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.0.1
  */
 fun main() {

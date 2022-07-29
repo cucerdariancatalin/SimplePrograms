@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * JUnit tests for the {@link Factorial}.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.0.0
  */
 class FactorialTest {

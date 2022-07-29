@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * JUnit tests for the {@link AnagramDetector}.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.0.1
  */
 class AnagramDetectorTest {

@@ -26,7 +26,7 @@ package com.simpleprograms;
 /**
  * The solution of the famous "FizzBuzz" task.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 3.0.1
  */
 

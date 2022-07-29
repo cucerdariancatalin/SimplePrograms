@@ -26,7 +26,7 @@ package com.simpleprograms
 /**
  * The program to implement the bubble sort algorithm.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.5
  */
 fun main() {

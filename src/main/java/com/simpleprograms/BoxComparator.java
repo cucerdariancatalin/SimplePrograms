@@ -30,7 +30,7 @@ import java.util.Arrays;
 /**
  * The program to compare two boxes.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 2.5.0
  */
 public class BoxComparator {

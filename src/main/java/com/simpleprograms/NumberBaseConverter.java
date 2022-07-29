@@ -32,7 +32,7 @@ import java.util.Scanner;
 /**
  * The program converts a number from one base to another.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.3.2
  */
 public class NumberBaseConverter {

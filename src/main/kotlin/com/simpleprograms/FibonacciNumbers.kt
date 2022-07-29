@@ -26,7 +26,7 @@ package com.simpleprograms
 /**
  * Simple implementation of the Fibonacci numbers.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 2.0.0
  */
 fun main() {

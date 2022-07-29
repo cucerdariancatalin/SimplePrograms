@@ -28,7 +28,7 @@ import java.math.BigInteger;
 /**
  * Simple implementation of the Fibonacci numbers.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 2.0.4
  */
 public class FibonacciNumbers {

@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * The program to reduce fractions to a common denominator.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 2.1.0
  */
 public class CommonDenominators {

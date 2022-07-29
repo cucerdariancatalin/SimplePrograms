@@ -28,7 +28,7 @@ package com.simpleprograms
  * three, "Buzz" instead of multiples of five and "FizzBuzz" instead of multiples of both
  * three and five at the same time.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.1.1
  */
 fun main() {

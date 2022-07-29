@@ -30,7 +30,7 @@ import java.util.Arrays;
 /**
  * The program to detect an anagram.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 3.0.2
  */
 public class AnagramDetector {

@@ -26,7 +26,7 @@
 #******************************************************#
 # The script calculates the factorial of the argument. #
 #                                                      #
-# Author: VitasSalvantes                               #
+# Author: Ivan Bobrov                                  #
 # Version: 1.0                                         #
 #******************************************************#
 

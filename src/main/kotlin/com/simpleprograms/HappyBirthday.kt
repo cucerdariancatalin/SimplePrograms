@@ -26,7 +26,7 @@ package com.simpleprograms
 /**
  * Run the program that prints a cake in the console depending on the age of the birthday person
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  */
 fun main() {
     // The age of the birthday person

@@ -26,7 +26,7 @@ package com.simpleprograms;
 /**
  * Class-example of factorial implementation.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 3.1.0
  */
 public class Factorial {

@@ -30,7 +30,7 @@ import java.util.Scanner;
 /**
  * Simple program to find the suitable row in the cinema.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 2.0.3
  */
 public class Cinema {

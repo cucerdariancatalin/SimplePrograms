@@ -26,7 +26,7 @@ package com.simpleprograms
 /**
  * Example of factorial implementation.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.0.1
  */
 fun main() {

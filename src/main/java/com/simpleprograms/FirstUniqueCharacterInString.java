@@ -31,7 +31,7 @@ import java.util.Scanner;
 /**
  * The program to find the first unique character in a string.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 2.0.0
  */
 public class FirstUniqueCharacterInString {

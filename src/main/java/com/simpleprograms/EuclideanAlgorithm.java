@@ -26,7 +26,7 @@ package com.simpleprograms;
 /**
  * The implementation of the Euclidean algorithm for positive integers.
  *
- * @author VitasSalvantes
+ * @author Ivan Bobrov
  * @version 1.1.1
  */
 public class EuclideanAlgorithm {
