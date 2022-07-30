@@ -2,7 +2,7 @@
 
 ![logo](/res/img/logo.png)
 
-[![GitHub license](https://img.shields.io/github/license/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/issues)
 
 This repository presents implementations of various algorithms in various programming languages (the
