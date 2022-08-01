@@ -27,14 +27,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.math.RoundingMode;
 import java.util.Scanner;
 
 /**
  * The program converts a number from one base to another.
  *
  * @author Ivan Bobrov
- * @version 1.4.3
+ * @version 1.4.4
  */
 public class NumberBaseConverter {
 
@@ -239,7 +238,7 @@ public class NumberBaseConverter {
      *      <li>Convert the fractional part of the number from the {@link #sourceBase} to the decimal.</li>
      *      <li>Convert the fractional part of the number from the decimal to the {@link #targetBase}.</li>
      * </ol>
-     * It rounds half up the converted fractional part using the {@link #scale}.
+     * It rounds down the converted fractional part using the {@link #scale}.
      *
      * @param fractionalPart the fractional part of the number to be converted.
      * @return a string that represents the converted fractional part of the number.
@@ -250,20 +249,17 @@ public class NumberBaseConverter {
                 ? new BigDecimal("0." + fractionalPart)
                 : convertFractionalPartToDecimal(fractionalPart);
 
-        final StringBuilder convertedFractionalPart = new StringBuilder("0.");
+        final StringBuilder convertedFractionalPart = new StringBuilder();
         final BigDecimal targetBase = BigDecimal.valueOf(this.targetBase);
         BigDecimal product;
 
-        for (int i = 0; i <= this.scale; i++) {
+        for (int i = 0; i < this.scale; i++) {
             product = fractionalPartInDecimal.multiply(targetBase);
             convertedFractionalPart.append(product.toBigInteger().toString(this.targetBase));
             fractionalPartInDecimal = product.remainder(BigDecimal.ONE);
         }
 
-        return new BigDecimal(convertedFractionalPart.toString())
-                .setScale(scale, RoundingMode.HALF_UP)
-                .toString()
-                .split("\\.")[1];
+        return convertedFractionalPart.toString();
     }
 
     /**
