@@ -34,7 +34,7 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author Ivan Bobrov
- * @version 1.4.2
+ * @version 1.4.3
  */
 public class NumberBaseConverter {
 
@@ -170,17 +170,14 @@ public class NumberBaseConverter {
         final String[] numberParts = number.split("\\.");
         final String convertedIntegerPart = convertIntegerPartToTargetBase(numberParts[0]);
 
-        if (scale == 0) {
+        if (scale == 0 || numberParts.length == 1) {
             return convertedIntegerPart;
         } else {
-            final boolean isFractionalPartInvaluable = numberParts.length == 1
-                    || numberParts[1].matches("0+");
-
-            final String convertedFractionalPart = isFractionalPartInvaluable
+            final String convertedFractionalPart = numberParts[1].matches("0+")
                     ? "0".repeat(scale)
                     : convertFractionalPartToTargetBase(numberParts[1]);
 
-            return scale == 0 ? convertedIntegerPart : convertedIntegerPart + "." + convertedFractionalPart;
+            return convertedIntegerPart + "." + convertedFractionalPart;
         }
     }
 
