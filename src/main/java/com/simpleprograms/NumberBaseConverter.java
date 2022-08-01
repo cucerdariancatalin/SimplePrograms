@@ -33,7 +33,7 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author Ivan Bobrov
- * @version 1.4.4
+ * @version 1.4.5
  */
 public class NumberBaseConverter {
 
@@ -187,19 +187,15 @@ public class NumberBaseConverter {
      */
     private void validateNumber(final String number) {
         if (number == null) {
-            throw new IllegalArgumentException("The number must not be null");
-        }
-
-        if (number.isEmpty()) {
-            throw new IllegalArgumentException("The number must not be an empty string");
+            throw new NumberFormatException("The number must not be null");
         }
 
         if (number.contains(",")) {
-            throw new IllegalArgumentException("Please use \".\" instead of \",\"");
+            throw new NumberFormatException("Please use \".\" instead of \",\"");
         }
 
         if (!number.matches("[-+]?[0-9a-zA-Z]+[.]?[0-9a-zA-Z]*")) {
-            throw new IllegalArgumentException("The format of the number is wrong");
+            throw new NumberFormatException("The format of the number is wrong");
         }
     }
 
