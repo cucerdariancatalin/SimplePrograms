@@ -34,18 +34,22 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link BoxComparator}.
  *
  * @author Ivan Bobrov
- * @version 1.0.1
+ * @version 1.0.2
  */
 class BoxComparatorTest {
 
     private int[] testBox1;
     private int[] testBox2;
 
+
+
     @BeforeEach
     void setUp() {
         testBox1 = new int[]{1, 2, 3};
         testBox2 = new int[]{4, 5, 6};
     }
+
+
 
     @Test
     @DisplayName("Check the boxes are nestable")
@@ -76,11 +80,17 @@ class BoxComparatorTest {
     @DisplayName("Null box")
     void testNullBox() {
         testBox1 = null;
-        assertThrows(IllegalArgumentException.class, () -> BoxComparator.checkNestable(testBox1, testBox2));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> BoxComparator.checkNestable(testBox1, testBox2)
+        );
 
         testBox1 = new int[]{1, 2, 3};
         testBox2 = null;
-        assertThrows(IllegalArgumentException.class, () -> BoxComparator.checkNestable(testBox1, testBox2));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> BoxComparator.checkNestable(testBox1, testBox2)
+        );
 
     }
 
@@ -88,17 +98,30 @@ class BoxComparatorTest {
     @DisplayName("Unsuitable box")
     void testUnsuitableBox() {
         testBox1 = new int[0];
-        assertThrows(IllegalArgumentException.class, () -> BoxComparator.checkNestable(testBox1, testBox2));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> BoxComparator.checkNestable(testBox1, testBox2)
+        );
 
         testBox1 = new int[]{1, 2, 3};
         testBox2 = new int[2];
-        assertThrows(IllegalArgumentException.class, () -> BoxComparator.checkNestable(testBox1, testBox2));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> BoxComparator.checkNestable(testBox1, testBox2)
+        );
 
         testBox2 = new int[]{1, -2, 3};
-        assertThrows(IllegalArgumentException.class, () -> BoxComparator.checkNestable(testBox1, testBox2));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> BoxComparator.checkNestable(testBox1, testBox2)
+        );
 
         testBox1 = new int[]{1, 2, 0};
         testBox2 = new int[]{1, 2, 3};
-        assertThrows(IllegalArgumentException.class, () -> BoxComparator.checkNestable(testBox1, testBox2));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> BoxComparator.checkNestable(testBox1, testBox2)
+        );
     }
+
 }

@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link CollatzConjecture}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class CollatzConjectureTest {
 
@@ -54,7 +54,29 @@ class CollatzConjectureTest {
         expectedOutput = List.of(12, 6, 3, 10, 5, 16, 8, 4, 2, 1);
         assertEquals(expectedOutput, CollatzConjecture.compute(12));
 
-        expectedOutput = List.of(19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1);
+        expectedOutput = List.of(
+                19,
+                58,
+                29,
+                88,
+                44,
+                22,
+                11,
+                34,
+                17,
+                52,
+                26,
+                13,
+                40,
+                20,
+                10,
+                5,
+                16,
+                8,
+                4,
+                2,
+                1
+        );
         assertEquals(expectedOutput, CollatzConjecture.compute(19));
 
         expectedOutput = List.of(34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1);
@@ -67,4 +89,5 @@ class CollatzConjectureTest {
         assertThrows(IllegalArgumentException.class, () -> CollatzConjecture.compute(0));
         assertThrows(IllegalArgumentException.class, () -> CollatzConjecture.compute(-1));
     }
+
 }

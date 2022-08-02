@@ -34,18 +34,22 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link CaesarCipher}.
  *
  * @author Ivan Bobrov
- * @version 1.0.1
+ * @version 1.0.2
  */
 class CaesarCipherTest {
 
     private CaesarCipher caesarCipher;
     private String testKey;
 
+
+
     @BeforeEach
     void setUp() {
         testKey = "Key";
         caesarCipher = new CaesarCipher(testKey);
     }
+
+
 
     @Test
     @DisplayName("Constructor")
@@ -96,4 +100,5 @@ class CaesarCipherTest {
         assertThrows(IllegalArgumentException.class, () -> new CaesarCipher(""));
         assertThrows(IllegalArgumentException.class, () -> caesarCipher.setKey(""));
     }
+
 }

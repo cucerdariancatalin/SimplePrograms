@@ -27,26 +27,28 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * JUnit tests for the {@link AtbashCipher}.
  *
  * @author Ivan Bobrov
- * @version 1.0.1
+ * @version 1.0.2
  */
 class AtbashCipherTest {
 
     private AtbashCipher atbashCipher;
     private String testMessage;
 
+
+
     @BeforeEach
     void setUp() {
         atbashCipher = new AtbashCipher();
         testMessage = "Java";
     }
+
+
 
     @Test
     @DisplayName("Process message")
@@ -62,7 +64,10 @@ class AtbashCipherTest {
     void testEmptyMessage() {
         testMessage = "";
 
-        assertThrows(IllegalArgumentException.class, () -> atbashCipher.processMessage(testMessage));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> atbashCipher.processMessage(testMessage)
+        );
     }
 
     @Test
@@ -70,6 +75,10 @@ class AtbashCipherTest {
     void testNullMessage() {
         testMessage = null;
 
-        assertThrows(IllegalArgumentException.class, () -> atbashCipher.processMessage(testMessage));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> atbashCipher.processMessage(testMessage)
+        );
     }
+
 }

@@ -37,7 +37,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link ChocolateBreaker}.
  *
  * @author Ivan Bobrov
- * @version 1.0.1
+ * @version 1.0.2
  */
 class ChocolateBreakerTest {
 
@@ -46,12 +46,15 @@ class ChocolateBreakerTest {
     private int testChocolateWidth;
 
 
+
     @BeforeEach
     void setUp() {
         testChocolateLength = 2;
         testChocolateWidth = 3;
         chocolateBreaker = new ChocolateBreaker(testChocolateLength, testChocolateWidth);
     }
+
+
 
     @Test
     @DisplayName("Constructor")
@@ -115,13 +118,23 @@ class ChocolateBreakerTest {
     @DisplayName("Wrong length or width")
     void testUnsuitableSize() {
         testChocolateLength = -1;
-        assertThrows(IllegalArgumentException.class, () -> new ChocolateBreaker(testChocolateLength, testChocolateWidth));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> new ChocolateBreaker(testChocolateLength, testChocolateWidth)
+        );
 
         testChocolateLength = testChocolateWidth;
         testChocolateWidth = 0;
-        assertThrows(IllegalArgumentException.class, () -> new ChocolateBreaker(testChocolateLength, testChocolateWidth));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> new ChocolateBreaker(testChocolateLength, testChocolateWidth)
+        );
 
         testChocolateLength = testChocolateWidth;
-        assertThrows(IllegalArgumentException.class, () -> new ChocolateBreaker(testChocolateLength, testChocolateWidth));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> new ChocolateBreaker(testChocolateLength, testChocolateWidth)
+        );
     }
+
 }

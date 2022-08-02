@@ -36,7 +36,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link FibonacciNumbers}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class FibonacciNumbersTest {
 
@@ -62,7 +62,14 @@ class FibonacciNumbersTest {
     @Test
     @DisplayName("Compute the Fibonacci numbers until the invalid given index")
     void computeFibonacciNumbersInvalidIndex() {
-        assertThrows(IllegalArgumentException.class, () -> FibonacciNumbers.computeFibonacciNumbers(0));
-        assertThrows(IllegalArgumentException.class, () -> FibonacciNumbers.computeFibonacciNumbers(-1));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> FibonacciNumbers.computeFibonacciNumbers(0)
+        );
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> FibonacciNumbers.computeFibonacciNumbers(-1)
+        );
     }
+
 }

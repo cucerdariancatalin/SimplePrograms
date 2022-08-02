@@ -26,13 +26,14 @@ package com.simpleprograms;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * JUnit tests for the {@link Factorial}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class FactorialTest {
 
@@ -51,4 +52,5 @@ class FactorialTest {
         //noinspection ResultOfMethodCallIgnored
         assertThrows(IllegalArgumentException.class, () -> Factorial.calculateFactorial(-1));
     }
+
 }

@@ -27,27 +27,28 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * JUnit tests for the {@link AnagramDetector}.
  *
  * @author Ivan Bobrov
- * @version 1.0.1
+ * @version 1.0.2
  */
 class AnagramDetectorTest {
 
     private AnagramDetector anagramDetector;
     private String testString;
 
+
+
     @BeforeEach
     void setUp() {
         anagramDetector = new AnagramDetector("Primary string");
         testString = "Java";
     }
+
+
 
     @Test
     @DisplayName("Constructor")
@@ -123,4 +124,5 @@ class AnagramDetectorTest {
         testString = "mama";
         assertFalse(anagramDetector.checkForAnagram(testString));
     }
+
 }

@@ -44,10 +44,14 @@ class NumberBaseConverterTest {
 
     private NumberBaseConverter numberBaseConverter;
 
+
+
     @BeforeEach
     void setUp() {
         numberBaseConverter = new NumberBaseConverter(16, 10, 5);
     }
+
+
 
     @Test
     @DisplayName("Get source base")

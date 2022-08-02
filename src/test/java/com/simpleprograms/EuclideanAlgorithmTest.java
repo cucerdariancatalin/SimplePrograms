@@ -33,12 +33,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link EuclideanAlgorithm}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class EuclideanAlgorithmTest {
 
     int testFirstInteger;
     int testSecondInteger;
+
+
 
     @Test
     @DisplayName("Calculate GCD of the valid integers")
@@ -70,18 +72,31 @@ class EuclideanAlgorithmTest {
     void calculateGCDInvalidIntegers() {
         testFirstInteger = 0;
         testSecondInteger = testFirstInteger;
-        assertThrows(IllegalArgumentException.class, () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger)
+        );
 
         testFirstInteger = 0;
         testSecondInteger = 1;
-        assertThrows(IllegalArgumentException.class, () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger)
+        );
 
         testFirstInteger = 1;
         testSecondInteger = 0;
-        assertThrows(IllegalArgumentException.class, () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger)
+        );
 
         testFirstInteger = -1;
         testSecondInteger = 1;
-        assertThrows(IllegalArgumentException.class, () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> EuclideanAlgorithm.calculateGCD(testFirstInteger, testSecondInteger)
+        );
     }
+
 }

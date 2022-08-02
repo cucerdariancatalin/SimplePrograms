@@ -26,23 +26,23 @@ package com.simpleprograms;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Nested;
 
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * JUnit tests for the {@link Cinema}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class CinemaTest {
 
     private Cinema cinema;
     private int[][] testSeats;
     private int ticketsNumber;
+
+
 
     @BeforeEach
     void setUp() {
@@ -55,6 +55,8 @@ class CinemaTest {
         cinema = new Cinema(testSeats);
         ticketsNumber = 2;
     }
+
+
 
     @Test
     @DisplayName("Seats getter")
@@ -159,4 +161,5 @@ class CinemaTest {
         cinema = new Cinema(testSeats);
         assertEquals(2, cinema.findConsecutiveAvailableSeats(ticketsNumber));
     }
+
 }

@@ -32,7 +32,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * JUnit tests for the {@link FirstUniqueCharacterInString}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class FirstUniqueCharacterInStringTest {
 
@@ -50,7 +50,14 @@ class FirstUniqueCharacterInStringTest {
     @DisplayName("Find the first unique character in an invalid string")
     void findFirstUniqueCharInvalidString() {
         //noinspection ConstantConditions
-        assertThrows(IllegalArgumentException.class, () -> FirstUniqueCharacterInString.findFirstUniqueChar(null));
-        assertThrows(IllegalArgumentException.class, () -> FirstUniqueCharacterInString.findFirstUniqueChar(""));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> FirstUniqueCharacterInString.findFirstUniqueChar(null)
+        );
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> FirstUniqueCharacterInString.findFirstUniqueChar("")
+        );
     }
+
 }

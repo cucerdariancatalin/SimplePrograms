@@ -33,11 +33,13 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * JUnit tests for the {@link CommonDenominators}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class CommonDenominatorsTest {
 
     private int[][] fractions;
+
+
 
     @Test
     @DisplayName("Make denominators of the valid fractions common")
@@ -67,24 +69,46 @@ class CommonDenominatorsTest {
     @DisplayName("Make denominators of the invalid fractions common")
     void makeDenominatorsCommonInvalidFractions() {
         fractions = null;
-        assertThrows(IllegalArgumentException.class, () -> CommonDenominators.makeDenominatorsCommon(fractions));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> CommonDenominators.makeDenominatorsCommon(fractions)
+        );
 
         fractions = new int[][]{};
-        assertThrows(IllegalArgumentException.class, () -> CommonDenominators.makeDenominatorsCommon(fractions));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> CommonDenominators.makeDenominatorsCommon(fractions)
+        );
 
         fractions = new int[][]{null};
-        assertThrows(IllegalArgumentException.class, () -> CommonDenominators.makeDenominatorsCommon(fractions));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> CommonDenominators.makeDenominatorsCommon(fractions)
+        );
 
         fractions = new int[][]{{}};
-        assertThrows(IllegalArgumentException.class, () -> CommonDenominators.makeDenominatorsCommon(fractions));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> CommonDenominators.makeDenominatorsCommon(fractions)
+        );
 
         fractions = new int[][]{{1}};
-        assertThrows(IllegalArgumentException.class, () -> CommonDenominators.makeDenominatorsCommon(fractions));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> CommonDenominators.makeDenominatorsCommon(fractions)
+        );
 
         fractions = new int[][]{{1, 2, 3}};
-        assertThrows(IllegalArgumentException.class, () -> CommonDenominators.makeDenominatorsCommon(fractions));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> CommonDenominators.makeDenominatorsCommon(fractions)
+        );
 
         fractions = new int[][]{{1, 0}};
-        assertThrows(IllegalArgumentException.class, () -> CommonDenominators.makeDenominatorsCommon(fractions));
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> CommonDenominators.makeDenominatorsCommon(fractions)
+        );
     }
+
 }
