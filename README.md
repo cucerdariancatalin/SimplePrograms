@@ -44,7 +44,6 @@ the [list of all programs](#List-of-all-programs).
 - [FizzBuzz](#fizzbuzz)
 - [HappyBirthday](#happybirthday)
 - [NumberBaseConverter](#numberbaseconverter)
-- [OrderedSequence](#orderedsequence)
 - [PerfectNumbers](#perfectnumbers)
 - [Polynomial](#polynomial)
 - [PrimeNumbers](#primenumbers)
@@ -511,20 +510,6 @@ This task is on [JetBrains Academy](https://hyperskill.org/projects/181).
 [Here](src/main/java/com/simpleprograms/NumberBaseConverter.java) you can see the implementation of this program in
 Java.
 
-### OrderedSequence
-
-Write a program that reads a sequence of integer numbers and outputs **true** if the sequence is ordered (in ascending
-or descending order), otherwise, **false**.
-
-Keep in mind, if a number has the same value as the following number, it does not break the order.
-
-The sequence ends with 0. Do not consider this number as a part of the sequence. The sequence always has at least one
-number (excluding 0).
-
-This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2734).
-
-[Here](src/main/java/com/simpleprograms/OrderedSequence.java) you can see the implementation of this program in Java.
-
 ### PerfectNumbers
 
 In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding
@@ -579,11 +564,10 @@ the introduction of computers, this algorithm became fundamental for computing e
 
 A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers. A
 natural number greater than 1 that is not prime is called a composite number. For example, 5 is prime because the only
-ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 is composite because it is a product (2 ×
-
-2) in which both numbers are smaller than 4. Primes are central in number theory because of the fundamental theorem of
-   arithmetic: every natural number greater than 1 is either a prime itself or can be factorized as a product of primes
-   that is unique up to their order.
+ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 is composite because it is a product
+(2 × 2) in which both numbers are smaller than 4. Primes are central in number theory because of the fundamental theorem
+of arithmetic: every natural number greater than 1 is either a prime itself or can be factorized as a product of
+primes that is unique up to their order.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Primes-vs-composites.svg/800px-Primes-vs-composites.svg.png" width="220" height="309" alt="primes-image">
 
