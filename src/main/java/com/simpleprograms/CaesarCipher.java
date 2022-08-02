@@ -24,19 +24,22 @@
 package com.simpleprograms;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The program to en- and decrypt messages using the Caesar cipher.
  *
  * @author Ivan Bobrov
- * @version 7.5.2
+ * @version 7.5.3
  */
 public class CaesarCipher {
 
     /**
      * The key is used to en- or decrypt the message.
      */
-    private String key;
+    private @NotNull String key;
+
+
 
     /**
      * The constructor sets a default value of the {@link #key}.
@@ -50,14 +53,19 @@ public class CaesarCipher {
     }
 
     /**
-     * The setter for the {@link #key}.
-     *
-     * @param key a new value of the {@link #key}.
+     * The example of using the program.
      */
-    public void setKey(final @NotNull String key) {
-        validateInput(key);
+    public static void main(String[] args) {
+        final var caesarCipher = new CaesarCipher("Key");
 
-        this.key = key;
+        final String message = "Hello, World!";
+        final String encryptedMessage = caesarCipher.processMessage(message, true);
+        System.out.printf(
+                "%s%n%s%n%s%n",
+                message,
+                encryptedMessage,
+                caesarCipher.processMessage(encryptedMessage, false)
+        );
     }
 
     /**
@@ -67,6 +75,17 @@ public class CaesarCipher {
      */
     public @NotNull String getKey() {
         return key;
+    }
+
+    /**
+     * The setter for the {@link #key}.
+     *
+     * @param key a new value of the {@link #key}.
+     */
+    public void setKey(final @NotNull String key) {
+        validateInput(key);
+
+        this.key = key;
     }
 
     /**
@@ -89,10 +108,13 @@ public class CaesarCipher {
      *
      * @param inputMessage the message to be en- or decrypted.
      * @param isEncryption the flag to choose the process option (en- or decrypt).
+     *
      * @return the en- or decrypted message .
      */
-    public @NotNull String processMessage(final @NotNull String inputMessage,
-                                          final boolean isEncryption) {
+    public @NotNull String processMessage(
+            final @NotNull String inputMessage,
+            final boolean isEncryption
+    ) {
         validateInput(inputMessage);
 
         final int numberKey = convertKeyToInt();
@@ -115,7 +137,7 @@ public class CaesarCipher {
      *
      * @param input the user input (string) to be validated.
      */
-    private void validateInput(final String input) {
+    private void validateInput(final @Nullable String input) {
         if (input == null) {
             throw new IllegalArgumentException("The input must not be null");
         }
@@ -125,14 +147,4 @@ public class CaesarCipher {
         }
     }
 
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var caesarCipher = new CaesarCipher("Key");
-
-        final String message = "Hello, World!";
-        final String encryptedMessage = caesarCipher.processMessage(message, true);
-        System.out.printf("%s%n%s%n%s%n", message, encryptedMessage, caesarCipher.processMessage(encryptedMessage, false));
-    }
 }

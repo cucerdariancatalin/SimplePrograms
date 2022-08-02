@@ -32,7 +32,7 @@ import java.util.Scanner;
  * The program to find the first unique character in a string.
  *
  * @author Ivan Bobrov
- * @version 2.0.0
+ * @version 2.0.1
  */
 public class FirstUniqueCharacterInString {
 
@@ -63,7 +63,7 @@ public class FirstUniqueCharacterInString {
      *
      * @param string the string to be validated.
      */
-    private static void validateString(final String string) {
+    private static void validateString(final @Nullable String string) {
         if (string == null) {
             throw new IllegalArgumentException("The string must not be null");
         }
@@ -73,6 +73,8 @@ public class FirstUniqueCharacterInString {
         }
     }
 
+
+
     /**
      * The example of using the program.
      */
@@ -80,6 +82,10 @@ public class FirstUniqueCharacterInString {
         System.out.println("- String?");
         final String string = new Scanner(System.in).nextLine();
 
-        System.out.printf("The first unique char: %c", FirstUniqueCharacterInString.findFirstUniqueChar(string));
+        System.out.printf(
+                "The first unique char: %c",
+                FirstUniqueCharacterInString.findFirstUniqueChar(string)
+        );
     }
+
 }

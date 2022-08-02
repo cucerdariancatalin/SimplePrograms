@@ -27,7 +27,7 @@ package com.simpleprograms;
  * The implementation of the Euclidean algorithm for positive integers.
  *
  * @author Ivan Bobrov
- * @version 1.1.1
+ * @version 1.1.2
  */
 public class EuclideanAlgorithm {
 
@@ -36,6 +36,7 @@ public class EuclideanAlgorithm {
      *
      * @param firstInteger  an integer greater than 0.
      * @param secondInteger an integer greater than 0.
+     *
      * @return the greatest common divisor.
      */
     public static int calculateGCD(final int firstInteger, final int secondInteger) {
@@ -69,10 +70,13 @@ public class EuclideanAlgorithm {
         }
     }
 
+
+
     /**
      * The example of using the program.
      */
     public static void main(String[] args) {
         System.out.println(EuclideanAlgorithm.calculateGCD(391, 544));
     }
+
 }

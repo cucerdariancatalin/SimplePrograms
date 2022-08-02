@@ -29,7 +29,7 @@ import java.util.Scanner;
  * The program to find out whether it is possible to break off exactly the number of segments from the chocolate bar.
  *
  * @author Ivan Bobrov
- * @version 2.0.2
+ * @version 2.0.3
  */
 public class ChocolateBreaker {
 
@@ -43,6 +43,8 @@ public class ChocolateBreaker {
      */
     private int chocolateWidth;
 
+
+
     /**
      * The constructor sets default values of the {@link #chocolateLength} and the {@link #chocolateWidth}.
      *
@@ -54,6 +56,28 @@ public class ChocolateBreaker {
 
         this.chocolateLength = chocolateLength;
         this.chocolateWidth = chocolateWidth;
+    }
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var scanner = new Scanner(System.in);
+        final var breaker = new ChocolateBreaker(scanner.nextInt(), scanner.nextInt());
+        System.out.printf("Length: %d%n", breaker.getChocolateLength());
+        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
+        System.out.println();
+
+        breaker.checkBreakPossibility(scanner.nextInt());
+
+        System.out.println();
+        breaker.setChocolateLength(12);
+        breaker.setChocolateWidth(24);
+        System.out.printf("Length: %d%n", breaker.getChocolateLength());
+        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
+        System.out.println();
+
+        breaker.checkBreakPossibility(6);
     }
 
     /**
@@ -121,7 +145,8 @@ public class ChocolateBreaker {
         boolean hasSuitableSize = segmentsNumber <= chocolateLength * chocolateWidth;
 
         // It could be broken off as a single straight line
-        boolean isDivider = segmentsNumber % chocolateLength == 0 || segmentsNumber % chocolateWidth == 0;
+        boolean isDivider = segmentsNumber % chocolateLength == 0 ||
+                            segmentsNumber % chocolateWidth == 0;
 
         if (hasSuitableSize && isDivider) {
             System.out.println("YES");
@@ -130,25 +155,4 @@ public class ChocolateBreaker {
         }
     }
 
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var scanner = new Scanner(System.in);
-        final var breaker = new ChocolateBreaker(scanner.nextInt(), scanner.nextInt());
-        System.out.printf("Length: %d%n", breaker.getChocolateLength());
-        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
-        System.out.println();
-
-        breaker.checkBreakPossibility(scanner.nextInt());
-
-        System.out.println();
-        breaker.setChocolateLength(12);
-        breaker.setChocolateWidth(24);
-        System.out.printf("Length: %d%n", breaker.getChocolateLength());
-        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
-        System.out.println();
-
-        breaker.checkBreakPossibility(6);
-    }
 }

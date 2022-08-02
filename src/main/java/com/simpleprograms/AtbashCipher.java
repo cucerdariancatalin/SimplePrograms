@@ -24,19 +24,33 @@
 package com.simpleprograms;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The program to en- and decrypt messages using the Atbash cipher.
  *
  * @author Ivan Bobrov
- * @version 5.0.1
+ * @version 5.0.2
  */
 public class AtbashCipher {
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var cipher = new AtbashCipher();
+        final var userMessage = "Hello, World!";
+
+        System.out.println(userMessage);
+        System.out.println(cipher.processMessage(userMessage));
+        System.out.println(cipher.processMessage("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE"));
+    }
 
     /**
      * En- or decrypts the message using the Atbash cipher.
      *
      * @param inputMessage the message to be en- or decrypted.
+     *
      * @return the en- or decrypted message.
      */
     public @NotNull String processMessage(final @NotNull String inputMessage) {
@@ -56,7 +70,7 @@ public class AtbashCipher {
      *
      * @param message the string to be validated.
      */
-    private void validateMessage(final String message) {
+    private void validateMessage(final @Nullable String message) {
         if (message == null) {
             throw new IllegalArgumentException("The message must not be null.");
         }
@@ -66,15 +80,4 @@ public class AtbashCipher {
         }
     }
 
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var cipher = new AtbashCipher();
-        final var userMessage = "Hello, World!";
-
-        System.out.println(userMessage);
-        System.out.println(cipher.processMessage(userMessage));
-        System.out.println(cipher.processMessage("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE"));
-    }
 }

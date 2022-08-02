@@ -23,6 +23,8 @@
 
 package com.simpleprograms;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +32,7 @@ import java.util.List;
  * Simple implementation of the Collatz conjecture.
  *
  * @author Ivan Bobrov
- * @version 2.0.1
+ * @version 2.0.2
  */
 public class CollatzConjecture {
 
@@ -38,9 +40,10 @@ public class CollatzConjecture {
      * Computes the integer sequence until the computed integer equals 1.
      *
      * @param initialInteger the initial integer to start computation with.
+     *
      * @return the list of the computed integers.
      */
-    public static List<Integer> compute(final int initialInteger) {
+    public static @NotNull List<Integer> compute(final int initialInteger) {
         validateInteger(initialInteger);
 
         int currentInteger = initialInteger;
@@ -71,6 +74,8 @@ public class CollatzConjecture {
         }
     }
 
+
+
     /**
      * The example of using the program.
      */
@@ -79,4 +84,5 @@ public class CollatzConjecture {
 
         System.out.println(integerSequence);
     }
+
 }

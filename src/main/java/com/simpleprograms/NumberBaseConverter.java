@@ -33,7 +33,7 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author Ivan Bobrov
- * @version 1.4.5
+ * @version 1.4.6
  */
 public class NumberBaseConverter {
 
@@ -53,6 +53,8 @@ public class NumberBaseConverter {
      */
     private int scale;
 
+
+
     /**
      * The constructor sets the {@link #sourceBase} and {@link #targetBase}.
      *
@@ -71,6 +73,15 @@ public class NumberBaseConverter {
         this.sourceBase = sourceBase;
         this.targetBase = targetBase;
         this.scale = scale;
+    }
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final NumberBaseConverter converter = new NumberBaseConverter(10, 10, 5);
+
+        converter.runDialog(new Scanner(System.in));
     }
 
     /**
@@ -359,15 +370,6 @@ public class NumberBaseConverter {
         if (!inputBases.matches("\\d\\d? \\d\\d?")) {
             throw new IllegalArgumentException("Wrong input bases format");
         }
-    }
-
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final NumberBaseConverter converter = new NumberBaseConverter(10, 10, 5);
-
-        converter.runDialog(new Scanner(System.in));
     }
 
 }

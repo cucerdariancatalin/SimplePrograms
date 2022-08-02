@@ -29,7 +29,7 @@ import java.math.BigInteger;
  * Simple implementation of the Fibonacci numbers.
  *
  * @author Ivan Bobrov
- * @version 2.0.4
+ * @version 2.0.5
  */
 public class FibonacciNumbers {
 
@@ -64,10 +64,13 @@ public class FibonacciNumbers {
         }
     }
 
+
+
     /**
      * The example of using the program.
      */
     public static void main(String[] args) {
         FibonacciNumbers.computeFibonacciNumbers(100);
     }
+
 }

@@ -27,7 +27,7 @@ package com.simpleprograms;
  * Class-example of factorial implementation.
  *
  * @author Ivan Bobrov
- * @version 3.1.0
+ * @version 3.1.1
  */
 public class Factorial {
 
@@ -35,6 +35,7 @@ public class Factorial {
      * Calculates the factorial of the positive number.
      *
      * @param number the positive number.
+     *
      * @return the factorial.
      */
     public static int calculateFactorial(int number) {
@@ -61,10 +62,13 @@ public class Factorial {
         }
     }
 
+
+
     /**
      * The example of using the program
      */
     public static void main(String[] args) {
         System.out.println(Factorial.calculateFactorial(4));
     }
+
 }

@@ -24,6 +24,7 @@
 package com.simpleprograms;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Scanner;
 
@@ -31,7 +32,7 @@ import java.util.Scanner;
  * Simple program to find the suitable row in the cinema.
  *
  * @author Ivan Bobrov
- * @version 2.0.3
+ * @version 2.0.4
  */
 public class Cinema {
 
@@ -39,7 +40,9 @@ public class Cinema {
      * The representation of the cinema current state.<br>
      * The sold seats are marked with "0", free seats - with "1".
      */
-    private final int[][] seats;
+    private final int @NotNull [] @NotNull [] seats;
+
+
 
     /**
      * The default constructor sets the value of the {@link #seats}.
@@ -50,66 +53,6 @@ public class Cinema {
         validateSeats(seats);
 
         this.seats = seats.clone();
-    }
-
-    /**
-     * The getter for the {@link #seats}.
-     *
-     * @return a copy of the {@link #seats}.
-     */
-    public int @NotNull [] @NotNull [] getSeats() {
-        return seats.clone();
-    }
-
-    /**
-     * Validates seats.
-     *
-     * @param seats the value to be validated.
-     */
-    private void validateSeats(final int[][] seats) {
-        if (seats == null) {
-            throw new IllegalArgumentException("The seats must not be null");
-        }
-
-        for (int[] row : seats) {
-            if (row == null) {
-                throw new IllegalArgumentException("The row must not be null");
-            }
-
-            for (int seat : row) {
-                if (seat != 0 && seat != 1) {
-                    throw new IllegalArgumentException("The seat must be either 1 or 0");
-                }
-            }
-        }
-    }
-
-    /**
-     * Finds the row which contains a desired number of hte consecutive seats.
-     *
-     * @param consecutiveSeatsNumber the desired number of the consecutive seats.
-     * @return the number of the first found suitable row or 0 if the row was not found.
-     */
-    public int findConsecutiveAvailableSeats(final int consecutiveSeatsNumber) {
-        int freeSeats = 0;
-
-        for (int i = 0; i < seats.length; i++) {
-            for (int j = 0; j < seats[i].length; j++) {
-                if (seats[i][j] == 0) {
-                    freeSeats++;
-
-                    if (freeSeats == consecutiveSeatsNumber) {
-                        return i + 1;
-                    }
-                } else {
-                    freeSeats = 0;
-                }
-            }
-
-            freeSeats = 0;
-        }
-
-        return 0;
     }
 
     /**
@@ -141,4 +84,66 @@ public class Cinema {
 
         System.out.println(cinema.findConsecutiveAvailableSeats(ticketsNumber));
     }
+
+    /**
+     * The getter for the {@link #seats}.
+     *
+     * @return a copy of the {@link #seats}.
+     */
+    public int @NotNull [] @NotNull [] getSeats() {
+        return seats.clone();
+    }
+
+    /**
+     * Validates seats.
+     *
+     * @param seats the value to be validated.
+     */
+    private void validateSeats(final int @Nullable [] @Nullable [] seats) {
+        if (seats == null) {
+            throw new IllegalArgumentException("The seats must not be null");
+        }
+
+        for (int[] row : seats) {
+            if (row == null) {
+                throw new IllegalArgumentException("The row must not be null");
+            }
+
+            for (int seat : row) {
+                if (seat != 0 && seat != 1) {
+                    throw new IllegalArgumentException("The seat must be either 1 or 0");
+                }
+            }
+        }
+    }
+
+    /**
+     * Finds the row which contains a desired number of hte consecutive seats.
+     *
+     * @param consecutiveSeatsNumber the desired number of the consecutive seats.
+     *
+     * @return the number of the first found suitable row or 0 if the row was not found.
+     */
+    public int findConsecutiveAvailableSeats(final int consecutiveSeatsNumber) {
+        int freeSeats = 0;
+
+        for (int i = 0; i < seats.length; i++) {
+            for (int j = 0; j < seats[i].length; j++) {
+                if (seats[i][j] == 0) {
+                    freeSeats++;
+
+                    if (freeSeats == consecutiveSeatsNumber) {
+                        return i + 1;
+                    }
+                } else {
+                    freeSeats = 0;
+                }
+            }
+
+            freeSeats = 0;
+        }
+
+        return 0;
+    }
+
 }

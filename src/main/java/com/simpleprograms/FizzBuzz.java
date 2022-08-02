@@ -27,7 +27,7 @@ package com.simpleprograms;
  * The solution of the famous "FizzBuzz" task.
  *
  * @author Ivan Bobrov
- * @version 3.0.1
+ * @version 3.0.2
  */
 
 public class FizzBuzz {
@@ -55,10 +55,13 @@ public class FizzBuzz {
         }
     }
 
+
+
     /**
      * The example of using the program.
      */
     public static void main(String[] args) {
         FizzBuzz.doFizzBuzz();
     }
+
 }

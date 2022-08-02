@@ -24,6 +24,7 @@
 package com.simpleprograms;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 
@@ -31,7 +32,7 @@ import java.util.Arrays;
  * The program to detect an anagram.
  *
  * @author Ivan Bobrov
- * @version 3.0.2
+ * @version 3.0.3
  */
 public class AnagramDetector {
 
@@ -39,6 +40,8 @@ public class AnagramDetector {
      * The string to compare with other strings.
      */
     private @NotNull String primaryString;
+
+
 
     /**
      * The default constructor.
@@ -49,6 +52,22 @@ public class AnagramDetector {
         validateString(primaryString);
 
         this.primaryString = primaryString;
+    }
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var anagramDetector = new AnagramDetector("Mama and papa");
+        System.out.println(anagramDetector.getPrimaryString());
+
+        System.out.println(anagramDetector.checkForAnagram("amMa dan paap"));
+
+        anagramDetector.setPrimaryString("Papa and mama");
+
+        System.out.println(anagramDetector.getPrimaryString());
+
+        System.out.println(anagramDetector.checkForAnagram("amma"));
     }
 
     /**
@@ -76,7 +95,7 @@ public class AnagramDetector {
      *
      * @param string the string to be validated.
      */
-    private void validateString(final String string) {
+    private void validateString(final @Nullable String string) {
         if (string == null) {
             throw new IllegalArgumentException("The string must not be null.");
         }
@@ -90,6 +109,7 @@ public class AnagramDetector {
      * Checks the {@link #primaryString} is an anagram of the input string.
      *
      * @param string the string to be checked.
+     *
      * @return boolean true if it is and boolean false if is not.
      */
     public boolean checkForAnagram(final @NotNull String string) {
@@ -104,19 +124,4 @@ public class AnagramDetector {
         return Arrays.equals(primaryWordLetters, wordLetters);
     }
 
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var anagramDetector = new AnagramDetector("Mama and papa");
-        System.out.println(anagramDetector.getPrimaryString());
-
-        System.out.println(anagramDetector.checkForAnagram("amMa dan paap"));
-
-        anagramDetector.setPrimaryString("Papa and mama");
-
-        System.out.println(anagramDetector.getPrimaryString());
-
-        System.out.println(anagramDetector.checkForAnagram("amma"));
-    }
 }
