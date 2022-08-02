@@ -24,9 +24,10 @@
 package com.simpleprograms
 
 /**
- * Run the program that prints a cake in the console depending on the age of the birthday person
+ * Prints a cake in the console depending on the age of the birthday person
  *
  * @author Ivan Bobrov
+ * @version 1.0.1
  */
 fun main() {
     // The age of the birthday person
@@ -40,7 +41,7 @@ fun main() {
 }
 
 /**
- * Function for printing candles on a cake
+ * Prints candles on a cake
  *
  * @param age the age of the birthday person
  */
@@ -61,7 +62,7 @@ fun printCakeCandles(age: Int) {
 }
 
 /**
- * Function for printing the top layer of a cake
+ * Prints the top layer of a cake
  *
  * @param age the age of the birthday person
  */
@@ -73,7 +74,7 @@ fun printCakeTop(age: Int) {
 }
 
 /**
- * Function for printing the bottom layers of a cake
+ * Prints the bottom layers of a cake
  *
  * @param age the age of the birthday person
  * @param layers the number of the layers in the cake

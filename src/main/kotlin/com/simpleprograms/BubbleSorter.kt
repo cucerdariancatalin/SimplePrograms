@@ -27,7 +27,7 @@ package com.simpleprograms
  * The program to implement the bubble sort algorithm.
  *
  * @author Ivan Bobrov
- * @version 1.5
+ * @version 1.5.0
  */
 fun main() {
     val array = arrayOf(10, 4, 6, 0, 5, 8, 9, 1, 3, 2, 7)

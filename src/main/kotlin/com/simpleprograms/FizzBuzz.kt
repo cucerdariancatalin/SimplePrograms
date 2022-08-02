@@ -24,12 +24,12 @@
 package com.simpleprograms
 
 /**
- * The program to print numbers from 1 to 100. It prints "Fizz" instead of multiples of
+ * Prints numbers from 1 to 100, but it prints "Fizz" instead of multiples of
  * three, "Buzz" instead of multiples of five and "FizzBuzz" instead of multiples of both
  * three and five at the same time.
  *
  * @author Ivan Bobrov
- * @version 1.1.1
+ * @version 1.1.2
  */
 fun main() {
     for (i in 1..100) {
