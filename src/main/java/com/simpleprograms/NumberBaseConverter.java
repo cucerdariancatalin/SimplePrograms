@@ -59,6 +59,7 @@ public class NumberBaseConverter {
      * @param sourceBase a default value of the {@link #sourceBase}.
      * @param targetBase a default value of the {@link #targetBase}.
      * @param scale      a default value of the {@link #scale}.
+     *
      * @see #validateBase(int)
      * @see #validateScale(int)
      */
@@ -85,6 +86,7 @@ public class NumberBaseConverter {
      * The setter for the {@link #sourceBase}.
      *
      * @param sourceBase a new value of the {@link #sourceBase}.
+     *
      * @see #validateBase(int)
      */
     public void setSourceBase(final int sourceBase) {
@@ -106,6 +108,7 @@ public class NumberBaseConverter {
      * The setter for the {@link #targetBase}.
      *
      * @param targetBase a new value of the {@link #targetBase}.
+     *
      * @see #validateBase(int)
      */
     public void setTargetBase(final int targetBase) {
@@ -127,6 +130,7 @@ public class NumberBaseConverter {
      * The setter for the {@link #scale}.
      *
      * @param scale a new value of the {@link #scale}.
+     *
      * @see #validateScale(int)
      */
     public void setScale(final int scale) {
@@ -161,6 +165,7 @@ public class NumberBaseConverter {
      * Converts a number from the {@link #sourceBase} to the {@link #targetBase}.
      *
      * @param number a string representation of the number to be converted.
+     *
      * @return a string representation of the converted number. The form is "1.00" (in this case, the scale is 2).
      */
     public @NotNull String convertNumber(final @NotNull String number) {
@@ -209,7 +214,9 @@ public class NumberBaseConverter {
      * </ol>
      *
      * @param integerPart the integer part of the number.
+     *
      * @return a string that represents the converted integer part of the number.
+     *
      * @see #convertIntegerPartToDecimal(String)
      */
     private @NotNull String convertIntegerPartToTargetBase(final @NotNull String integerPart) {
@@ -220,6 +227,7 @@ public class NumberBaseConverter {
      * Converts the integer part of the number from the {@link #sourceBase} to the decimal.
      *
      * @param integerPart the integer part of the number to be converted.
+     *
      * @return the converted integer part of the number.
      */
     private @NotNull BigInteger convertIntegerPartToDecimal(final @NotNull String integerPart) {
@@ -237,7 +245,9 @@ public class NumberBaseConverter {
      * It rounds down the converted fractional part using the {@link #scale}.
      *
      * @param fractionalPart the fractional part of the number to be converted.
+     *
      * @return a string that represents the converted fractional part of the number.
+     *
      * @see #convertFractionalPartToDecimal(String)
      */
     private @NotNull String convertFractionalPartToTargetBase(final @NotNull String fractionalPart) {
@@ -262,6 +272,7 @@ public class NumberBaseConverter {
      * Converts the fractional part of the number from the {@link #sourceBase} to the decimal.
      *
      * @param fractionalPart the fractional part of the number to be converted.
+     *
      * @return a BigDecimal representation of the converted fractional part of the number.
      */
     private @NotNull BigDecimal convertFractionalPartToDecimal(final @NotNull String fractionalPart) {
@@ -270,9 +281,14 @@ public class NumberBaseConverter {
         for (int i = 0; i < fractionalPart.length(); i++) {
             final BigDecimal positionPower = BigDecimal.valueOf(Math.pow(sourceBase, -(i + 1)));
             final char digitInSourceBase = fractionalPart.charAt(i);
-            final BigDecimal digitInDecimal = new BigDecimal(new BigInteger(String.valueOf(digitInSourceBase), sourceBase));
+            final BigDecimal digitInDecimal = new BigDecimal(new BigInteger(
+                    String.valueOf(digitInSourceBase),
+                    sourceBase
+            ));
 
-            fractionalPartInDecimal = fractionalPartInDecimal.add(digitInDecimal.multiply(positionPower));
+            fractionalPartInDecimal = fractionalPartInDecimal.add(digitInDecimal.multiply(
+                    positionPower
+            ));
         }
 
         return fractionalPartInDecimal;
@@ -287,7 +303,9 @@ public class NumberBaseConverter {
         validateScanner(scanner);
 
         while (true) {
-            System.out.println("Enter two numbers in format: {source base} {target base} (To quit type /exit)");
+            System.out.println(
+                    "Enter two numbers in format: {source base} {target base} (To quit type /exit)"
+            );
             final String inputBases = scanner.nextLine().toLowerCase();
 
             if ("/exit".equals(inputBases)) {
@@ -301,7 +319,11 @@ public class NumberBaseConverter {
             setTargetBase(Integer.parseInt(bases[1]));
 
             while (true) {
-                System.out.printf("Enter number in base %d to convert to base %d (To go back type /back)%n", sourceBase, targetBase);
+                System.out.printf(
+                        "Enter number in base %d to convert to base %d (To go back type /back)%n",
+                        sourceBase,
+                        targetBase
+                );
                 final String inputNumber = scanner.nextLine().toLowerCase();
 
                 if ("/back".equals(inputNumber)) {
@@ -347,4 +369,5 @@ public class NumberBaseConverter {
 
         converter.runDialog(new Scanner(System.in));
     }
+
 }
