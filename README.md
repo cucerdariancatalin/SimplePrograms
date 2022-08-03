@@ -334,7 +334,8 @@ with **k** available seats, output the first row with these seats. If there is n
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1930).
 
-[Here](src/main/java/com/simpleprograms/Cinema.java) you can see the solution of this task in Java.
+[Here](src/main/java/com/simpleprograms/Cinema.java) you can see the solution of this task in Java
+and [here](src/test/java/com/simpleprograms/CinemaTest.java) - the JUnit tests.
 
 ### CollatzConjecture
 
@@ -347,7 +348,7 @@ which positive integer is chosen to start the sequence.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture))
 
 [Here](src/main/java/com/simpleprograms/CollatzConjecture.java) you can see the implementation of this algorithm in
-Java.
+Java and [here](src/test/java/com/simpleprograms/CollatzConjectureTest.java) - the JUnit tests.
 
 ### CommonDenominators
 
@@ -364,7 +365,8 @@ The algorithm is quite simple:
 
 This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d95).
 
-[Here](src/main/java/com/simpleprograms/CommonDenominators.java) you can see the implementation of this program in Java.
+[Here](src/main/java/com/simpleprograms/CommonDenominators.java) you can see the implementation of this program in Java
+and [here](src/test/java/com/simpleprograms/CommonDenominatorsTest.java) - the JUnit tests.
 
 ### CountTheDigit
 
@@ -386,7 +388,7 @@ many other number-theoretic and cryptographic calculations.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Euclidean_algorithm))
 
 [Here](src/main/java/com/simpleprograms/EuclideanAlgorithm.java) you can see the implementation of this algorithm in
-Java.
+Java and [here](src/test/java/com/simpleprograms/EuclideanAlgorithmTest.java) - the JUnit tests.
 
 ### Factorial
 
@@ -430,8 +432,9 @@ The value of 0! is 1, according to the convention for an empty product.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Factorial))
 
 [Here](src/main/java/com/simpleprograms/Factorial.java) you can see the implementation of Factorial in
-Java, [here](src/main/kotlin/com/simpleprograms/Factorial.kt) in
-Kotlin and [here](src/main/bash/com/SimplePrograms/factorial.sh) in Bash.
+Java, [here](src/test/java/com/simpleprograms/FactorialTest.java) - the JUnit tests,
+[here](src/main/kotlin/com/simpleprograms/Factorial.kt) - in Kotlin and
+[here](src/main/bash/com/SimplePrograms/factorial.sh) - in Bash.
 
 ### FibonacciNumbers
 
@@ -453,8 +456,8 @@ The beginning of the sequence is thus:
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
 
 [Here](src/main/java/com/simpleprograms/FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in
-Java and [here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt)
-in Kotlin.
+Java, [here](src/test/java/com/simpleprograms/FibonacciNumbersTest.java) - the JUnit tests and
+[here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt) - in Kotlin.
 
 ### FirstUniqueCharacterInString
 
@@ -467,7 +470,7 @@ Given the string: "Hello World! Hello!".
 First unique character: "W".
 
 [Here](src/main/java/com/simpleprograms/FirstUniqueCharacterInString.java) you can see the solution to this task in
-Java.
+Java and [here](src/test/java/com/simpleprograms/FirstUniqueCharacterInStringTest.java) - the JUnit tests.
 
 ### FizzBuzz
 
@@ -475,8 +478,9 @@ The program should print numbers from 1 to 100. But instead of multiples of thre
 numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same
 time, it prints "FizzBuzz".
 
-[Here](src/main/java/com/simpleprograms/FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java
-and [here](src/main/kotlin/com/simpleprograms/FizzBuzz.kt) in Kotlin.
+[Here](src/main/java/com/simpleprograms/FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java,
+[here](src/test/java/com/simpleprograms/FizzBuzzTest.java) - the JUnit tests and
+[here](src/main/kotlin/com/simpleprograms/FizzBuzz.kt) - in Kotlin.
 
 ### HappyBirthday
 
@@ -507,7 +511,7 @@ target base, instead of 2.
 This task is on [JetBrains Academy](https://hyperskill.org/projects/181).
 
 [Here](src/main/java/com/simpleprograms/NumberBaseConverter.java) you can see the implementation of this program in
-Java.
+Java and [here](src/test/java/com/simpleprograms/NumberBaseConverterTest.java) - the JUnit tests.
 
 ### PerfectNumbers
 
@@ -544,7 +548,7 @@ number.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Perfect_number))
 
 [Here](src/main/java/com/simpleprograms/PerfectNumbers.java) you can see the implementation of a sequence of perfect
-numbers in Java.
+numbers in Java and [here](src/test/java/com/simpleprograms/PerfectNumbersTest.java) - the JUnit tests.
 
 **Attention! To display more than four numbers, you will have to wait!** :)
 
@@ -572,7 +576,8 @@ primes that is unique up to their order.
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Prime_number))
 
-[Here](src/main/java/com/simpleprograms/PrimeNumbers.java) you can see the implementation of prime numbers in Java.
+[Here](src/main/java/com/simpleprograms/PrimeNumbers.java) you can see the implementation of prime numbers in Java
+and [here](src/test/java/com/simpleprograms/PrimeNumbersTest.java) - the JUnit tests.
 
 ### QuadraticEquation
 
@@ -616,7 +621,7 @@ I prefer the graph:
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
 [Here](src/main/java/com/simpleprograms/RecamanSequence.java) you can see the implementation of the Recaman's sequence
-in Java.
+in Java and [here](src/test/java/com/simpleprograms/RecamanSequenceTest.java) - the JUnit tests.
 
 ### Restaurant
 
