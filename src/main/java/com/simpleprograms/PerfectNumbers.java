@@ -27,7 +27,7 @@ package com.simpleprograms;
  * The program creates a sequence of perfect numbers.
  *
  * @author Ivan Bobrov
- * @version 2.1.1
+ * @version 2.1.2
  */
 public class PerfectNumbers {
 
@@ -53,8 +53,8 @@ public class PerfectNumbers {
             }
 
             if (sum == perfectNumberCandidate) {
-                System.out.printf("%d%s", perfectNumberCandidate, quantity == 1 ? "\n" : ", ");
                 quantity--;
+                System.out.printf("%d%s", perfectNumberCandidate, quantity == 0 ? "\n" : ", ");
             }
 
             perfectNumberCandidate++;
