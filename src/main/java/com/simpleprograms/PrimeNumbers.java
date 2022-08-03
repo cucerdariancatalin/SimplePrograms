@@ -26,8 +26,8 @@ package com.simpleprograms;
 /**
  * The program creates a sequence of prime numbers.
  *
- * @author VitasSalvantes
- * @version 1.5.0
+ * @author Ivan Bobrov
+ * @version 1.5.1
  */
 public class PrimeNumbers {
 
