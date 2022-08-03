@@ -28,15 +28,15 @@ import kotlin.math.sqrt
 /**
  * Solves quadratic equations.
  *
- * @author VitasSalvantes
- * @version 1.0.1
+ * @author Ivan Bobrov
+ * @version 1.0.2
  */
 fun main() {
     val a = 2.0
     val b = -5.0
     val c = -63.0
 
-    val answers = if (a == 1.0) pqMethod(b, c) else diskriminantMethod(a, b, c)
+    val answers = if (a == 1.0) pqMethod(b, c) else discriminantMethod(a, b, c)
 
     println("Answer: ${answers.joinToString()}")
 }
@@ -50,10 +50,10 @@ fun pqMethod(p: Double, q: Double): Array<Double> {
 }
 
 // ax^2 + bx + c = 0
-fun diskriminantMethod(a: Double, b: Double, c: Double): Array<Double> {
-    val diskriminant = b * b - 4 * a * c
-    val x1 = (-b + sqrt(diskriminant)) / (2 * a)
-    val x2 = (-b - sqrt(diskriminant)) / (2 * a)
+fun discriminantMethod(a: Double, b: Double, c: Double): Array<Double> {
+    val discriminant = b * b - 4 * a * c
+    val x1 = (-b + sqrt(discriminant)) / (2 * a)
+    val x2 = (-b - sqrt(discriminant)) / (2 * a)
 
     return arrayOf(x1, x2)
 }
