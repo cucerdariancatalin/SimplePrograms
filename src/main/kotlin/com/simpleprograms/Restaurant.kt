@@ -79,7 +79,7 @@ open class Item(val name: String, val price: Int) {
 class Noodles : Item("Noodles", 10)
 
 /**
- * An item „Vegetables” costs $5 and can consist of some types
+ * An item "Vegetables" costs $5 and can consist of some types
  */
 class Vegetables(private vararg val toppings: String) : Item("Vegetables", 5) {
     override fun toString(): String {
