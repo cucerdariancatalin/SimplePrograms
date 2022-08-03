@@ -48,7 +48,6 @@ the [list of all programs](#List-of-all-programs).
 - [Polynomial](#polynomial)
 - [PrimeNumbers](#primenumbers)
 - [QuadraticEquation](#quadraticequation)
-- [Queens](#queens)
 - [RecamanSequence](#recamansequence)
 - [Restaurant](#restaurant)
 - [RightRotation](#rightrotation)
@@ -589,18 +588,6 @@ Of course, this program has limitations:
 
 [Here](src/main/kotlin/com/simpleprograms/QuadraticEquation.kt) you can see the implementation of this program in
 Kotlin.
-
-### Queens
-
-Queen is the most powerful and valuable attacking piece in the game of chess. It combines the powers of the bishop and
-the rook. It is able to move any number of unoccupied squares in a straight line: vertically, horizontally or
-diagonally.
-
-You are given coordinates of two queens on a chess board. Find out whether they can capture each other.
-
-This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2168).
-
-[Here](src/main/java/com/simpleprograms/Queens.java) you can see the implementation of this program in Java.
 
 ### RecamanSequence
 
