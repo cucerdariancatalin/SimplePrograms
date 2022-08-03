@@ -598,10 +598,10 @@ often defined using recursion.
 It takes its name after its inventor Bernardo Recamán Santos (Bogotá, August 5, 1954), a Colombian mathematician.
 
 The Recaman's
-sequence <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda" alt="recaman-sequence-formula">
+sequence ![recaman-sequence-formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda)
 is defined as:
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89ab504e66d289aeb91cdd3c9b3d88212a13f506" alt="recaman-sequence-formula">
+![recaman-sequence-formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/89ab504e66d289aeb91cdd3c9b3d88212a13f506)
 
 The first terms of the sequence are:
 
@@ -609,9 +609,9 @@ The first terms of the sequence are:
 46, 79, 113, 78, 114, 77, 39, 78, 38, 79, 37, 80, 36, 81, 35, 82, 34, 83, 33, 84, 32, 85, 31, 86, 30, 87, 29, 88, 28,
 89, 27, 90, 26, 91, 157, 224, 156, 225, 155, ...
 
-I like the drawing better:
+I prefer the graph:
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Reacam%C3%A1nSequenceDrawing.png/375px-Reacam%C3%A1nSequenceDrawing.png"  alt="recaman-sequence-image">
+![recaman-sequence-image](https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Reacam%C3%A1nSequenceDrawing.png/375px-Reacam%C3%A1nSequenceDrawing.png)
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
