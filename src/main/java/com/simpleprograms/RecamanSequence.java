@@ -24,12 +24,13 @@
 package com.simpleprograms;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Simple implementation of the Recaman sequence.
  *
  * @author Ivan Bobrov
- * @version 1.6.0
+ * @version 1.6.1
  */
 
 public class RecamanSequence {
@@ -50,8 +51,12 @@ public class RecamanSequence {
             recamanSequence.add(newElementCandidate > 0 && !recamanSequence.contains(newElementCandidate)
                                 ? newElementCandidate
                                 : recamanSequence.get(i - 1) + i);
+        }
 
-            System.out.printf("%d%s", recamanSequence.get(i), i == quantity - 1 ? "\n" : ", ");
+        final Iterator<Integer> iterator = recamanSequence.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.printf("%d%s", iterator.next(), iterator.hasNext() ? ", " : "\n");
         }
     }
 
