@@ -653,7 +653,8 @@ Resulting array
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/3663).
 
-[Here](src/main/java/com/simpleprograms/RightRotation.java) you can see the solution of this task in Java.
+[Here](src/main/java/com/simpleprograms/RightRotation.java) you can see the solution of this task in Java
+and [here](src/test/java/com/simpleprograms/RightRotationTest.java) - the JUnit tests.
 
 ### RotateRectangleArray
 
