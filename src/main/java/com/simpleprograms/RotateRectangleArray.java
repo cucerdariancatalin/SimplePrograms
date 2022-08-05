@@ -1,54 +1,103 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
 package com.simpleprograms;
 
-import java.util.Scanner;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
- * Simple program to rotate a rectangle array by 90 degrees clockwise.
+ * The program rotates a rectangle array by 90 degrees clockwise.
  *
- * @author VitasSalvantes
- * @version 1.0
+ * @author Ivan Bobrov
+ * @version 2.0.0
  */
 public class RotateRectangleArray {
+
     /**
-     * Method that launches the program.
+     * Rotates a rectangle array right.
+     *
+     * @param array the rectangle array to be rotated.
+     *
+     * @return a rotated copy of the rectangle array.
      */
-    public static void main(String[] args) {
-        // The Scanner object to get the user input
-        Scanner scanner = new Scanner(System.in);
+    public static int @NotNull [] @NotNull [] rotate(final int @NotNull [] @NotNull [] array) {
+        validateRectangleArray(array);
+        final int @NotNull [] @NotNull [] rotatedArray = new int[array[0].length][array.length];
 
-        // Number of rows in the rectangle array
-        int rows = scanner.nextInt();
-
-        // Number of columns in the rectangle array
-        int columns = scanner.nextInt();
-
-        // The rectangle array
-        int[][] rectangle = new int[rows][columns];
-
-        // The rotated rectangle array
-        int[][] rotatedRectangle = new int[columns][rows];
-
-        // Fill the rectangle array
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                rectangle[i][j] = scanner.nextInt();
+        for (int i = 0; i < rotatedArray.length; i++) {
+            for (int j = 0; j < rotatedArray[i].length; j++) {
+                rotatedArray[i][j] = array[array.length - 1 - j][i];
             }
         }
 
-        // Rotate the rectangle array
-        for (int i = 0; i < columns; i++) {
-            for (int j = 0; j < rows; j++) {
-                // Change row and column indexes
-                rotatedRectangle[i][j] = rectangle[rows - 1 - j][i];
-            }
+        return rotatedArray;
+    }
+
+    /**
+     * Validates a rectangle array.
+     *
+     * @param array the rectangle array to be validated.
+     */
+    private static void validateRectangleArray(final int @Nullable [] @Nullable [] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("The array must not be null");
         }
 
-        // Print the rotated array
-        for (int[] row : rotatedRectangle) {
-            for (int number : row) {
-                System.out.print(number + " ");
+        if (array.length == 0) {
+            throw new IllegalArgumentException("The array must not be empty");
+        }
+
+        for (int[] row : array) {
+            if (row == null) {
+                throw new IllegalArgumentException("The row must not be null");
             }
-            System.out.println();
+
+            if (row.length == 0) {
+                throw new IllegalArgumentException("The row must not be empty");
+            }
+
+            //noinspection ConstantConditions
+            if (row.length != array[0].length) {
+                throw new IllegalArgumentException("The array must be rectangle");
+            }
         }
     }
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final int[][] rotatedArray = RotateRectangleArray.rotate(new int[][]{
+                {1, 2, 3},
+                {4, 5, 6}
+        });
+
+        for (int[] row : rotatedArray) {
+            for (int i = 0; i < row.length; i++) {
+                System.out.printf("%d" + (i == row.length - 1 ? "%n" : " "), row[i]);
+            }
+        }
+    }
+
 }
