@@ -30,12 +30,12 @@ import org.jetbrains.annotations.Nullable;
  * The program rotates a rectangle array by 90 degrees clockwise.
  *
  * @author Ivan Bobrov
- * @version 2.0.0
+ * @version 2.0.1
  */
 public class RotateRectangleArray {
 
     /**
-     * Rotates a rectangle array right.
+     * Rotates a rectangle array by 90 degrees clockwise.
      *
      * @param array the rectangle array to be rotated.
      *
