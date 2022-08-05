@@ -54,7 +54,6 @@ the [list of all programs](#List-of-all-programs).
 - [RotateRectangleArray](#rotaterectanglearray)
 - [SimpleCurrencyConverter](#simplecurrencyconverter)
 - [TicTacToe](#tictactoe)
-- [TortoiseRacing](#tortoiseracing)
 
 ### AnagramDetector
 
@@ -715,20 +714,6 @@ This task is on [JetBrains Academy](https://hyperskill.org/projects/231).
 Coming soon...
 
 [Here](src/main/java/com/simpleprograms/TicTacToe.java) you can see the implementation of this game in Java.
-
-### TortoiseRacing
-
-Two tortoises started a race. The first tortoise starts right away, and the second gives is a head start. If the
-distance between the tortoises is known, how long will it take for the second to catch up with the first?
-
-We will assume that the speed of the second is always greater than the speed of the first and that all numbers are
-non-negative integers.
-
-The answer should be displayed as [hours, minutes, seconds].
-
-This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006c/java).
-
-[Here](src/main/java/com/simpleprograms/TortoiseRacing.java) you can see the implementation of this program in Java.
 
 ## Technologies
 
