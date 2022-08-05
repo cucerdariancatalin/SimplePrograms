@@ -671,7 +671,8 @@ Output the resulting array. Separate numbers by a single space in the output.
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1927).
 
-[Here](src/main/java/com/simpleprograms/RotateRectangleArray.java) you can see the solution of this task in Java.
+[Here](src/main/java/com/simpleprograms/RotateRectangleArray.java) you can see the solution of this task in Java
+and [here](src/test/java/com/simpleprograms/RotateRectangleArrayTest.java) - the JUnit tests.
 
 ### SimpleCurrencyConverter
 
