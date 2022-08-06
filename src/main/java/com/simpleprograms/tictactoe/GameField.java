@@ -30,7 +30,7 @@ import org.jetbrains.annotations.Nullable;
  * The game field of the Tic-Tac-Toe game.
  *
  * @author Ivan Bobrov
- * @version 1.0.2
+ * @version 1.0.3
  */
 public class GameField {
 
@@ -225,7 +225,7 @@ public class GameField {
      * @return the boolean true if the coordinate is out of the range or the boolean false otherwise.
      */
     public boolean isCoordinateOutOfRange(final int coordinate) {
-        return coordinate < 0 && coordinate >= DIMENSION_SIZE;
+        return coordinate < 0 || coordinate >= DIMENSION_SIZE;
     }
 
 }
