@@ -30,7 +30,7 @@ import org.jetbrains.annotations.Nullable;
  * The game field of the Tic-Tac-Toe game.
  *
  * @author Ivan Bobrov
- * @version 1.0.3
+ * @version 1.0.4
  */
 public class GameField {
 
@@ -120,7 +120,7 @@ public class GameField {
     @Override
     public @NotNull String toString() {
         final StringBuilder stringGameField = new StringBuilder();
-        final String horizontalBorder = "---------";
+        final String horizontalBorder = "-".repeat(DIMENSION_SIZE * 2 + 3);
 
         // The top border
         stringGameField.append(horizontalBorder).append("\n");
