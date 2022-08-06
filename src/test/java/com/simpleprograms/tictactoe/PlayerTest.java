@@ -36,16 +36,20 @@ import static org.junit.jupiter.api.Assertions.*;
  * JUnit tests for the {@link Player}.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 class PlayerTest {
 
     private Player testPlayer;
 
+
+
     @BeforeEach
     void setUp() {
         testPlayer = new Player("Player", 'X');
     }
+
+
 
     @Test
     @DisplayName("Test constructor")
