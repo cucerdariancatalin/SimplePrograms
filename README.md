@@ -711,9 +711,16 @@ This task is on [JetBrains Academy](https://hyperskill.org/projects/231).
 
 ### TicTacToe
 
-Coming soon...
+Everybody remembers this paper-and-pencil game from childhood: Tic-Tac-Toe, also known as Noughts and crosses or Xs and
+Os. A single mistake usually costs you the game, but thankfully it is simple enough that most players discover the best
+strategy quickly. Let’s program Tic-Tac-Toe and get playing!
 
-[Here](src/main/java/com/simpleprograms/TicTacToe.java) you can see the implementation of this game in Java.
+My implementation of the game works with the 3x3, 4x4, 5x5 and even greater field!
+
+This task is on [JetBrains Academy](https://hyperskill.org/projects/48).
+
+[Here](src/main/java/com/simpleprograms/tictactoe) you can see the implementation of this game in Java
+and [here](src/test/java/com/simpleprograms/tictactoe) - the JUnit tests.
 
 ## Technologies
 
