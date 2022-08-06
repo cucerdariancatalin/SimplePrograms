@@ -32,19 +32,19 @@ import java.util.Scanner;
  * The player of the Tic-Tac-Toe game.
  *
  * @author Ivan Bobrov
- * @version 1.0.1
+ * @version 1.0.2
  */
 public class Player {
 
     /**
      * The name of a player.
      */
-    private @NotNull String name;
+    private final @NotNull String name;
 
     /**
      * The character the player marks a move.
      */
-    private char gameChar;
+    private final char gameChar;
 
 
 
@@ -86,32 +86,12 @@ public class Player {
     }
 
     /**
-     * The setter for the {@link Player#name}.
-     *
-     * @param name a new value of the {@link Player#name}. It must not be neither null nor blank.
-     */
-    public void setName(final @NotNull String name) {
-        validateName(name);
-
-        this.name = name;
-    }
-
-    /**
      * The getter for the {@link Player#gameChar}.
      *
      * @return the game character of the player.
      */
     public char getGameChar() {
         return gameChar;
-    }
-
-    /**
-     * The setter for the {@link Player#gameChar}.
-     *
-     * @param gameChar a new value of the {@link Player#gameChar}.
-     */
-    public void setGameChar(char gameChar) {
-        this.gameChar = gameChar;
     }
 
 
