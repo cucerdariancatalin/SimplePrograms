@@ -1,4 +1,4 @@
-# Simple programs
+# SimplePrograms
 
 ![logo](/res/img/logo.png)
 
@@ -12,7 +12,7 @@ in accordance with the samples) or new options in any programming language.
 
 ## Table of contents
 
-- [How does it work](#how-does-it-work)
+- [How it works](#how-it-works)
 - [List of all programs](#list-of-all-programs)
 - [Technologies](#technologies)
 - [Development progress](#development-progress)
@@ -20,7 +20,7 @@ in accordance with the samples) or new options in any programming language.
 - [How to install](#how-to-install)
 - [How to contribute](#how-to-contribute)
 
-## How does it work
+## How it works
 
 For quick access to the description of the program and its implementation you can use
 the [list of all programs](#List-of-all-programs).
@@ -724,19 +724,23 @@ and [here](src/test/java/com/simpleprograms/tictactoe) - the JUnit tests.
 
 ## Technologies
 
-- The [Java](https://www.oracle.com/java/) and the
-  [Kotlin](https://kotlinlang.org/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/)) programming languages
-  were chosen for development.
+- [Java](https://www.oracle.com/java/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/))
 
-- Development is carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Ultimate Edition.
+- [JUnit 5](https://junit.org/junit5/)
 
-- [WakaTime](https://wakatime.com/) is used to track activity.
+- [Kotlin](https://kotlinlang.org/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/))
 
-- [Microsoft To Do](https://todo.microsoft.com/tasks/) is used to schedule tasks.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/) Ultimate Edition
+
+- [WakaTime](https://wakatime.com/)
+
+- [Microsoft To Do](https://todo.microsoft.com/tasks/)
 
 ## Development progress
 
-Development is in an active state.
+Development began on **January 30, 2021,** and is in the active state.
 
 As there is no clear plan, any interesting programs are welcome.
 
@@ -752,8 +756,14 @@ See more on [WakaTime](https://wakatime.com/@VitasSalvantes/projects/qomqnujpcs)
 
 ## How to install
 
-It is enough to copy code of any program and run it in any suitable development environment, or use the command
-line/terminal.
+1. [Download](https://github.com/VitasSalvantes/SimplePrograms/archive/refs/heads/main.zip) zip
+2. Extract the archive
+3. Open the extracted folder in your favourite IDE or code editor
+
+or
+
+1. Copy the code of any program
+2. Paste and run it in your favourite IDE or code editor
 
 ## How to contribute
 
