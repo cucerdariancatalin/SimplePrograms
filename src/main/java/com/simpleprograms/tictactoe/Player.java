@@ -32,7 +32,7 @@ import java.util.Scanner;
  * The player of the Tic-Tac-Toe game.
  *
  * @author Ivan Bobrov
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class Player {
 
@@ -132,8 +132,8 @@ public class Player {
             if (!move.matches("\\d+ \\d+")) {
                 System.out.println("You should enter numbers!");
             } else {
-                final String @NotNull [] moveArray = move.split(" ");
-                final int @NotNull [] coordinates = new int[2];
+                final String[] moveArray = move.split(" ");
+                final int[] coordinates = new int[2];
                 coordinates[0] = Integer.parseInt(moveArray[0]) - 1;
                 coordinates[1] = Integer.parseInt(moveArray[1]) - 1;
 
