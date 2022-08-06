@@ -29,7 +29,7 @@ import java.util.Scanner;
  * The program to find out whether it is possible to break off exactly the number of segments from the chocolate bar.
  *
  * @author Ivan Bobrov
- * @version 2.0.3
+ * @version 2.0.4
  */
 public class ChocolateBreaker {
 
@@ -46,7 +46,7 @@ public class ChocolateBreaker {
 
 
     /**
-     * The constructor sets default values of the {@link #chocolateLength} and the {@link #chocolateWidth}.
+     * Sets default values of the fields.
      *
      * @param chocolateLength a new value of the {@link #chocolateLength}. It must be greater than 0.
      * @param chocolateWidth  a new value of the {@link #chocolateWidth}. It must be greater than 0.
@@ -56,28 +56,6 @@ public class ChocolateBreaker {
 
         this.chocolateLength = chocolateLength;
         this.chocolateWidth = chocolateWidth;
-    }
-
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var scanner = new Scanner(System.in);
-        final var breaker = new ChocolateBreaker(scanner.nextInt(), scanner.nextInt());
-        System.out.printf("Length: %d%n", breaker.getChocolateLength());
-        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
-        System.out.println();
-
-        breaker.checkBreakPossibility(scanner.nextInt());
-
-        System.out.println();
-        breaker.setChocolateLength(12);
-        breaker.setChocolateWidth(24);
-        System.out.printf("Length: %d%n", breaker.getChocolateLength());
-        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
-        System.out.println();
-
-        breaker.checkBreakPossibility(6);
     }
 
     /**
@@ -120,6 +98,8 @@ public class ChocolateBreaker {
         this.chocolateWidth = chocolateWidth;
     }
 
+
+
     /**
      * Validates new values of the {@link #chocolateLength} and the {@link #chocolateWidth}.
      *
@@ -153,6 +133,30 @@ public class ChocolateBreaker {
         } else {
             System.out.println("NO");
         }
+    }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var scanner = new Scanner(System.in);
+        final var breaker = new ChocolateBreaker(scanner.nextInt(), scanner.nextInt());
+        System.out.printf("Length: %d%n", breaker.getChocolateLength());
+        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
+        System.out.println();
+
+        breaker.checkBreakPossibility(scanner.nextInt());
+
+        System.out.println();
+        breaker.setChocolateLength(12);
+        breaker.setChocolateWidth(24);
+        System.out.printf("Length: %d%n", breaker.getChocolateLength());
+        System.out.printf("Width: %d%n", breaker.getChocolateWidth());
+        System.out.println();
+
+        breaker.checkBreakPossibility(6);
     }
 
 }

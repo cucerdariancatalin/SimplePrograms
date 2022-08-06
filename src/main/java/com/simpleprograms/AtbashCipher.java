@@ -30,21 +30,9 @@ import org.jetbrains.annotations.Nullable;
  * The program to en- and decrypt messages using the Atbash cipher.
  *
  * @author Ivan Bobrov
- * @version 5.0.2
+ * @version 5.0.3
  */
 public class AtbashCipher {
-
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var cipher = new AtbashCipher();
-        final var userMessage = "Hello, World!";
-
-        System.out.println(userMessage);
-        System.out.println(cipher.processMessage(userMessage));
-        System.out.println(cipher.processMessage("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE"));
-    }
 
     /**
      * En- or decrypts the message using the Atbash cipher.
@@ -78,6 +66,20 @@ public class AtbashCipher {
         if (message.length() == 0) {
             throw new IllegalArgumentException("The message must not be empty.");
         }
+    }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var cipher = new AtbashCipher();
+        final var userMessage = "Hello, World!";
+
+        System.out.println(userMessage);
+        System.out.println(cipher.processMessage(userMessage));
+        System.out.println(cipher.processMessage("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE"));
     }
 
 }

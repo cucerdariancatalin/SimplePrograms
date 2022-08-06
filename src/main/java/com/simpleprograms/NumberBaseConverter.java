@@ -33,7 +33,7 @@ import java.util.Scanner;
  * The program converts a number from one base to another.
  *
  * @author Ivan Bobrov
- * @version 1.4.6
+ * @version 1.4.7
  */
 public class NumberBaseConverter {
 
@@ -56,7 +56,7 @@ public class NumberBaseConverter {
 
 
     /**
-     * The constructor sets the {@link #sourceBase} and {@link #targetBase}.
+     * Sets default values of the fields.
      *
      * @param sourceBase a default value of the {@link #sourceBase}.
      * @param targetBase a default value of the {@link #targetBase}.
@@ -73,15 +73,6 @@ public class NumberBaseConverter {
         this.sourceBase = sourceBase;
         this.targetBase = targetBase;
         this.scale = scale;
-    }
-
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final NumberBaseConverter converter = new NumberBaseConverter(10, 10, 5);
-
-        converter.runDialog(new Scanner(System.in));
     }
 
     /**
@@ -150,6 +141,8 @@ public class NumberBaseConverter {
         this.scale = scale;
     }
 
+
+
     /**
      * Validates a base. The value must be greater than 1 and less than 36.
      *
@@ -189,8 +182,8 @@ public class NumberBaseConverter {
             return convertedIntegerPart;
         } else {
             final String convertedFractionalPart = numberParts[1].matches("0+")
-                    ? "0".repeat(scale)
-                    : convertFractionalPartToTargetBase(numberParts[1]);
+                                                   ? "0".repeat(scale)
+                                                   : convertFractionalPartToTargetBase(numberParts[1]);
 
             return convertedIntegerPart + "." + convertedFractionalPart;
         }
@@ -263,8 +256,8 @@ public class NumberBaseConverter {
      */
     private @NotNull String convertFractionalPartToTargetBase(final @NotNull String fractionalPart) {
         BigDecimal fractionalPartInDecimal = (sourceBase == 10)
-                ? new BigDecimal("0." + fractionalPart)
-                : convertFractionalPartToDecimal(fractionalPart);
+                                             ? new BigDecimal("0." + fractionalPart)
+                                             : convertFractionalPartToDecimal(fractionalPart);
 
         final StringBuilder convertedFractionalPart = new StringBuilder();
         final BigDecimal targetBase = BigDecimal.valueOf(this.targetBase);
@@ -370,6 +363,17 @@ public class NumberBaseConverter {
         if (!inputBases.matches("\\d\\d? \\d\\d?")) {
             throw new IllegalArgumentException("Wrong input bases format");
         }
+    }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final NumberBaseConverter converter = new NumberBaseConverter(10, 10, 5);
+
+        converter.runDialog(new Scanner(System.in));
     }
 
 }

@@ -30,7 +30,7 @@ import org.jetbrains.annotations.Nullable;
  * The program to en- and decrypt messages using the Caesar cipher.
  *
  * @author Ivan Bobrov
- * @version 7.5.3
+ * @version 7.5.4
  */
 public class CaesarCipher {
 
@@ -42,7 +42,7 @@ public class CaesarCipher {
 
 
     /**
-     * The constructor sets a default value of the {@link #key}.
+     * Sets default values of the fields.
      *
      * @param key - a default value of the {@link #key}.
      */
@@ -50,22 +50,6 @@ public class CaesarCipher {
         validateInput(key);
 
         this.key = key;
-    }
-
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var caesarCipher = new CaesarCipher("Key");
-
-        final String message = "Hello, World!";
-        final String encryptedMessage = caesarCipher.processMessage(message, true);
-        System.out.printf(
-                "%s%n%s%n%s%n",
-                message,
-                encryptedMessage,
-                caesarCipher.processMessage(encryptedMessage, false)
-        );
     }
 
     /**
@@ -87,6 +71,8 @@ public class CaesarCipher {
 
         this.key = key;
     }
+
+
 
     /**
      * Converts the {@link #key} to a number.
@@ -145,6 +131,24 @@ public class CaesarCipher {
         if (input.length() == 0) {
             throw new IllegalArgumentException("The input must contain at least one character.");
         }
+    }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var caesarCipher = new CaesarCipher("Key");
+
+        final String message = "Hello, World!";
+        final String encryptedMessage = caesarCipher.processMessage(message, true);
+        System.out.printf(
+                "%s%n%s%n%s%n",
+                message,
+                encryptedMessage,
+                caesarCipher.processMessage(encryptedMessage, false)
+        );
     }
 
 }

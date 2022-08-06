@@ -32,7 +32,7 @@ import java.util.Scanner;
  * Simple program to find the suitable row in the cinema.
  *
  * @author Ivan Bobrov
- * @version 2.0.4
+ * @version 2.0.5
  */
 public class Cinema {
 
@@ -45,7 +45,7 @@ public class Cinema {
 
 
     /**
-     * The default constructor sets the value of the {@link #seats}.
+     * Sets default values of the fields.
      *
      * @param seats the value of the {@link #seats}.
      */
@@ -56,36 +56,6 @@ public class Cinema {
     }
 
     /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var scanner = new Scanner(System.in);
-        final int rowsNumber = scanner.nextInt();
-        final int seatsNumber = scanner.nextInt();
-        int[][] seats = new int[rowsNumber][seatsNumber];
-
-        for (int i = 0; i < rowsNumber; i++) {
-            for (int j = 0; j < seatsNumber; j++) {
-                seats[i][j] = scanner.nextInt();
-            }
-        }
-
-        final Cinema cinema = new Cinema(seats);
-        final int ticketsNumber = scanner.nextInt();
-        seats = cinema.getSeats();
-
-        for (int[] row : seats) {
-            for (int seatIndex = 0; seatIndex < row.length; seatIndex++) {
-                final char splitter = (seatIndex == row.length - 1) ? '\n' : ' ';
-
-                System.out.printf("%d%c", row[seatIndex], splitter);
-            }
-        }
-
-        System.out.println(cinema.findConsecutiveAvailableSeats(ticketsNumber));
-    }
-
-    /**
      * The getter for the {@link #seats}.
      *
      * @return a copy of the {@link #seats}.
@@ -93,6 +63,8 @@ public class Cinema {
     public int @NotNull [] @NotNull [] getSeats() {
         return seats.clone();
     }
+
+
 
     /**
      * Validates seats.
@@ -144,6 +116,38 @@ public class Cinema {
         }
 
         return 0;
+    }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var scanner = new Scanner(System.in);
+        final int rowsNumber = scanner.nextInt();
+        final int seatsNumber = scanner.nextInt();
+        int[][] seats = new int[rowsNumber][seatsNumber];
+
+        for (int i = 0; i < rowsNumber; i++) {
+            for (int j = 0; j < seatsNumber; j++) {
+                seats[i][j] = scanner.nextInt();
+            }
+        }
+
+        final Cinema cinema = new Cinema(seats);
+        final int ticketsNumber = scanner.nextInt();
+        seats = cinema.getSeats();
+
+        for (int[] row : seats) {
+            for (int seatIndex = 0; seatIndex < row.length; seatIndex++) {
+                final char splitter = (seatIndex == row.length - 1) ? '\n' : ' ';
+
+                System.out.printf("%d%c", row[seatIndex], splitter);
+            }
+        }
+
+        System.out.println(cinema.findConsecutiveAvailableSeats(ticketsNumber));
     }
 
 }

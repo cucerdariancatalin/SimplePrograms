@@ -32,7 +32,7 @@ import java.util.Arrays;
  * The program to detect an anagram.
  *
  * @author Ivan Bobrov
- * @version 3.0.3
+ * @version 3.0.4
  */
 public class AnagramDetector {
 
@@ -44,7 +44,7 @@ public class AnagramDetector {
 
 
     /**
-     * The default constructor.
+     * Sets default values of the fields.
      *
      * @param primaryString a default value of the {@link #primaryString}.
      */
@@ -52,22 +52,6 @@ public class AnagramDetector {
         validateString(primaryString);
 
         this.primaryString = primaryString;
-    }
-
-    /**
-     * The example of using the program.
-     */
-    public static void main(String[] args) {
-        final var anagramDetector = new AnagramDetector("Mama and papa");
-        System.out.println(anagramDetector.getPrimaryString());
-
-        System.out.println(anagramDetector.checkForAnagram("amMa dan paap"));
-
-        anagramDetector.setPrimaryString("Papa and mama");
-
-        System.out.println(anagramDetector.getPrimaryString());
-
-        System.out.println(anagramDetector.checkForAnagram("amma"));
     }
 
     /**
@@ -89,6 +73,8 @@ public class AnagramDetector {
 
         this.primaryString = primaryString;
     }
+
+
 
     /**
      * Validates an input string.
@@ -122,6 +108,24 @@ public class AnagramDetector {
         Arrays.sort(wordLetters);
 
         return Arrays.equals(primaryWordLetters, wordLetters);
+    }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final var anagramDetector = new AnagramDetector("Mama and papa");
+        System.out.println(anagramDetector.getPrimaryString());
+
+        System.out.println(anagramDetector.checkForAnagram("amMa dan paap"));
+
+        anagramDetector.setPrimaryString("Papa and mama");
+
+        System.out.println(anagramDetector.getPrimaryString());
+
+        System.out.println(anagramDetector.checkForAnagram("amma"));
     }
 
 }
