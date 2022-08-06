@@ -1,8 +1,8 @@
-# Simple programs
+# SimplePrograms
 
 ![logo](/res/img/logo.png)
 
-[![GitHub license](https://img.shields.io/github/license/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/VitasSalvantes/SimplePrograms)](https://github.com/VitasSalvantes/SimplePrograms/issues)
 
 This repository presents implementations of various algorithms in various programming languages (the
@@ -10,59 +10,50 @@ This repository presents implementations of various algorithms in various progra
 and [Kotlin](https://kotlinlang.org/)). You can suggest your own options for implementing existing examples (naming them
 in accordance with the samples) or new options in any programming language.
 
-**Attention! Some of the programs need to be updated!** Already updated programs are marked with *updated*.
-
 ## Table of contents
 
-- [How does it work](#How-does-it-work)
-- [List of all programs](#List-of-all-programs)
-- [Technologies](#Technologies)
-- [Development progress](#Development-progress)
-- [Project statistics](#Project-statistics)
-- [How to install](#How-to-install)
-- [How to contribute](#How-to-contribute)
+- [How it works](#how-it-works)
+- [List of all programs](#list-of-all-programs)
+- [Technologies](#technologies)
+- [Development progress](#development-progress)
+- [Project statistics](#project-statistics)
+- [How to install](#how-to-install)
+- [How to contribute](#how-to-contribute)
 
-## How does it work
+## How it works
 
 For quick access to the description of the program and its implementation you can use
 the [list of all programs](#List-of-all-programs).
 
 ## List of all programs
 
-- [AnagramDetector](#AnagramDetector) *updated*
-- [AtbashCipher](#AtbashCipher) *updated*
-- [BoxComparator](#BoxComparator) *updated*
-- [BubbleSorter](#BubbleSorter) *updated*
-- [CaesarCipher](#CaesarCipher) *updated*
-- [ChocolateBreaker](#ChocolateBreaker) *updated*
-- [Cinema](#Cinema) *updated*
-- [CodeWordCipher](#CodeWordCipher)
-- [CollatzConjecture](#CollatzConjecture)
-- [CommonDenominators](#CommonDenominators)
-- [ConsoleCalc](#ConsoleCalc)
-- [CountTheDigit](#CountTheDigit)
-- [EuclideanAlgorithm](#EuclideanAlgorithm)
-- [ExchangedValues](#ExchangedValues)
-- [Factorial](#Factorial)
-- [FibonacciNumbers](#FibonacciNumbers)
-- [FirstUniqueCharacterInString](#FirstUniqueCharacterInString)
-- [FizzBuzz](#FizzBuzz)
-- [HappyBirthday](#HappyBirthday)
-- [HelloWorld](#HelloWorld)
-- [NumberBaseConverter](#NumberBaseConverter) *updated*
-- [OrderedSequence](#OrderedSequence)
-- [PerfectNumbers](#PerfectNumbers)
-- [Polynomial](#Polynomial)
-- [PrimeNumbers](#PrimeNumbers)
-- [QuadraticEquation](#QuadraticEquation)
-- [Queens](#Queens)
-- [RecamanSequence](#RecamanSequence)
-- [Restaurant](#Restaurant)
-- [RightRotation](#RightRotation)
-- [RotateRectangleArray](#RotateRectangleArray)
-- [SquareEveryDigit](#SquareEveryDigit)
-- [TicTacToe](#TicTacToe)
-- [TortoiseRacing](#TortoiseRacing)
+- [AnagramDetector](#anagramdetector)
+- [AtbashCipher](#atbashcipher)
+- [BoxComparator](#boxcomparator)
+- [BubbleSorter](#bubblesorter)
+- [CaesarCipher](#caesarcipher)
+- [ChocolateBreaker](#chocolatebreaker)
+- [Cinema](#cinema)
+- [CollatzConjecture](#collatzconjecture)
+- [CommonDenominators](#commondenominators)
+- [CountTheDigit](#countthedigit)
+- [EuclideanAlgorithm](#euclideanalgorithm)
+- [Factorial](#factorial)
+- [FibonacciNumbers](#fibonaccinumbers)
+- [FirstUniqueCharacterInString](#firstuniquecharacterinstring)
+- [FizzBuzz](#fizzbuzz)
+- [HappyBirthday](#happybirthday)
+- [NumberBaseConverter](#numberbaseconverter)
+- [PerfectNumbers](#perfectnumbers)
+- [Polynomial](#polynomial)
+- [PrimeNumbers](#primenumbers)
+- [QuadraticEquation](#quadraticequation)
+- [RecamanSequence](#recamansequence)
+- [Restaurant](#restaurant)
+- [RightRotation](#rightrotation)
+- [RotateRectangleArray](#rotaterectanglearray)
+- [SimpleCurrencyConverter](#simplecurrencyconverter)
+- [TicTacToe](#tictactoe)
 
 ### AnagramDetector
 
@@ -342,85 +333,8 @@ with **k** available seats, output the first row with these seats. If there is n
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1930).
 
-[Here](src/main/java/com/simpleprograms/Cinema.java) you can see the solution of this task in Java.
-
-### CodeWordCipher
-
-Substitution of single letters separately — simple substitution — can be demonstrated by writing out the alphabet in
-some order to represent the substitution. This is termed a substitution alphabet. The cipher alphabet may be shifted or
-reversed (creating the Caesar and Atbash ciphers, respectively) or scrambled in a more complex fashion, in which case it
-is called a mixed alphabet or deranged alphabet. Traditionally, mixed alphabets may be created by first writing out a
-keyword, removing repeated letters in it, then writing all the remaining letters in the alphabet in the usual order.
-
-Using this system, the keyword "zebras" gives us the following alphabets:
-
-<table>
-<tbody>
-<tr>
-<th>Plain</th>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td>I</td>
-<td>J</td>
-<td>K</td>
-<td>L</td>
-<td>M</td>
-<td>N</td>
-<td>O</td>
-<td>P</td>
-<td>Q</td>
-<td>R</td>
-<td>S</td>
-<td>T</td>
-<td>U</td>
-<td>V</td>
-<td>W</td>
-<td>X</td>
-<td>Y</td>
-<td>Z</td>
-</tr>
-
-<tr>
-<th>Cipher</th>
-<td>Z</td>
-<td>E</td>
-<td>B</td>
-<td>R</td>
-<td>A</td>
-<td>S</td>
-<td>C</td>
-<td>D</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td>I</td>
-<td>J</td>
-<td>K</td>
-<td>L</td>
-<td>M</td>
-<td>N</td>
-<td>O</td>
-<td>P</td>
-<td>Q</td>
-<td>T</td>
-<td>U</td>
-<td>V</td>
-<td>W</td>
-<td>X</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-
-(See more in [Wikipedia](https://en.m.wikipedia.org/wiki/Substitution_cipher))
-
-[Here](src/main/java/com/simpleprograms/CodeWordCipher.java) you can see the implementation of code word cipher in Java.
+[Here](src/main/java/com/simpleprograms/Cinema.java) you can see the solution of this task in Java
+and [here](src/test/java/com/simpleprograms/CinemaTest.java) - the JUnit tests.
 
 ### CollatzConjecture
 
@@ -433,30 +347,25 @@ which positive integer is chosen to start the sequence.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture))
 
 [Here](src/main/java/com/simpleprograms/CollatzConjecture.java) you can see the implementation of this algorithm in
-Java.
+Java and [here](src/test/java/com/simpleprograms/CollatzConjectureTest.java) - the JUnit tests.
 
 ### CommonDenominators
 
-This simple program converts any number of fractions to a common denominator.
+The program converts any number of fractions to a common denominator.
 
-The algorithm of work is quite simple:
+The algorithm is quite simple:
 
 1. We get a two-dimensional array, where each element is a fraction and consists of the first number (numerator) and the
    second (denominator), and we simplify it (we reduce the numerator and denominator)
-2. We are looking for the least common multiple for all denominators
+2. We look for the least common multiple for all denominators
 3. We bring all fractions to a common denominator (it is equal to the least common multiple)
 4. We get the answer as a string like "(numerator_1,denominator_1)(numerator_2,denominator_2)...(numerator_n,
    denominator_n)"
 
 This task is on [Codewars](https://www.codewars.com/kata/54d7660d2daf68c619000d95).
 
-[Here](src/main/java/com/simpleprograms/CommonDenominators.java) you can see the implementation of this program in Java.
-
-### ConsoleCalc
-
-[Here](src/main/java/com/simpleprograms/ConsoleCalc.java) you can see the implementation of a simple calculator in Java.
-You can enter an unlimited
-number of numbers and perform various mathematical operations with them.
+[Here](src/main/java/com/simpleprograms/CommonDenominators.java) you can see the implementation of this program in Java
+and [here](src/test/java/com/simpleprograms/CommonDenominatorsTest.java) - the JUnit tests.
 
 ### CountTheDigit
 
@@ -478,13 +387,7 @@ many other number-theoretic and cryptographic calculations.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Euclidean_algorithm))
 
 [Here](src/main/java/com/simpleprograms/EuclideanAlgorithm.java) you can see the implementation of this algorithm in
-Java.
-
-### ExchangedValues
-
-[Here](src/main/java/com/simpleprograms/ExchangedValues.java) you can see how to exchange values between two variables
-without using a third in Java
-and [here](src/main/kotlin/com/simpleprograms/ExchangedValues.kt) in Kotlin.
+Java and [here](src/test/java/com/simpleprograms/EuclideanAlgorithmTest.java) - the JUnit tests.
 
 ### Factorial
 
@@ -528,9 +431,9 @@ The value of 0! is 1, according to the convention for an empty product.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Factorial))
 
 [Here](src/main/java/com/simpleprograms/Factorial.java) you can see the implementation of Factorial in
-Java, [here](src/main/kotlin/com/simpleprograms/Factorial.kt) in
-Kotlin, [here](src/main/python/com/SimplePrograms/Factorial.py) in Python
-and [here](src/main/bash/com/SimplePrograms/factorial.sh) in Bash.
+Java, [here](src/test/java/com/simpleprograms/FactorialTest.java) - the JUnit tests,
+[here](src/main/kotlin/com/simpleprograms/Factorial.kt) - in Kotlin and
+[here](src/main/bash/com/SimplePrograms/factorial.sh) - in Bash.
 
 ### FibonacciNumbers
 
@@ -552,8 +455,8 @@ The beginning of the sequence is thus:
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
 
 [Here](src/main/java/com/simpleprograms/FibonacciNumbers.java) you can see the implementation of Fibonacci numbers in
-Java, [here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt)
-in Kotlin and [here](src/main/python/com/SimplePrograms/FibonacciNumbers.py) in Python.
+Java, [here](src/test/java/com/simpleprograms/FibonacciNumbersTest.java) - the JUnit tests and
+[here](src/main/kotlin/com/simpleprograms/FibonacciNumbers.kt) - in Kotlin.
 
 ### FirstUniqueCharacterInString
 
@@ -566,7 +469,7 @@ Given the string: "Hello World! Hello!".
 First unique character: "W".
 
 [Here](src/main/java/com/simpleprograms/FirstUniqueCharacterInString.java) you can see the solution to this task in
-Java.
+Java and [here](src/test/java/com/simpleprograms/FirstUniqueCharacterInStringTest.java) - the JUnit tests.
 
 ### FizzBuzz
 
@@ -574,8 +477,9 @@ The program should print numbers from 1 to 100. But instead of multiples of thre
 numbers that are multiples of five, - "Buzz". Instead of numbers that are multiples of both three and five at the same
 time, it prints "FizzBuzz".
 
-[Here](src/main/java/com/simpleprograms/FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java
-and [here](src/main/kotlin/com/simpleprograms/FizzBuzz.kt) in Kotlin.
+[Here](src/main/java/com/simpleprograms/FizzBuzz.java) you can see the solution to the popular FizzBuzz task in Java,
+[here](src/test/java/com/simpleprograms/FizzBuzzTest.java) - the JUnit tests and
+[here](src/main/kotlin/com/simpleprograms/FizzBuzz.kt) - in Kotlin.
 
 ### HappyBirthday
 
@@ -586,24 +490,6 @@ the [Android Basics in Kotlin](https://developer.android.com/codelabs/basic-andr
 by Google.
 
 [Here](src/main/kotlin/com/simpleprograms/HappyBirthday.kt) you can see the implementation of this program in Kotlin.
-
-### HelloWorld
-
-A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!". Such a
-program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming
-language. It is often the first program written by people learning to code. It can also be used as a sanity test to make
-sure that a computer software intended to compile or run source code is correctly installed, and that the operator
-understands how to use it.
-
-While small test programs have existed since the development of programmable computers, the tradition of using the
-phrase "Hello, World!" as a test message was influenced by an example program in the seminal 1978 book "The C
-Programming Language". The example program in that book prints "", and was inherited from a 1974 Bell Laboratories
-internal memorandum by Brian Kernighan, "Programming in C: A Tutorial".
-
-(See more in [Wikipedia](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))
-
-[Here](src/main/java/com/simpleprograms/HelloWorld.java) you can see an example of this program in Java
-and [here](src/main/kotlin/com/simpleprograms/HelloWorld.kt) in Kotlin.
 
 ### NumberBaseConverter
 
@@ -624,21 +510,7 @@ target base, instead of 2.
 This task is on [JetBrains Academy](https://hyperskill.org/projects/181).
 
 [Here](src/main/java/com/simpleprograms/NumberBaseConverter.java) you can see the implementation of this program in
-Java.
-
-### OrderedSequence
-
-Write a program that reads a sequence of integer numbers and outputs **true** if the sequence is ordered (in ascending
-or descending order), otherwise, **false**.
-
-Keep in mind, if a number has the same value as the following number, it does not break the order.
-
-The sequence ends with 0. Do not consider this number as a part of the sequence. The sequence always has at least one
-number (excluding 0).
-
-This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2734).
-
-[Here](src/main/java/com/simpleprograms/OrderedSequence.java) you can see the implementation of this program in Java.
+Java and [here](src/test/java/com/simpleprograms/NumberBaseConverterTest.java) - the JUnit tests.
 
 ### PerfectNumbers
 
@@ -675,7 +547,7 @@ number.
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Perfect_number))
 
 [Here](src/main/java/com/simpleprograms/PerfectNumbers.java) you can see the implementation of a sequence of perfect
-numbers in Java.
+numbers in Java and [here](src/test/java/com/simpleprograms/PerfectNumbersTest.java) - the JUnit tests.
 
 **Attention! To display more than four numbers, you will have to wait!** :)
 
@@ -694,17 +566,18 @@ the introduction of computers, this algorithm became fundamental for computing e
 
 A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers. A
 natural number greater than 1 that is not prime is called a composite number. For example, 5 is prime because the only
-ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 is composite because it is a product (2 ×
-
-2) in which both numbers are smaller than 4. Primes are central in number theory because of the fundamental theorem of
-   arithmetic: every natural number greater than 1 is either a prime itself or can be factorized as a product of primes
-   that is unique up to their order.
+ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 is composite because it is a product
+(2 × 2) in which both numbers are smaller than 4. Primes are central in the number theory because of the fundamental
+theorem
+of arithmetic: every natural number greater than 1 is either a prime itself or can be factorized as a product of
+primes that is unique up to their order.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Primes-vs-composites.svg/800px-Primes-vs-composites.svg.png" width="220" height="309" alt="primes-image">
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Prime_number))
 
-[Here](src/main/java/com/simpleprograms/PrimeNumbers.java) you can see the implementation of prime numbers in Java.
+[Here](src/main/java/com/simpleprograms/PrimeNumbers.java) you can see the implementation of prime numbers in Java
+and [here](src/test/java/com/simpleprograms/PrimeNumbersTest.java) - the JUnit tests.
 
 ### QuadraticEquation
 
@@ -721,18 +594,6 @@ Of course, this program has limitations:
 [Here](src/main/kotlin/com/simpleprograms/QuadraticEquation.kt) you can see the implementation of this program in
 Kotlin.
 
-### Queens
-
-Queen is the most powerful and valuable attacking piece in the game of chess. It combines the powers of the bishop and
-the rook. It is able to move any number of unoccupied squares in a straight line: vertically, horizontally or
-diagonally.
-
-You are given coordinates of two queens on a chess board. Find out whether they can capture each other.
-
-This task is on [JetBrains Academy](https://hyperskill.org/learn/step/2168).
-
-[Here](src/main/java/com/simpleprograms/Queens.java) you can see the implementation of this program in Java.
-
 ### RecamanSequence
 
 In mathematics and computer science, the Recaman's sequence (or Recaman's sequence) is a well known sequence defined by
@@ -742,10 +603,10 @@ often defined using recursion.
 It takes its name after its inventor Bernardo Recamán Santos (Bogotá, August 5, 1954), a Colombian mathematician.
 
 The Recaman's
-sequence <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda" alt="recaman-sequence-formula">
+sequence ![recaman-sequence-formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/f98223b2560de036588b919037549a149aeb7eda)
 is defined as:
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89ab504e66d289aeb91cdd3c9b3d88212a13f506" alt="recaman-sequence-formula">
+![recaman-sequence-formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/89ab504e66d289aeb91cdd3c9b3d88212a13f506)
 
 The first terms of the sequence are:
 
@@ -753,14 +614,14 @@ The first terms of the sequence are:
 46, 79, 113, 78, 114, 77, 39, 78, 38, 79, 37, 80, 36, 81, 35, 82, 34, 83, 33, 84, 32, 85, 31, 86, 30, 87, 29, 88, 28,
 89, 27, 90, 26, 91, 157, 224, 156, 225, 155, ...
 
-I like the drawing better:
+I prefer the graph:
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Reacam%C3%A1nSequenceDrawing.png/375px-Reacam%C3%A1nSequenceDrawing.png"  alt="recaman-sequence-image">
+![recaman-sequence-image](https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Reacam%C3%A1nSequenceDrawing.png/375px-Reacam%C3%A1nSequenceDrawing.png)
 
 (See more in [Wikipedia](https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence))
 
 [Here](src/main/java/com/simpleprograms/RecamanSequence.java) you can see the implementation of the Recaman's sequence
-in Java.
+in Java and [here](src/test/java/com/simpleprograms/RecamanSequenceTest.java) - the JUnit tests.
 
 ### Restaurant
 
@@ -791,7 +652,8 @@ Resulting array
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/3663).
 
-[Here](src/main/java/com/simpleprograms/RightRotation.java) you can see the solution of this task in Java.
+[Here](src/main/java/com/simpleprograms/RightRotation.java) you can see the solution of this task in Java
+and [here](src/test/java/com/simpleprograms/RightRotationTest.java) - the JUnit tests.
 
 ### RotateRectangleArray
 
@@ -808,51 +670,77 @@ Output the resulting array. Separate numbers by a single space in the output.
 
 This task is on [JetBrains Academy](https://hyperskill.org/learn/step/1927).
 
-[Here](src/main/java/com/simpleprograms/RotateRectangleArray.java) you can see the solution of this task in Java.
+[Here](src/main/java/com/simpleprograms/RotateRectangleArray.java) you can see the solution of this task in Java
+and [here](src/test/java/com/simpleprograms/RotateRectangleArrayTest.java) - the JUnit tests.
 
-### SquareEveryDigit
+### SimpleCurrencyConverter
 
-It's necessary to display the squares of all digits included in the number entered by the user.
+Have you ever wondered how many Japanese yens you can have for 100 USD? In this project, you will write a program that
+converts a provided currency to another.
 
-For example, if we write 139, we get 1981, because 1\*1=1, 3\*3=9, 9\*9=81.
+We will loop our program to make it run continuously until the exit command is prompted.
 
-[Here](src/main/java/com/simpleprograms/SquareEveryDigit.java) you can see the implementation of this algorithm in Java.
+First, ask the user what they want to do.
+
+Give two choices to users: one is conversion, the other is the exit. Users need to input 1 and 2, respectively.
+
+In case of any wrong input, you need to ask again for the input and repeat the process.
+
+Output the following message: What do you want to convert? After this, users provide input that indicates a currency to
+convert from and a currency to convert to. Don't forget to handle all unknown and invalid inputs.
+
+Calculate and output the result that must take 4 decimal places.
+
+To simplify getting input from the console, we're using a JS library, check out
+the [documentation](https://github.com/hyperskill/sync-input#usage) to see how it's used.
+
+Don’t forget that when getting the input for the desired currency, the program should be able to process lower and
+uppercase letters. Also, if an unknown input is provided by users, print the following message:
+"Unknown currency".
+
+The value for the converted amount should not be less than 1. If it's less, output "The amount cannot be less than 1".
+If the amount is not a number, output "The amount has to be a number".
+
+Print the following message when users choose to exit the program: "Have a nice day!".
+
+Print the following message when unknown input occurs: "Unknown input".
+
+This task is on [JetBrains Academy](https://hyperskill.org/projects/231).
+
+[Here](src/main/js/com/simpleprograms/SimpleCurrencyConverter.js) you can see the solution of this task in JavaScript.
 
 ### TicTacToe
 
-Coming soon...
+Everybody remembers this paper-and-pencil game from childhood: Tic-Tac-Toe, also known as Noughts and crosses or Xs and
+Os. A single mistake usually costs you the game, but thankfully it is simple enough that most players discover the best
+strategy quickly. Let’s program Tic-Tac-Toe and get playing!
 
-[Here](src/main/java/com/simpleprograms/TicTacToe.java) you can see the implementation of this game in Java.
+My implementation of the game works with the 3x3, 4x4, 5x5 and even greater field!
 
-### TortoiseRacing
+This task is on [JetBrains Academy](https://hyperskill.org/projects/48).
 
-Two tortoises started a race. The first tortoise starts right away, and the second gives is a head start. If the
-distance between the tortoises is known, how long will it take for the second to catch up with the first?
-
-We will assume that the speed of the second is always greater than the speed of the first and that all numbers are
-non-negative integers.
-
-The answer should be displayed as [hours, minutes, seconds].
-
-This task is on [Codewars](https://www.codewars.com/kata/55e2adece53b4cdcb900006c/java).
-
-[Here](src/main/java/com/simpleprograms/TortoiseRacing.java) you can see the implementation of this program in Java.
+[Here](src/main/java/com/simpleprograms/tictactoe) you can see the implementation of this game in Java
+and [here](src/test/java/com/simpleprograms/tictactoe) - the JUnit tests.
 
 ## Technologies
 
-- [Java](https://www.oracle.com/java/) ([JDK version 17.0.1](https://docs.oracle.com/en/java/javase/17/)),
-  [Kotlin](https://kotlinlang.org/) ([JDK version 17.0.1](https://docs.oracle.com/en/java/javase/17/))
-  and [Python](https://www.python.org/) programming languages were chosen for development.
+- [Java](https://www.oracle.com/java/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/))
 
-- Development is carried out in [IntelliJ IDEA](https://www.jetbrains.com/idea/) Community Edition.
+- [JUnit 5](https://junit.org/junit5/)
 
-- [WakaTime](https://wakatime.com/) is used to track activity.
+- [Kotlin](https://kotlinlang.org/) ([Temurin Open JDK version 17.0.2](https://adoptium.net/))
 
-- [Microsoft To Do](https://todo.microsoft.com/tasks/) is used to schedule tasks.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/) Ultimate Edition
+
+- [WakaTime](https://wakatime.com/)
+
+- [Microsoft To Do](https://todo.microsoft.com/tasks/)
 
 ## Development progress
 
-Development is in an active state.
+Development began on **January 30, 2021,** and is in the active state.
 
 As there is no clear plan, any interesting programs are welcome.
 
@@ -868,8 +756,14 @@ See more on [WakaTime](https://wakatime.com/@VitasSalvantes/projects/qomqnujpcs)
 
 ## How to install
 
-It is enough to copy code of any program and run it in any suitable development environment, or use the command
-line/terminal.
+1. [Download](https://github.com/VitasSalvantes/SimplePrograms/archive/refs/heads/main.zip) zip
+2. Extract the archive
+3. Open the extracted folder in your favourite IDE or code editor
+
+or
+
+1. Copy the code of any program
+2. Paste and run it in your favourite IDE or code editor
 
 ## How to contribute
 

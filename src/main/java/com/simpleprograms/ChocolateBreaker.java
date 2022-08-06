@@ -1,25 +1,24 @@
-/**
+/*
  * MIT License
- * <p>
- * Copyright (c) 2021 VitasSalvantes
- * <p>
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * <p>
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * <p>
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
 
 package com.simpleprograms;
@@ -29,8 +28,8 @@ import java.util.Scanner;
 /**
  * The program to find out whether it is possible to break off exactly the number of segments from the chocolate bar.
  *
- * @author VitasSalvantes
- * @version 2.0
+ * @author Ivan Bobrov
+ * @version 2.0.4
  */
 public class ChocolateBreaker {
 
@@ -44,8 +43,10 @@ public class ChocolateBreaker {
      */
     private int chocolateWidth;
 
+
+
     /**
-     * The constructor sets default values of the {@link #chocolateLength} and the {@link #chocolateWidth}.
+     * Sets default values of the fields.
      *
      * @param chocolateLength a new value of the {@link #chocolateLength}. It must be greater than 0.
      * @param chocolateWidth  a new value of the {@link #chocolateWidth}. It must be greater than 0.
@@ -63,7 +64,7 @@ public class ChocolateBreaker {
      * @return the {@link #chocolateLength}.
      */
     public int getChocolateLength() {
-        return this.chocolateLength;
+        return chocolateLength;
     }
 
     /**
@@ -83,7 +84,7 @@ public class ChocolateBreaker {
      * @return the {@link #chocolateWidth}.
      */
     public int getChocolateWidth() {
-        return this.chocolateWidth;
+        return chocolateWidth;
     }
 
     /**
@@ -97,14 +98,15 @@ public class ChocolateBreaker {
         this.chocolateWidth = chocolateWidth;
     }
 
+
+
     /**
      * Validates new values of the {@link #chocolateLength} and the {@link #chocolateWidth}.
      *
      * @param chocolateLength a new value of the {@link #chocolateLength} to be checked.
      * @param chocolateWidth  a new value of the {@link #chocolateWidth} to be checked.
-     * @throws IllegalArgumentException if at least one of the values is less than 1.
      */
-    private void validateChocolateSize(final int chocolateLength, final int chocolateWidth) throws IllegalArgumentException {
+    private void validateChocolateSize(final int chocolateLength, final int chocolateWidth) {
         if (chocolateLength < 1 || chocolateWidth < 1) {
             throw new IllegalArgumentException("The values must be greater than 0!");
         }
@@ -120,10 +122,11 @@ public class ChocolateBreaker {
         validateChocolateSize(1, segmentsNumber);
 
         // The number of the segments is not greater than the number of the segments in the chocolate bar
-        boolean hasSuitableSize = segmentsNumber <= this.chocolateLength * this.chocolateWidth;
+        boolean hasSuitableSize = segmentsNumber <= chocolateLength * chocolateWidth;
 
         // It could be broken off as a single straight line
-        boolean isDivider = segmentsNumber % this.chocolateLength == 0 || segmentsNumber % this.chocolateWidth == 0;
+        boolean isDivider = segmentsNumber % chocolateLength == 0 ||
+                            segmentsNumber % chocolateWidth == 0;
 
         if (hasSuitableSize && isDivider) {
             System.out.println("YES");
@@ -131,6 +134,8 @@ public class ChocolateBreaker {
             System.out.println("NO");
         }
     }
+
+
 
     /**
      * The example of using the program.
@@ -153,4 +158,5 @@ public class ChocolateBreaker {
 
         breaker.checkBreakPossibility(6);
     }
+
 }

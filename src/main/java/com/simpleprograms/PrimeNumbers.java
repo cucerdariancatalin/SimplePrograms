@@ -1,69 +1,82 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
 package com.simpleprograms;
 
-import java.util.Scanner;
-
 /**
- * Class with methods for printing prime numbers
+ * The program creates a sequence of prime numbers.
  *
- * @author VitasSalvantes
- * @version 1.5
+ * @author Ivan Bobrov
+ * @version 1.5.1
  */
 public class PrimeNumbers {
 
     /**
-     * A Scanner class object that accepts user input
+     * Prints a prime number sequence.
+     *
+     * @param quantity the quantity of prime numbers to be printed.
+     *                 It must be greater than 0.
      */
-    private Scanner scanner;
+    public static void printPrimeNumbers(int quantity) {
+        validateQuantity(quantity);
 
-    /**
-     * The number of prime numbers displayed
-     */
-    private int numberOfPrimes;
+        int primeNumberCandidate = 1;
 
-    /**
-     * Method that launches the program
-     */
-    public static void main(String[] args) {
-        PrimeNumbers pn = new PrimeNumbers();
+        while (quantity > 0) {
+            primeNumberCandidate++;
 
-        pn.setQuantity();
-        System.out.println(pn.createPrimeNumbers());
-    }
+            for (int divider = 2; divider <= primeNumberCandidate; divider++) {
 
-    /**
-     * Method for creating strings containing prime numbers
-     */
-    public String createPrimeNumbers() {
-        StringBuilder primesOutput = new StringBuilder();
-        int number = 2;
-
-        while (numberOfPrimes > 0) {
-
-            for (int i = 2; i <= number; i++) {
-
-                if (number % i == 0 && number != i) {
+                if (primeNumberCandidate % divider == 0 && primeNumberCandidate != divider) {
                     break;
                 }
 
-                if (number == i) {
-                    primesOutput.append(number).append(" ");
-                    numberOfPrimes--;
+                if (primeNumberCandidate == divider) {
+                    quantity--;
+                    System.out.printf("%d%s", primeNumberCandidate, quantity == 0 ? "\n" : ", ");
                 }
             }
-
-            number++;
         }
-        return primesOutput.toString();
     }
 
     /**
-     * Setter for {@link PrimeNumbers#numberOfPrimes}
+     * Validates a quantity.
+     *
+     * @param quantity the quantity to be validated.
      */
-    public void setQuantity() {
-        scanner = new Scanner(System.in);
-
-        System.out.println("- Quantity?");
-        numberOfPrimes = scanner.nextInt();
-        scanner.close();
+    private static void validateQuantity(final int quantity) {
+        if (quantity < 1) {
+            throw new IllegalArgumentException("The quantity must be greater than 0");
+        }
     }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        PrimeNumbers.printPrimeNumbers(10);
+    }
+
 }

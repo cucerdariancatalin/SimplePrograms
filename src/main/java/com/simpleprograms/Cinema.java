@@ -1,14 +1,38 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
 package com.simpleprograms;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Scanner;
 
 /**
  * Simple program to find the suitable row in the cinema.
  *
- * @author VitasSalvantes
- * @version 2.0
+ * @author Ivan Bobrov
+ * @version 2.0.5
  */
 public class Cinema {
 
@@ -16,10 +40,12 @@ public class Cinema {
      * The representation of the cinema current state.<br>
      * The sold seats are marked with "0", free seats - with "1".
      */
-    private final int[][] seats;
+    private final int @NotNull [] @NotNull [] seats;
+
+
 
     /**
-     * The default constructor sets the value of the {@link #seats}.
+     * Sets default values of the fields.
      *
      * @param seats the value of the {@link #seats}.
      */
@@ -38,13 +64,14 @@ public class Cinema {
         return seats.clone();
     }
 
+
+
     /**
      * Validates seats.
      *
      * @param seats the value to be validated.
-     * @throws IllegalArgumentException if the value either is null or contains null or unsuitable number.
      */
-    private void validateSeats(final int[][] seats) throws IllegalArgumentException {
+    private void validateSeats(final int @Nullable [] @Nullable [] seats) {
         if (seats == null) {
             throw new IllegalArgumentException("The seats must not be null");
         }
@@ -66,6 +93,7 @@ public class Cinema {
      * Finds the row which contains a desired number of hte consecutive seats.
      *
      * @param consecutiveSeatsNumber the desired number of the consecutive seats.
+     *
      * @return the number of the first found suitable row or 0 if the row was not found.
      */
     public int findConsecutiveAvailableSeats(final int consecutiveSeatsNumber) {
@@ -89,6 +117,8 @@ public class Cinema {
 
         return 0;
     }
+
+
 
     /**
      * The example of using the program.
@@ -119,4 +149,5 @@ public class Cinema {
 
         System.out.println(cinema.findConsecutiveAvailableSeats(ticketsNumber));
     }
+
 }

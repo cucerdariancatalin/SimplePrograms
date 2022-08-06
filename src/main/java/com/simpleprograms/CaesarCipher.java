@@ -1,46 +1,48 @@
-/**
+/*
  * MIT License
- * <p>
- * Copyright (c) 2021 VitasSalvantes
- * <p>
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * <p>
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * <p>
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
 
 package com.simpleprograms;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The program to en- and decrypt messages using the Caesar cipher.
  *
- * @author VitasSalvantes
- * @version 7.5
+ * @author Ivan Bobrov
+ * @version 7.5.4
  */
 public class CaesarCipher {
 
     /**
      * The key is used to en- or decrypt the message.
      */
-    private String key;
+    private @NotNull String key;
+
+
 
     /**
-     * The constructor sets a default value of the {@link #key}.
+     * Sets default values of the fields.
      *
      * @param key - a default value of the {@link #key}.
      */
@@ -48,6 +50,15 @@ public class CaesarCipher {
         validateInput(key);
 
         this.key = key;
+    }
+
+    /**
+     * The getter for the {@link #key}.
+     *
+     * @return the {@link #key}.
+     */
+    public @NotNull String getKey() {
+        return key;
     }
 
     /**
@@ -61,14 +72,7 @@ public class CaesarCipher {
         this.key = key;
     }
 
-    /**
-     * The getter for the {@link #key}.
-     *
-     * @return the {@link #key}.
-     */
-    public @NotNull String getKey() {
-        return this.key;
-    }
+
 
     /**
      * Converts the {@link #key} to a number.
@@ -78,8 +82,8 @@ public class CaesarCipher {
     private int convertKeyToInt() {
         int numberKey = 0;
 
-        for (int i = 0; i < this.key.length(); i++) {
-            numberKey += Character.getNumericValue(this.key.charAt(i));
+        for (int i = 0; i < key.length(); i++) {
+            numberKey += Character.getNumericValue(key.charAt(i));
         }
 
         return numberKey % Character.MAX_CODE_POINT;
@@ -90,10 +94,13 @@ public class CaesarCipher {
      *
      * @param inputMessage the message to be en- or decrypted.
      * @param isEncryption the flag to choose the process option (en- or decrypt).
+     *
      * @return the en- or decrypted message .
      */
-    public @NotNull String processMessage(final @NotNull String inputMessage,
-                                          final boolean isEncryption) {
+    public @NotNull String processMessage(
+            final @NotNull String inputMessage,
+            final boolean isEncryption
+    ) {
         validateInput(inputMessage);
 
         final int numberKey = convertKeyToInt();
@@ -115,9 +122,8 @@ public class CaesarCipher {
      * The method is used to validate a new value of the {@link #key} and the input message.
      *
      * @param input the user input (string) to be validated.
-     * @throws IllegalArgumentException if either the {@link #key} or the user input are null or empty.
      */
-    private void validateInput(final String input) throws IllegalArgumentException {
+    private void validateInput(final @Nullable String input) {
         if (input == null) {
             throw new IllegalArgumentException("The input must not be null");
         }
@@ -127,6 +133,8 @@ public class CaesarCipher {
         }
     }
 
+
+
     /**
      * The example of using the program.
      */
@@ -135,6 +143,12 @@ public class CaesarCipher {
 
         final String message = "Hello, World!";
         final String encryptedMessage = caesarCipher.processMessage(message, true);
-        System.out.printf("%s%n%s%n%s%n", message, encryptedMessage, caesarCipher.processMessage(encryptedMessage, false));
+        System.out.printf(
+                "%s%n%s%n%s%n",
+                message,
+                encryptedMessage,
+                caesarCipher.processMessage(encryptedMessage, false)
+        );
     }
+
 }

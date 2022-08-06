@@ -1,40 +1,96 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
 package com.simpleprograms;
 
-import java.util.Scanner;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.Arrays;
 
 /**
- * The simple program to do the right rotation.
+ * Implementation of the right rotation.
  *
- * @author VitasSalvantes
- * @version 1.0
+ * @author Ivan Bobrov
+ * @version 2.0.0
  */
 public class RightRotation {
-    public static void main(String[] args) {
-        // The Scanner object to get the user input
-        Scanner scanner = new Scanner(System.in);
 
-        // The array of numbers
-        String[] numbers = scanner.nextLine().trim().split(" ");
+    /**
+     * Rotates an array right.
+     *
+     * @param array          the array to be rotated.
+     * @param rotationNumber the number of rotations.
+     */
+    public static void rotate(final int @NotNull [] array, final int rotationNumber) {
+        validateArray(array);
+        validateRotationNumber(rotationNumber);
+        final int optimizedRotationNumber = rotationNumber % array.length;
 
-        // The number to shift all elements of the array
-        int rotationNumber = scanner.nextInt() % numbers.length;
-
-        // The last element of the array
-        String buffer;
-
-        // 1. Save the last number in the buffer
-        // 2. Shift all elements to right once (here the last number is lost)
-        // 3. Assign the first element to the value from the buffer
-        // 4. Repeat it all rotationNumber times
-        for (int i = 0; i < rotationNumber; i++) {
-            buffer = numbers[numbers.length - 1];
-            System.arraycopy(numbers, 0, numbers, 1, numbers.length - 1);
-            numbers[0] = buffer;
-        }
-
-        // Print the rotated array
-        for (String number : numbers) {
-            System.out.print(number + " ");
+        for (int i = 0; i < optimizedRotationNumber; i++) {
+            final int buffer = array[array.length - 1];
+            System.arraycopy(array, 0, array, 1, array.length - 1);
+            array[0] = buffer;
         }
     }
+
+    /**
+     * Validates an array.
+     *
+     * @param array the array to be validated.
+     */
+    private static void validateArray(final int @Nullable [] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("The array must not be null");
+        }
+
+        if (array.length == 0) {
+            throw new IllegalArgumentException("The array must not be empty");
+        }
+    }
+
+    /**
+     * Validates a rotation number.
+     *
+     * @param rotationNumber the number to be validated.
+     */
+    private static void validateRotationNumber(final int rotationNumber) {
+        if (rotationNumber < 0) {
+            throw new IllegalArgumentException("The rotation number must not be less than 0");
+        }
+    }
+
+
+
+    /**
+     * The example of using the program.
+     */
+    public static void main(String[] args) {
+        final int[] array = {5, 1, 2, 3, 4};
+
+        System.out.println(Arrays.toString(array));
+        RightRotation.rotate(array, 4);
+        System.out.println(Arrays.toString(array));
+    }
+
 }

@@ -21,32 +21,36 @@
  * THE SOFTWARE.
  */
 
-package com.simpleprograms
+package com.simpleprograms;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * Simple implementation of the Fibonacci numbers.
+ * JUnit tests for the {@link Factorial}.
  *
  * @author Ivan Bobrov
- * @version 2.0.0
+ * @version 1.0.1
  */
-fun main() {
-    println("- How many numbers?")
-    val numberOfNumbers = readLine()?.toInt() ?: 1
-    print(makeFibonacciNumbers(numberOfNumbers))
-}
+class FactorialTest {
 
-/**
- * Computes Fibonacci numbers.
- */
-fun makeFibonacciNumbers(maxIndex: Int) {
-    var nextNumber = 0
-    var sum = 1
-
-    for (index in 1..maxIndex) {
-        print("$nextNumber" + if (index == maxIndex) "\n" else ", ")
-
-        val currentNumber = nextNumber
-        nextNumber = sum
-        sum += currentNumber
+    @Test
+    @DisplayName("Calculate the factorial of a valid number")
+    void calculateFactorial() {
+        assertEquals(1, Factorial.calculateFactorial(0));
+        assertEquals(1, Factorial.calculateFactorial(1));
+        assertEquals(2, Factorial.calculateFactorial(2));
+        assertEquals(3628800, Factorial.calculateFactorial(10));
     }
+
+    @Test
+    @DisplayName("Calculate the factorial of an invalid number")
+    void calculateFactorialInvalidNumber() {
+        //noinspection ResultOfMethodCallIgnored
+        assertThrows(IllegalArgumentException.class, () -> Factorial.calculateFactorial(-1));
+    }
+
 }

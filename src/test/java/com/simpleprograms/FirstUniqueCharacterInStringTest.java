@@ -23,61 +23,40 @@
 
 package com.simpleprograms;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * JUnit tests for the {@link AtbashCipher}.
+ * JUnit tests for the {@link FirstUniqueCharacterInString}.
  *
  * @author Ivan Bobrov
- * @version 1.0.2
+ * @version 1.0.1
  */
-class AtbashCipherTest {
-
-    private AtbashCipher atbashCipher;
-    private String testMessage;
-
-
-
-    @BeforeEach
-    void setUp() {
-        atbashCipher = new AtbashCipher();
-        testMessage = "Java";
-    }
-
-
+class FirstUniqueCharacterInStringTest {
 
     @Test
-    @DisplayName("Process message")
-    void processMessage() {
-        assertNotEquals(testMessage, atbashCipher.processMessage(testMessage));
-
-        testMessage = "Hello, World!";
-        assertEquals("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE", atbashCipher.processMessage(testMessage));
+    @DisplayName("Find the first unique character in a valid string")
+    void findFirstUniqueChar() {
+        assertEquals('a', FirstUniqueCharacterInString.findFirstUniqueChar("a"));
+        assertEquals('a', FirstUniqueCharacterInString.findFirstUniqueChar("aA"));
+        assertEquals('e', FirstUniqueCharacterInString.findFirstUniqueChar("HelloH"));
+        assertEquals('W', FirstUniqueCharacterInString.findFirstUniqueChar("Hello World! Hello!"));
+        assertNull(FirstUniqueCharacterInString.findFirstUniqueChar("Hello World! Hello World!"));
     }
 
     @Test
-    @DisplayName("Empty message")
-    void testEmptyMessage() {
-        testMessage = "";
-
+    @DisplayName("Find the first unique character in an invalid string")
+    void findFirstUniqueCharInvalidString() {
+        //noinspection ConstantConditions
         assertThrows(
                 IllegalArgumentException.class,
-                () -> atbashCipher.processMessage(testMessage)
+                () -> FirstUniqueCharacterInString.findFirstUniqueChar(null)
         );
-    }
-
-    @Test
-    @DisplayName("Null message")
-    void testNullMessage() {
-        testMessage = null;
-
         assertThrows(
                 IllegalArgumentException.class,
-                () -> atbashCipher.processMessage(testMessage)
+                () -> FirstUniqueCharacterInString.findFirstUniqueChar("")
         );
     }
 

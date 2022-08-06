@@ -1,87 +1,82 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022 Ivan Bobrov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to
+ * whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
 package com.simpleprograms;
 
 /**
- * The simple implementation of the Euclidean algorithm for positive integers.
+ * The implementation of the Euclidean algorithm for positive integers.
  *
- * @author VitasSalvantes
- * @version 1.0
+ * @author Ivan Bobrov
+ * @version 1.1.2
  */
 public class EuclideanAlgorithm {
-    /**
-     * The first integer.
-     */
-    private int firstNumber;
 
     /**
-     * The second integer.
-     */
-    private int secondNumber;
-
-    /**
-     * The setter for the {@link EuclideanAlgorithm#firstNumber}.
+     * Calculates the greatest common divisor.
      *
-     * @param firstNumber a positive integer.
-     */
-    public void setFirstNumber(int firstNumber) {
-        this.firstNumber = Math.abs(firstNumber);
-    }
-
-    /**
-     * The setter for the {@link EuclideanAlgorithm#secondNumber}.
+     * @param firstInteger  an integer greater than 0.
+     * @param secondInteger an integer greater than 0.
      *
-     * @param secondNumber a positive integer.
+     * @return the greatest common divisor.
      */
-    public void setSecondNumber(int secondNumber) {
-        this.secondNumber = Math.abs(secondNumber);
-    }
+    public static int calculateGCD(final int firstInteger, final int secondInteger) {
+        validateInteger(firstInteger);
+        validateInteger(secondInteger);
 
-    /**
-     * The constructor to set the {@link EuclideanAlgorithm#firstNumber} and the {@link EuclideanAlgorithm#secondNumber}.
-     *
-     * @param firstNumber  a positive integer.
-     * @param secondNumber a positive integer.
-     */
-    public EuclideanAlgorithm(int firstNumber,
-                              int secondNumber) {
-        this.firstNumber = Math.abs(firstNumber);
-        this.secondNumber = Math.abs(secondNumber);
-    }
+        int greatestNumber = Math.max(firstInteger, secondInteger);
+        int leastNumber = Math.min(firstInteger, secondInteger);
+        int remainder = greatestNumber % leastNumber;
+        int gcdCandidate = leastNumber;
 
-    /**
-     * The method to calculate the greatest common divisor.
-     *
-     * @return the greatest common divisor
-     */
-    public int calculateGCD() {
-        int remainder;
-        var gcdCandidate = 1;
-        var biggestNumber = Math.max(this.firstNumber, this.secondNumber);
-        var smallestNumber = Math.min(this.firstNumber, this.secondNumber);
-
-        while (true) {
-            remainder = biggestNumber % smallestNumber;
-
-            if (remainder == 0) {
-                return gcdCandidate;
-            }
-
+        while (remainder != 0) {
             gcdCandidate = remainder;
-            biggestNumber = smallestNumber;
-            smallestNumber = remainder;
+            greatestNumber = leastNumber;
+            leastNumber = remainder;
+
+            remainder = greatestNumber % leastNumber;
+        }
+
+        return gcdCandidate;
+    }
+
+    /**
+     * Validates an integer.
+     *
+     * @param integer the integer to be validated.
+     */
+    private static void validateInteger(final int integer) {
+        if (integer < 1) {
+            throw new IllegalArgumentException("The integer must be greater than 0");
         }
     }
 
+
+
     /**
-     * The method to launch the program.
+     * The example of using the program.
      */
     public static void main(String[] args) {
-        EuclideanAlgorithm algorithm = new EuclideanAlgorithm(391, 544);
-
-        System.out.println(algorithm.calculateGCD());
-
-        algorithm.setFirstNumber(18);
-        algorithm.setSecondNumber(12);
-
-        System.out.println(algorithm.calculateGCD());
+        System.out.println(EuclideanAlgorithm.calculateGCD(391, 544));
     }
+
 }

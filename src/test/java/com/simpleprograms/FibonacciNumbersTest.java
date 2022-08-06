@@ -23,61 +23,52 @@
 
 package com.simpleprograms;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * JUnit tests for the {@link AtbashCipher}.
+ * JUnit tests for the {@link FibonacciNumbers}.
  *
  * @author Ivan Bobrov
- * @version 1.0.2
+ * @version 1.0.1
  */
-class AtbashCipherTest {
-
-    private AtbashCipher atbashCipher;
-    private String testMessage;
-
-
-
-    @BeforeEach
-    void setUp() {
-        atbashCipher = new AtbashCipher();
-        testMessage = "Java";
-    }
-
-
+class FibonacciNumbersTest {
 
     @Test
-    @DisplayName("Process message")
-    void processMessage() {
-        assertNotEquals(testMessage, atbashCipher.processMessage(testMessage));
+    @DisplayName("Compute the Fibonacci numbers until the valid given index")
+    void computeFibonacciNumbers() {
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+        FibonacciNumbers.computeFibonacciNumbers(1);
+        assertEquals("0\n", outputStreamCaptor.toString());
 
-        testMessage = "Hello, World!";
-        assertEquals("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE", atbashCipher.processMessage(testMessage));
+        outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+        FibonacciNumbers.computeFibonacciNumbers(2);
+        assertEquals("0, 1\n", outputStreamCaptor.toString());
+
+        outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+        FibonacciNumbers.computeFibonacciNumbers(10);
+        assertEquals("0, 1, 1, 2, 3, 5, 8, 13, 21, 34\n", outputStreamCaptor.toString());
     }
 
     @Test
-    @DisplayName("Empty message")
-    void testEmptyMessage() {
-        testMessage = "";
-
+    @DisplayName("Compute the Fibonacci numbers until the invalid given index")
+    void computeFibonacciNumbersInvalidIndex() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> atbashCipher.processMessage(testMessage)
+                () -> FibonacciNumbers.computeFibonacciNumbers(0)
         );
-    }
-
-    @Test
-    @DisplayName("Null message")
-    void testNullMessage() {
-        testMessage = null;
-
         assertThrows(
                 IllegalArgumentException.class,
-                () -> atbashCipher.processMessage(testMessage)
+                () -> FibonacciNumbers.computeFibonacciNumbers(-1)
         );
     }
 

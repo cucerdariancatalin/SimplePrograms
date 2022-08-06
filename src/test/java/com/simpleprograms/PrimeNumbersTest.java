@@ -23,62 +23,44 @@
 
 package com.simpleprograms;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * JUnit tests for the {@link AtbashCipher}.
+ * JUnit tests for the {@link PrimeNumbers}.
  *
  * @author Ivan Bobrov
- * @version 1.0.2
+ * @version 1.0.0
  */
-class AtbashCipherTest {
-
-    private AtbashCipher atbashCipher;
-    private String testMessage;
-
-
-
-    @BeforeEach
-    void setUp() {
-        atbashCipher = new AtbashCipher();
-        testMessage = "Java";
-    }
-
-
+class PrimeNumbersTest {
 
     @Test
-    @DisplayName("Process message")
-    void processMessage() {
-        assertNotEquals(testMessage, atbashCipher.processMessage(testMessage));
+    @DisplayName("Print prime numbers")
+    void printPrimeNumbers() {
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+        PrimeNumbers.printPrimeNumbers(1);
+        assertEquals("2\n", outputStreamCaptor.toString());
 
-        testMessage = "Hello, World!";
-        assertEquals("ﾷﾚﾓﾓﾐￓ\uFFDFﾨﾐﾍﾓﾛ\uFFDE", atbashCipher.processMessage(testMessage));
+        outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+        PrimeNumbers.printPrimeNumbers(10);
+        assertEquals("2, 3, 5, 7, 11, 13, 17, 19, 23, 29\n", outputStreamCaptor.toString());
     }
 
     @Test
-    @DisplayName("Empty message")
-    void testEmptyMessage() {
-        testMessage = "";
-
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> atbashCipher.processMessage(testMessage)
-        );
-    }
-
-    @Test
-    @DisplayName("Null message")
-    void testNullMessage() {
-        testMessage = null;
-
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> atbashCipher.processMessage(testMessage)
-        );
+    @DisplayName("Print an invalid quantity of prime numbers")
+    void printPrimeNumbersInvalidQuantity() {
+        for (int i = -10; i < 1; i++) {
+            final int finalI = i;
+            assertThrows(IllegalArgumentException.class, () -> PrimeNumbers.printPrimeNumbers(finalI));
+        }
     }
 
 }
